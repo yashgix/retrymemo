@@ -1,0 +1,9117 @@
+{
+ "examples": [
+  {
+   "gold": [
+    "mbed_greentea/mbed_greentea_cli.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "ARMmbed__greentea-263",
+   "top": {
+    "fix_hybrid": [
+     "mbed_greentea/mbed_report_api.py",
+     "mbed_greentea/mbed_target_info.py",
+     "setup.py"
+    ],
+    "handoff": [
+     "mbed_greentea/mbed_greentea_cli.py",
+     "mbed_greentea/mbed_report_api.py",
+     "mbed_greentea/mbed_target_info.py"
+    ],
+    "retry_agent": [
+     "mbed_greentea/mbed_greentea_cli.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "driving_gridworld/road.py"
+   ],
+   "retry_first_needed_step": 3,
+   "task": "AmiiThinks__driving_gridworld-13",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "driving_gridworld/road.py"
+    ],
+    "retry_agent": [
+     "driving_gridworld/road.py",
+     "driving_gridworld/road_pycolab_env.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "adal/cache_driver.py",
+    "adal/oauth2_client.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "AzureAD__azure-activedirectory-library-for-python-87",
+   "top": {
+    "fix_hybrid": [
+     "adal/authentication_context.py",
+     "adal/oauth2_client.py"
+    ],
+    "handoff": [
+     "adal/authentication_context.py",
+     "adal/oauth2_client.py"
+    ],
+    "retry_agent": [
+     "adal/authority.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "azurelinuxagent/pa/provision/cloudinit.py",
+    "azurelinuxagent/pa/provision/default.py"
+   ],
+   "retry_first_needed_step": 3,
+   "task": "Azure__WALinuxAgent-1105",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "azurelinuxagent/pa/provision/default.py",
+     "azurelinuxagent/agent.py",
+     "azurelinuxagent/common/event.py"
+    ],
+    "retry_agent": [
+     "azurelinuxagent/pa/provision/default.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "README.rst",
+    "diff_cover/report_generator.py",
+    "diff_cover/violationsreporters/base.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "Bachmann1234__diff_cover-300",
+   "top": {
+    "fix_hybrid": [
+     "diff_cover/diff_cover_tool.py",
+     "diff_cover/violationsreporters/violations_reporter.py",
+     "README.rst"
+    ],
+    "handoff": [
+     "diff_cover/report_generator.py",
+     "diff_cover/diff_quality_tool.py",
+     "diff_cover/test_report_generator.py"
+    ],
+    "retry_agent": [
+     "diff_cover/report_generator.py",
+     "diff_cover/violationsreporters/base.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "b2/sync/policy.py"
+   ],
+   "retry_first_needed_step": 4,
+   "task": "Backblaze__B2_Command_Line_Tool-332",
+   "top": {
+    "fix_hybrid": [
+     "b2/console_tool.py",
+     "README.md",
+     "b2/raw_api.py"
+    ],
+    "handoff": [
+     "b2/sync/policy.py",
+     "b2/console_tool.py",
+     "b2/sync/sync.py"
+    ],
+    "retry_agent": [
+     "b2/sync/policy.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "neurom/features/morphology.py",
+    "neurom/features/population.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "BlueBrain__NeuroM-1073",
+   "top": {
+    "fix_hybrid": [
+     "CHANGELOG.rst",
+     "neurom/morphmath.py",
+     "neurom/features/__init__.py"
+    ],
+    "handoff": [
+     "neurom/features/morphology.py",
+     "CHANGELOG.rst",
+     "neurom/morphmath.py"
+    ],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "README.rst",
+    "examples/README.rst",
+    "scrapy_loader_upkeep/loader.py"
+   ],
+   "retry_first_needed_step": 3,
+   "task": "BurnzZ__scrapy-loader-upkeep-3",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "scrapy_loader_upkeep/loader.py"
+    ],
+    "retry_agent": [
+     "scrapy_loader_upkeep/loader.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "k8t/cli.py",
+    "k8t/secret_providers.py",
+    "k8t/secrets.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "ClarkSource__k8t-40",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "k8t/config.py",
+     "k8t/secret_providers.py",
+     "k8t/secrets.py"
+    ],
+    "retry_agent": [
+     "k8t/secrets.py",
+     "k8t/templates.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "mixbox/dates.py",
+    "mixbox/fields.py"
+   ],
+   "retry_first_needed_step": 5,
+   "task": "CybOXProject__mixbox-35",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "mixbox/dates.py",
+     "mixbox/fields.py"
+    ],
+    "retry_agent": [
+     "mixbox/fields.py",
+     "mixbox/dates.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "cyclonedx_py/parser/conda.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "CycloneDX__cyclonedx-python-367",
+   "top": {
+    "fix_hybrid": [
+     "cyclonedx_py/utils/conda.py",
+     "cyclonedx_py/parser/conda.py",
+     "poetry.lock"
+    ],
+    "handoff": [
+     "cyclonedx_py/parser/conda.py",
+     "cyclonedx_py/utils/conda.py",
+     "poetry.lock"
+    ],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "raytracing/rays.py"
+   ],
+   "retry_first_needed_step": 15,
+   "task": "DCC-Lab__RayTracing-133",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "raytracing/rays.py"
+    ],
+    "retry_agent": [
+     "raytracing/rays.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "pydov/util/location.py",
+    "pydov/util/owsutil.py"
+   ],
+   "retry_first_needed_step": 9,
+   "task": "DOV-Vlaanderen__pydov-388",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "pydov/util/location.py"
+    ],
+    "retry_agent": [
+     "pydov/util/location.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "newt/main.py",
+    "newt/transform/gen3standard.py",
+    "scripts/data_bleach.py"
+   ],
+   "retry_first_needed_step": 9,
+   "task": "DataBiosphere__newt-transformer-32",
+   "top": {
+    "fix_hybrid": [
+     "newt/transform/gen3standard.py",
+     "scripts/data_bleach.py",
+     "newt/main.py"
+    ],
+    "handoff": [
+     "scripts/data_bleach.py",
+     "README.md",
+     "newt/transform/gen3standard.py"
+    ],
+    "retry_agent": [
+     "scripts/data_bleach.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "src/toil/options/common.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "DataBiosphere__toil-4805",
+   "top": {
+    "fix_hybrid": [
+     "src/toil/batchSystems/abstractBatchSystem.py",
+     "src/toil/batchSystems/abstractGridEngineBatchSystem.py",
+     "src/toil/batchSystems/lsf.py"
+    ],
+    "handoff": [
+     "src/toil/common.py",
+     "src/toil/batchSystems/options.py",
+     "src/toil/jobStores/fileJobStore.py"
+    ],
+    "retry_agent": [
+     "src/toil/jobStores/fileJobStore.py",
+     "src/toil/jobStores/abstractJobStore.py",
+     "src/toil/test/jobStores/jobStoreTest.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "datadog/threadstats/base.py"
+   ],
+   "retry_first_needed_step": 6,
+   "task": "DataDog__datadogpy-625",
+   "top": {
+    "fix_hybrid": [
+     "datadog/threadstats/base.py",
+     "datadog/threadstats/aws_lambda.py",
+     "datadog/threadstats/metrics.py"
+    ],
+    "handoff": [
+     "datadog/threadstats/base.py",
+     "datadog/threadstats/aws_lambda.py",
+     "datadog/threadstats/metrics.py"
+    ],
+    "retry_agent": [
+     "datadog/threadstats/base.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "CHANGELOG.rst",
+    "pyflwdir/dem.py"
+   ],
+   "retry_first_needed_step": 3,
+   "task": "Deltares__pyflwdir-18",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "pyflwdir/dem.py"
+    ],
+    "retry_agent": [
+     "pyflwdir/dem.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "openapi3/schemas.py"
+   ],
+   "retry_first_needed_step": 17,
+   "task": "Dorthu__openapi3-94",
+   "top": {
+    "fix_hybrid": [
+     "openapi3/openapi.py",
+     "setup.py"
+    ],
+    "handoff": [
+     "openapi3/schemas.py",
+     "openapi3/openapi.py",
+     "openapi3/__init__.py"
+    ],
+    "retry_agent": [
+     "openapi3/components.py",
+     "openapi3/schemas.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "README.rst",
+    "reentry/config.py"
+   ],
+   "retry_first_needed_step": 4,
+   "task": "DropD__reentry-50",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "reentry/config.py"
+    ],
+    "retry_agent": [
+     "reentry/config.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "zstash/extract.py"
+   ],
+   "retry_first_needed_step": 3,
+   "task": "E3SM-Project__zstash-168",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "zstash/check.py",
+     "zstash/extract.py"
+    ],
+    "retry_agent": [
+     "zstash/check.py",
+     "zstash/extract.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "egcg_core/ncbi.py"
+   ],
+   "retry_first_needed_step": 3,
+   "task": "EdinburghGenomics__EGCG-Core-11",
+   "top": {
+    "fix_hybrid": [
+     "egcg_core/rest_communication.py",
+     "etc/example_egcg.yaml"
+    ],
+    "handoff": [
+     "egcg_core/ncbi.py",
+     "egcg_core/rest_communication.py",
+     "etc/example_egcg.yaml"
+    ],
+    "retry_agent": [
+     "egcg_core/ncbi.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "pdbx/__init__.py",
+    "pdbx/containers.py",
+    "pdbx/reader.py"
+   ],
+   "retry_first_needed_step": 5,
+   "task": "Electrostatics__mmcif_pdbx-27",
+   "top": {
+    "fix_hybrid": [
+     "pdbx/reader.py"
+    ],
+    "handoff": [
+     "pdbx/reader.py"
+    ],
+    "retry_agent": [
+     "pdbx/reader.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "conllu/parser.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "EmilStenstrom__conllu-35",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "conllu/parser.py"
+    ],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "extra_data/reader.py"
+   ],
+   "retry_first_needed_step": 6,
+   "task": "European-XFEL__EXtra-data-128",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "extra_data/run_files_map.py"
+    ],
+    "retry_agent": [
+     "extra_data/run_files_map.py",
+     "extra_data/reader.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "extra_data/keydata.py"
+   ],
+   "retry_first_needed_step": 14,
+   "task": "European-XFEL__EXtra-data-222",
+   "top": {
+    "fix_hybrid": [
+     "extra_data/reader.py",
+     ".github/dependabot/constraints.txt",
+     "extra_data/components.py"
+    ],
+    "handoff": [
+     "extra_data/components.py",
+     "extra_data/reader.py",
+     ".github/dependabot/constraints.txt"
+    ],
+    "retry_agent": [
+     "extra_data/tests/test_components.py",
+     "extra_data/keydata.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    ".github/dependabot/constraints.txt",
+    "extra_data/keydata.py"
+   ],
+   "retry_first_needed_step": 4,
+   "task": "European-XFEL__EXtra-data-257",
+   "top": {
+    "fix_hybrid": [
+     "extra_data/reader.py",
+     "extra_data/keydata.py",
+     ".github/dependabot/constraints.txt"
+    ],
+    "handoff": [
+     "extra_data/keydata.py",
+     "extra_data/reader.py",
+     ".github/dependabot/constraints.txt"
+    ],
+    "retry_agent": [
+     "extra_data/keydata.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "CHANGELOG.md",
+    "munch/__init__.py"
+   ],
+   "retry_first_needed_step": 3,
+   "task": "Infinidat__munch-52",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "munch/__init__.py"
+    ],
+    "retry_agent": [
+     "munch/__init__.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "CHANGELOG.md",
+    "munch/__init__.py"
+   ],
+   "retry_first_needed_step": 7,
+   "task": "Infinidat__munch-54",
+   "top": {
+    "fix_hybrid": [
+     "CHANGELOG.md",
+     "munch/__init__.py"
+    ],
+    "handoff": [
+     "munch/__init__.py",
+     "CHANGELOG.md"
+    ],
+    "retry_agent": [
+     "munch/__init__.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "pywatts/callbacks/debug_callback.py",
+    "pywatts/core/filemanager.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "KIT-IAI__pyWATTS-41",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "pywatts/core/step_factory.py",
+     "pywatts/utils/summary.py",
+     "pywatts/core/probabilistic_step.py"
+    ],
+    "retry_agent": [
+     "pywatts/utils/summary.py",
+     "pywatts/core/probabilistic_step.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "optimade/filtertransformers/mongo.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "Materials-Consortia__optimade-python-tools-1134",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "optimade/server/query_params.py",
+     "optimade/server/routers/references.py",
+     "optimade/server/routers/utils.py"
+    ],
+    "retry_agent": [
+     "optimade/server/mappers/references.py",
+     "optimade/server/mappers/entries.py",
+     "optimade/models/references.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "lingua_franca/lang/parse_en.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "MycroftAI__lingua-franca-87",
+   "top": {
+    "fix_hybrid": [
+     "lingua_franca/lang/parse_es.py",
+     "lingua_franca/parse.py",
+     "lingua_franca/lang/parse_en.py"
+    ],
+    "handoff": [
+     "lingua_franca/lang/parse_en.py",
+     "lingua_franca/lang/parse_es.py",
+     "lingua_franca/parse.py"
+    ],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "Changelog.rst",
+    "cfdm/read_write/netcdf/netcdfwrite.py",
+    "docs/source/tutorial.rst"
+   ],
+   "retry_first_needed_step": null,
+   "task": "NCAS-CMS__cfdm-158",
+   "top": {
+    "fix_hybrid": [
+     "cfdm/core/cellmethod.py",
+     "cfdm/read_write/netcdf/netcdfwrite.py",
+     "cfdm/read_write/write.py"
+    ],
+    "handoff": [
+     "cfdm/read_write/write.py",
+     "cfdm/core/cellmethod.py",
+     "cfdm/read_write/netcdf/netcdfwrite.py"
+    ],
+    "retry_agent": [
+     "cfdm/read_write/write.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "Changelog.rst",
+    "cfdm/read_write/netcdf/netcdfread.py"
+   ],
+   "retry_first_needed_step": 7,
+   "task": "NCAS-CMS__cfdm-269",
+   "top": {
+    "fix_hybrid": [
+     "Changelog.rst",
+     "cfdm/read_write/netcdf/netcdfread.py",
+     "cfdm/read_write/read.py"
+    ],
+    "handoff": [
+     "cfdm/read_write/netcdf/netcdfread.py",
+     "Changelog.rst",
+     "cfdm/read_write/read.py"
+    ],
+    "retry_agent": [
+     "cfdm/read_write/netcdf/netcdfread.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "libs/config.py",
+    "netuitive-statsd.conf.example"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "Netuitive__netuitive-statsd-14",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "libs/config.py",
+     "netuitive-statsd.conf.example"
+    ],
+    "retry_agent": [
+     "libs/config.py",
+     "netuitive-statsd.conf.example"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "HISTORY.rst",
+    "setup.py",
+    "skosprovider_rdf/utils.py"
+   ],
+   "retry_first_needed_step": 9,
+   "task": "OnroerendErfgoed__skosprovider_rdf-119",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "tests/test_utils.py"
+    ],
+    "retry_agent": [
+     "tests/data/waarde_en_besluit_types.ttl",
+     "skosprovider_rdf/providers.py",
+     "skosprovider_rdf/utils.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "petab/lint.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "PEtab-dev__libpetab-python-136",
+   "top": {
+    "fix_hybrid": [
+     "petab/lint.py"
+    ],
+    "handoff": [
+     "tests/test_calculate.py",
+     "tests/test_combine.py",
+     "tests/test_conditions.py"
+    ],
+    "retry_agent": [
+     "tests/test_petab.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "petab/core.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "PEtab-dev__libpetab-python-235",
+   "top": {
+    "fix_hybrid": [
+     "petab/lint.py",
+     "petab/C.py",
+     "petab/parameters.py"
+    ],
+    "handoff": [
+     "petab/core.py",
+     "petab/lint.py",
+     "petab/C.py"
+    ],
+    "retry_agent": [
+     "petab/core.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "microdf/generic.py"
+   ],
+   "retry_first_needed_step": 8,
+   "task": "PSLmodels__microdf-166",
+   "top": {
+    "fix_hybrid": [
+     ".github/workflows/check_jupyterbook.yml",
+     ".github/workflows/deploy_jupyterbook.yml",
+     ".github/workflows/linting.yml"
+    ],
+    "handoff": [
+     ".github/workflows/check_jupyterbook.yml",
+     ".github/workflows/deploy_jupyterbook.yml",
+     ".github/workflows/linting.yml"
+    ],
+    "retry_agent": [
+     "microdf/__init__.py",
+     "microdf/generic.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "microdf/generic.py"
+   ],
+   "retry_first_needed_step": 8,
+   "task": "PSLmodels__microdf-219",
+   "top": {
+    "fix_hybrid": [
+     "microdf/generic.py",
+     ".github/workflows/check_jupyterbook.yml",
+     ".github/workflows/deploy_jupyterbook.yml"
+    ],
+    "handoff": [
+     "microdf/generic.py",
+     ".github/workflows/check_jupyterbook.yml",
+     ".github/workflows/deploy_jupyterbook.yml"
+    ],
+    "retry_agent": [
+     "microdf/generic.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "icontract/_checkers.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "Parquery__icontract-137",
+   "top": {
+    "fix_hybrid": [
+     "icontract/_checkers.py"
+    ],
+    "handoff": [
+     "icontract/_checkers.py"
+    ],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "icontract/_recompute.py",
+    "icontract/_represent.py",
+    "precommit.py"
+   ],
+   "retry_first_needed_step": 6,
+   "task": "Parquery__icontract-170",
+   "top": {
+    "fix_hybrid": [
+     "icontract/_checkers.py",
+     "README.rst",
+     ".travis.yml"
+    ],
+    "handoff": [
+     "icontract/_recompute.py",
+     "icontract/_checkers.py",
+     "README.rst"
+    ],
+    "retry_agent": [
+     "icontract/_recompute.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "plasmapy/mathematics/mathematics.py"
+   ],
+   "retry_first_needed_step": 3,
+   "task": "PlasmaPy__PlasmaPy-228",
+   "top": {
+    "fix_hybrid": [
+     "plasmapy/physics/transport.py"
+    ],
+    "handoff": [
+     "plasmapy/mathematics/mathematics.py",
+     "plasmapy/physics/transport.py"
+    ],
+    "retry_agent": [
+     "plasmapy/mathematics/mathematics.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "src/flake8/checker.py",
+    "src/flake8/exceptions.py",
+    "src/flake8/processor.py"
+   ],
+   "retry_first_needed_step": 10,
+   "task": "PyCQA__flake8-1320",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [],
+    "retry_agent": [
+     "src/flake8/checker.py",
+     "src/flake8/processor.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "isort/settings.py"
+   ],
+   "retry_first_needed_step": 4,
+   "task": "PyCQA__isort-1995",
+   "top": {
+    "fix_hybrid": [
+     "isort/output.py",
+     "isort/parse.py",
+     "CHANGELOG.md"
+    ],
+    "handoff": [
+     "isort/settings.py",
+     "isort/output.py",
+     "isort/parse.py"
+    ],
+    "retry_agent": [
+     "isort/settings.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "CHANGES.txt",
+    "src/webob/acceptparse.py"
+   ],
+   "retry_first_needed_step": 5,
+   "task": "Pylons__webob-372",
+   "top": {
+    "fix_hybrid": [
+     "CHANGES.txt",
+     "webob/request.py",
+     ".travis.yml"
+    ],
+    "handoff": [
+     "src/webob/acceptparse.py",
+     "CHANGES.txt",
+     "webob/request.py"
+    ],
+    "retry_agent": [
+     "src/webob/acceptparse.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "rx/core/operators/observeon.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "ReactiveX__RxPY-357",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "rx/core/observer/observeonobserver.py",
+     "rx/core/observer/scheduledobserver.py",
+     "rx/core/operators/observeon.py"
+    ],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "rx/scheduler/eventloop/asynciothreadsafescheduler.py"
+   ],
+   "retry_first_needed_step": 5,
+   "task": "ReactiveX__RxPY-567",
+   "top": {
+    "fix_hybrid": [
+     "rx/operators/__init__.py",
+     "rx/__init__.py",
+     ".travis.yml"
+    ],
+    "handoff": [
+     "rx/scheduler/eventloop/asynciothreadsafescheduler.py",
+     "rx/operators/__init__.py",
+     "rx/__init__.py"
+    ],
+    "retry_agent": [
+     "rx/scheduler/eventloop/asynciothreadsafescheduler.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "spotify_dl/spotify.py",
+    "spotify_dl/youtube.py"
+   ],
+   "retry_first_needed_step": 5,
+   "task": "SathyaBhat__spotify-dl-368",
+   "top": {
+    "fix_hybrid": [
+     "README.md",
+     "requirements.txt",
+     "spotify_dl/spotify_dl.py"
+    ],
+    "handoff": [
+     "spotify_dl/youtube.py",
+     "spotify_dl/spotify.py",
+     "spotify_dl/utils.py"
+    ],
+    "retry_agent": [
+     "spotify_dl/spotify_dl.py",
+     "spotify_dl/spotify.py",
+     "spotify_dl/utils.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "sceptre/context.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "Sceptre__sceptre-1296",
+   "top": {
+    "fix_hybrid": [
+     "sceptre/plan/actions.py",
+     "sceptre/cli/drift.py",
+     "sceptre/template_handlers/http.py"
+    ],
+    "handoff": [
+     "sceptre/plan/actions.py",
+     "sceptre/cli/drift.py",
+     "sceptre/template_handlers/http.py"
+    ],
+    "retry_agent": [
+     "sceptre/plan/__init__.py",
+     "sceptre/plan/plan.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "umongo/frameworks/motor_asyncio.py",
+    "umongo/frameworks/pymongo.py",
+    "umongo/frameworks/txmongo.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "Scille__umongo-330",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "umongo/frameworks/motor_asyncio.py"
+    ],
+    "retry_agent": [
+     "umongo/frameworks/motor_asyncio.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "CHANGELOG.md",
+    "natsort/utils.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "SethMMorton__natsort-146",
+   "top": {
+    "fix_hybrid": [
+     "CHANGELOG.md",
+     "natsort/utils.py",
+     "docs/api.rst"
+    ],
+    "handoff": [
+     "natsort/natsort.py",
+     "CHANGELOG.md",
+     "natsort/utils.py"
+    ],
+    "retry_agent": [
+     "natsort/natsort.py",
+     "docs/locale_issues.rst",
+     "docs/api.rst"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "CHANGELOG.md",
+    "igseq/__main__.py",
+    "igseq/getreads.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "ShawHahnLab__igseq-43",
+   "top": {
+    "fix_hybrid": [
+     "CHANGELOG.md",
+     "igseq/identity.py",
+     "igseq/vdj.py"
+    ],
+    "handoff": [
+     "igseq/getreads.py",
+     "CHANGELOG.md",
+     "igseq/identity.py"
+    ],
+    "retry_agent": [
+     "igseq/getreads.py",
+     "igseq/igblast.py",
+     "tools/bcl2fastq.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "CHANGELOG.md",
+    "igseq/tree.py"
+   ],
+   "retry_first_needed_step": 5,
+   "task": "ShawHahnLab__igseq-57",
+   "top": {
+    "fix_hybrid": [
+     "CHANGELOG.md",
+     "igseq/identity.py",
+     "igseq/data/examples/outputs/tree/example_pattern_from_newick.nex"
+    ],
+    "handoff": [
+     "igseq/tree.py",
+     "CHANGELOG.md",
+     "igseq/identity.py"
+    ],
+    "retry_agent": [
+     "igseq/tree.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "README.md",
+    "shopify/base.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "Shopify__shopify_python_api-330",
+   "top": {
+    "fix_hybrid": [
+     ".travis.yml",
+     "README.md",
+     "setup.py"
+    ],
+    "handoff": [
+     "shopify/session.py",
+     "shopify/api_version.py",
+     "shopify/base.py"
+    ],
+    "retry_agent": [
+     "shopify/api_version.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "sparkpost/transmissions.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "SparkPost__python-sparkpost-141",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "sparkpost/__init__.py"
+    ],
+    "retry_agent": [
+     "sparkpost/transmissions.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "spikeinterface/core/base.py",
+    "spikeinterface/core/unitsaggregationsorting.py"
+   ],
+   "retry_first_needed_step": 49,
+   "task": "SpikeInterface__spikeinterface-961",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [],
+    "retry_agent": [
+     "spikeinterface/core/unitsaggregationsorting.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "CHANGES.rst",
+    "async_upnp_client/client.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "StevenLooman__async_upnp_client-62",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "async_upnp_client/client.py"
+    ],
+    "retry_agent": [
+     "async_upnp_client/device_updater.py",
+     "async_upnp_client/client_factory.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "ftpvl/fetchers.py"
+   ],
+   "retry_first_needed_step": 4,
+   "task": "SymbiFlow__FPGA-Tool-Performance-Visualization-Library-17",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "ftpvl/fetchers.py"
+    ],
+    "retry_agent": [
+     "ftpvl/fetchers.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "speech_recognition/__init__.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "Uberi__speech_recognition-619",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "tests/test_recognition.py"
+    ],
+    "retry_agent": [
+     "tests/test_recognition.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "docs/_templates/overrides/metpy.calc.rst",
+    "setup.cfg",
+    "src/metpy/calc/thermo.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "Unidata__MetPy-2580",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "ci/doc_requirements.txt",
+    "ci/linting_requirements.txt",
+    "src/metpy/io/gempak.py"
+   ],
+   "retry_first_needed_step": 8,
+   "task": "Unidata__MetPy-2691",
+   "top": {
+    "fix_hybrid": [
+     "docs/_templates/overrides/metpy.calc.rst",
+     "setup.cfg",
+     "src/metpy/calc/thermo.py"
+    ],
+    "handoff": [
+     "src/metpy/io/gempak.py",
+     "docs/_templates/overrides/metpy.calc.rst",
+     "setup.cfg"
+    ],
+    "retry_agent": [
+     "src/metpy/io/gempak.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "requirements.txt",
+    "setup.py",
+    "steam/game_servers.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "ValvePython__steam-359",
+   "top": {
+    "fix_hybrid": [
+     "steam/core/crypto.py",
+     "steam/steamid.py"
+    ],
+    "handoff": [
+     "steam/game_servers.py",
+     "steam/core/crypto.py",
+     "steam/steamid.py"
+    ],
+    "retry_agent": [
+     "steam/game_servers.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "src/quom/quom.py"
+   ],
+   "retry_first_needed_step": 8,
+   "task": "Viatorus__quom-46",
+   "top": {
+    "fix_hybrid": [
+     "src/quom/quom.py",
+     "src/quom/__main__.py",
+     "README.md"
+    ],
+    "handoff": [
+     "src/quom/quom.py",
+     "src/quom/__main__.py",
+     "README.md"
+    ],
+    "retry_agent": [
+     "src/quom/quom.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "git_machete/cli.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "VirtusLab__git-machete-330",
+   "top": {
+    "fix_hybrid": [
+     "git_machete/cmd.py"
+    ],
+    "handoff": [
+     "git_machete/cli.py",
+     "git_machete/cmd.py"
+    ],
+    "retry_agent": [
+     "git_machete/cli.py",
+     "git_machete/options.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "docs/changelog.md",
+    "xknx/dpt/dpt_2byte_float.py",
+    "xknx/secure/keyring.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "XKNX__xknx-1008",
+   "top": {
+    "fix_hybrid": [
+     "xknx/exceptions/exception.py",
+     "changelog.md",
+     "xknx/knxip/cemi_frame.py"
+    ],
+    "handoff": [
+     "xknx/secure/keyring.py",
+     "xknx/exceptions/exception.py",
+     "changelog.md"
+    ],
+    "retry_agent": [
+     "xknx/secure/keyring.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "pyramid_hypernova/batch.py"
+   ],
+   "retry_first_needed_step": 4,
+   "task": "Yelp__pyramid-hypernova-15",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "pyramid_hypernova/batch.py"
+    ],
+    "retry_agent": [
+     "pyramid_hypernova/types.py",
+     "pyramid_hypernova/batch.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "CHANGELOG.md",
+    "dark/__init__.py",
+    "dark/reads.py"
+   ],
+   "retry_first_needed_step": 11,
+   "task": "acorg__dark-matter-663",
+   "top": {
+    "fix_hybrid": [
+     "dark/__init__.py",
+     "CHANGELOG.md",
+     "dark/sam.py"
+    ],
+    "handoff": [
+     "bin/extract-ORFs.py",
+     "CHANGELOG.md",
+     "dark/reads.py"
+    ],
+    "retry_agent": [
+     "dark/reads.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "src/marshmallow_union/__init__.py"
+   ],
+   "retry_first_needed_step": 10,
+   "task": "adamboche__python-marshmallow-union-29",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "src/marshmallow_union/__init__.py"
+    ],
+    "retry_agent": [
+     "src/marshmallow_union/__init__.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "src/ec2_metadata.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "adamchainz__ec2-metadata-166",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "src/ec2_metadata.py"
+    ],
+    "retry_agent": [
+     "src/ec2_metadata.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "HISTORY.rst",
+    "README.rst",
+    "src/time_machine/__init__.py"
+   ],
+   "retry_first_needed_step": 4,
+   "task": "adamchainz__time-machine-152",
+   "top": {
+    "fix_hybrid": [
+     "HISTORY.rst",
+     "src/time_machine.py"
+    ],
+    "handoff": [
+     "src/time_machine/__init__.py",
+     "HISTORY.rst",
+     "src/time_machine.py"
+    ],
+    "retry_agent": [
+     "src/time_machine/__init__.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "CHANGES.rst",
+    "src/exceptiongroup/_formatting.py"
+   ],
+   "retry_first_needed_step": 3,
+   "task": "agronholm__exceptiongroup-34",
+   "top": {
+    "fix_hybrid": [
+     "README.rst",
+     "src/exceptiongroup/_exceptions.py",
+     "src/exceptiongroup/_formatting.py"
+    ],
+    "handoff": [
+     "src/exceptiongroup/_formatting.py",
+     "README.rst",
+     "src/exceptiongroup/_exceptions.py"
+    ],
+    "retry_agent": [
+     "src/exceptiongroup/_formatting.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "CHANGES.rst",
+    "multidict/_multidict.pyx",
+    "multidict/_multidict_py.py"
+   ],
+   "retry_first_needed_step": 3,
+   "task": "aio-libs__multidict-100",
+   "top": {
+    "fix_hybrid": [
+     "multidict/_multidict_py.py",
+     "CHANGES.rst",
+     "benchmark.py"
+    ],
+    "handoff": [
+     "multidict/_multidict_py.py",
+     "CHANGES.rst",
+     "benchmark.py"
+    ],
+    "retry_agent": [
+     "multidict/_multidict.pyx"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "CHANGES.rst",
+    "yarl/__init__.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "aio-libs__yarl-106",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "yarl/__init__.py"
+    ],
+    "retry_agent": [
+     "yarl/__init__.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "asv/util.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "airspeed-velocity__asv-733",
+   "top": {
+    "fix_hybrid": [
+     "asv/results.py",
+     "asv/util.py",
+     "asv/benchmark.py"
+    ],
+    "handoff": [
+     "asv/util.py",
+     "asv/results.py",
+     "asv/benchmark.py"
+    ],
+    "retry_agent": [
+     "asv/util.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "asv/util.py",
+    "asv/www/graphdisplay.js"
+   ],
+   "retry_first_needed_step": null,
+   "task": "airspeed-velocity__asv-734",
+   "top": {
+    "fix_hybrid": [
+     "asv/results.py",
+     "asv/util.py",
+     "asv/benchmark.py"
+    ],
+    "handoff": [
+     "asv/www/summarylist.js",
+     "asv/results.py",
+     "asv/util.py"
+    ],
+    "retry_agent": [
+     "asv/www/asv_ui.js",
+     "asv/benchmarks.py",
+     "asv/benchmark.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    ".travis.yml",
+    "asv/commands/run.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "airspeed-velocity__asv-794",
+   "top": {
+    "fix_hybrid": [
+     "asv/results.py",
+     "asv/util.py",
+     "asv/benchmark.py"
+    ],
+    "handoff": [
+     "asv.conf.json",
+     "asv/commands/run.py",
+     "asv/main.py"
+    ],
+    "retry_agent": [
+     "asv/config.py",
+     "asv/results.py",
+     "asv/machine.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "ogn_lib/parser.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "akolar__ogn-lib-18",
+   "top": {
+    "fix_hybrid": [
+     "ogn_lib/parser.py"
+    ],
+    "handoff": [
+     "ogn_lib/parser.py"
+    ],
+    "retry_agent": [
+     "ogn_lib/parser.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "src/sqlfluff/cli/commands.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "alanmcruickshank__sqlfluff-336",
+   "top": {
+    "fix_hybrid": [
+     "src/sqlfluff/cli/commands.py",
+     "src/sqlfluff/linter.py",
+     "src/sqlfluff/rules/std.py"
+    ],
+    "handoff": [
+     "src/sqlfluff/cli/commands.py",
+     "src/sqlfluff/linter.py",
+     "src/sqlfluff/rules/std.py"
+    ],
+    "retry_agent": [
+     "src/sqlfluff/linter.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "CHANGELOG.md",
+    "src/sqlfluff/rules/std.py"
+   ],
+   "retry_first_needed_step": 4,
+   "task": "alanmcruickshank__sqlfluff-93",
+   "top": {
+    "fix_hybrid": [
+     "src/sqlfluff/errors.py",
+     "src/sqlfluff/rules/base.py",
+     "src/sqlfluff/rules/std.py"
+    ],
+    "handoff": [
+     "src/sqlfluff/rules/std.py",
+     "src/sqlfluff/errors.py",
+     "src/sqlfluff/rules/base.py"
+    ],
+    "retry_agent": [
+     "src/sqlfluff/rules/std.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "telegram/client.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "alexander-akhmetov__python-telegram-208",
+   "top": {
+    "fix_hybrid": [
+     "telegram/client.py",
+     "telegram/utils.py",
+     "docs/source/changelog.rst"
+    ],
+    "handoff": [
+     "telegram/client.py",
+     "telegram/utils.py",
+     "docs/source/changelog.rst"
+    ],
+    "retry_agent": [
+     "telegram/client.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "algosdk/future/transaction.py",
+    "algosdk/v2client/algod.py"
+   ],
+   "retry_first_needed_step": 3,
+   "task": "algorand__py-algorand-sdk-171",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "algosdk/future/transaction.py"
+    ],
+    "retry_agent": [
+     "algosdk/future/transaction.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "text_to_num/lang/spanish.py"
+   ],
+   "retry_first_needed_step": 5,
+   "task": "allo-media__text2num-77",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "text_to_num/parsers.py",
+     "text_to_num/lang/spanish.py"
+    ],
+    "retry_agent": [
+     "text_to_num/lang/spanish.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "altair/vegalite/v3/theme.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "altair-viz__altair-1539",
+   "top": {
+    "fix_hybrid": [
+     "altair/utils/core.py",
+     "altair/vegalite/v2/api.py"
+    ],
+    "handoff": [
+     "altair/vegalite/v2/theme.py",
+     "altair/vegalite/v2/api.py",
+     "altair/utils/theme.py"
+    ],
+    "retry_agent": [
+     "altair/vegalite/tests/test_common.py",
+     "altair/utils/plugin_registry.py",
+     "altair/vegalite/v2/theme.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "TexSoup/reader.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "alvinwan__TexSoup-138",
+   "top": {
+    "fix_hybrid": [
+     "TexSoup/reader.py",
+     "TexSoup/data.py",
+     "TexSoup/tokens.py"
+    ],
+    "handoff": [
+     "TexSoup/tex.py",
+     "TexSoup/reader.py",
+     "TexSoup/data.py"
+    ],
+    "retry_agent": [
+     "TexSoup/tokens.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "retype.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "ambv__retype-3",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "retype.py"
+    ],
+    "retry_agent": [
+     "retype.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "cincoconfig/config.py",
+    "cincoconfig/encryption.py",
+    "cincoconfig/fields.py"
+   ],
+   "retry_first_needed_step": 4,
+   "task": "ameily__cincoconfig-40",
+   "top": {
+    "fix_hybrid": [
+     "cincoconfig/fields.py"
+    ],
+    "handoff": [
+     "cincoconfig/fields.py"
+    ],
+    "retry_agent": [
+     "cincoconfig/fields.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "Akeso/AttackWorkers.py",
+    "Akeso/ServiceManager.py",
+    "Akeso/config.py"
+   ],
+   "retry_first_needed_step": 6,
+   "task": "ameserole__Akeso-14",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "Akeso/AttackWorkers.py",
+     "Akeso/ServiceManager.py"
+    ],
+    "retry_agent": [
+     "Akeso/ServiceManager.py",
+     "Akeso/AttackWorkers.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "src/nitpick/style/fetchers/github.py"
+   ],
+   "retry_first_needed_step": 3,
+   "task": "andreoliwa__nitpick-603",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "src/nitpick/fields.py"
+    ],
+    "retry_agent": [
+     "src/nitpick/style/fetchers/github.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "add_trailing_comma.py"
+   ],
+   "retry_first_needed_step": 13,
+   "task": "asottile__add-trailing-comma-34",
+   "top": {
+    "fix_hybrid": [
+     "add_trailing_comma.py",
+     "setup.py"
+    ],
+    "handoff": [
+     "add_trailing_comma.py",
+     "setup.py"
+    ],
+    "retry_agent": [
+     "README.md",
+     "add_trailing_comma.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "add_trailing_comma.py"
+   ],
+   "retry_first_needed_step": 7,
+   "task": "asottile__add-trailing-comma-71",
+   "top": {
+    "fix_hybrid": [
+     "add_trailing_comma.py",
+     "setup.py"
+    ],
+    "handoff": [
+     "add_trailing_comma.py",
+     "setup.py"
+    ],
+    "retry_agent": [
+     "add_trailing_comma.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "babi/highlight.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "asottile__babi-187",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "babi/highlight.py"
+    ],
+    "retry_agent": [
+     "bin/download-theme"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "dead.py"
+   ],
+   "retry_first_needed_step": 3,
+   "task": "asottile__dead-24",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "dead.py"
+    ],
+    "retry_agent": [
+     "dead.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "setup_cfg_fmt.py"
+   ],
+   "retry_first_needed_step": 20,
+   "task": "asottile__setup-cfg-fmt-132",
+   "top": {
+    "fix_hybrid": [
+     "setup_cfg_fmt.py",
+     "setup.cfg"
+    ],
+    "handoff": [
+     "setup_cfg_fmt.py",
+     "setup.cfg"
+    ],
+    "retry_agent": [
+     "setup_cfg_fmt.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "README.md",
+    "setup_cfg_fmt.py"
+   ],
+   "retry_first_needed_step": 3,
+   "task": "asottile__setup-cfg-fmt-150",
+   "top": {
+    "fix_hybrid": [
+     "setup_cfg_fmt.py",
+     "setup.cfg"
+    ],
+    "handoff": [
+     "setup_cfg_fmt.py",
+     ".pre-commit-config.yaml",
+     ".pre-commit-hooks.yaml"
+    ],
+    "retry_agent": [
+     "setup_cfg_fmt.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "setup_cfg_fmt.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "asottile__setup-cfg-fmt-41",
+   "top": {
+    "fix_hybrid": [
+     "setup_cfg_fmt.py"
+    ],
+    "handoff": [
+     "setup.cfg",
+     "setup.py",
+     "setup_cfg_fmt.py"
+    ],
+    "retry_agent": [
+     "setup.cfg"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "setup_cfg_fmt.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "asottile__setup-cfg-fmt-54",
+   "top": {
+    "fix_hybrid": [
+     "setup_cfg_fmt.py",
+     "setup.cfg"
+    ],
+    "handoff": [
+     "setup.cfg",
+     "setup_cfg_fmt.py"
+    ],
+    "retry_agent": [
+     "setup.cfg"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "README.md",
+    "tokenize_rt.py"
+   ],
+   "retry_first_needed_step": 13,
+   "task": "asottile__tokenize-rt-3",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "tokenize_rt.py"
+    ],
+    "retry_agent": [
+     "tokenize_rt.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "yesqa.py"
+   ],
+   "retry_first_needed_step": 7,
+   "task": "asottile__yesqa-4",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "yesqa.py"
+    ],
+    "retry_agent": [
+     "yesqa.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "yesqa.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "asottile__yesqa-44",
+   "top": {
+    "fix_hybrid": [
+     "yesqa.py"
+    ],
+    "handoff": [
+     "yesqa.py"
+    ],
+    "retry_agent": [
+     "yesqa.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    ".travis.yml",
+    "appveyor.yml",
+    "sphinx_automodapi/automodsumm.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "astropy__sphinx-automodapi-51",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "sphinx_automodapi/automodsumm.py"
+    ],
+    "retry_agent": [
+     "sphinx_automodapi/automodsumm.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "auth0/v3/management/branding.py"
+   ],
+   "retry_first_needed_step": 6,
+   "task": "auth0__auth0-python-463",
+   "top": {
+    "fix_hybrid": [
+     "README.rst",
+     "auth0/v3/management/rules_configs.py",
+     "auth0/v3/management/auth0.py"
+    ],
+    "handoff": [
+     "auth0/v3/management/branding.py",
+     "README.rst",
+     "auth0/v3/management/rules_configs.py"
+    ],
+    "retry_agent": [
+     "auth0/v3/management/branding.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "auth0/management/branding.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "auth0__auth0-python-477",
+   "top": {
+    "fix_hybrid": [
+     "auth0/v3/management/branding.py",
+     "auth0/v3/management/rules_configs.py",
+     "auth0/v3/management/client_grants.py"
+    ],
+    "handoff": [
+     "auth0/management/branding.py",
+     "auth0/v3/management/branding.py",
+     "auth0/v3/management/rules_configs.py"
+    ],
+    "retry_agent": [
+     "auth0/management/branding.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "mailmerge/sendmail_client.py"
+   ],
+   "retry_first_needed_step": 4,
+   "task": "awdeorio__mailmerge-155",
+   "top": {
+    "fix_hybrid": [
+     "mailmerge/template_message.py",
+     "mailmerge/__main__.py",
+     "mailmerge/__init__.py"
+    ],
+    "handoff": [
+     "mailmerge/sendmail_client.py",
+     "mailmerge/template_message.py",
+     "mailmerge/__main__.py"
+    ],
+    "retry_agent": [
+     "mailmerge/sendmail_client.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "mailmerge/template_message.py"
+   ],
+   "retry_first_needed_step": 14,
+   "task": "awdeorio__mailmerge-60",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "setup.py"
+    ],
+    "retry_agent": [
+     "mailmerge/template_message.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    ".github/workflows/pypi-release.yaml",
+    "src/rpdk/core/contract/resource_generator.py",
+    "src/rpdk/core/data_loaders.py"
+   ],
+   "retry_first_needed_step": 11,
+   "task": "aws-cloudformation__cloudformation-cli-937",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     ".github/workflows/pypi-release.yaml"
+    ],
+    "retry_agent": [
+     "src/rpdk/core/upload.py",
+     ".github/workflows/pypi-release.yaml"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "python/rpdk/python/codegen.py",
+    "src/cloudformation_cli_python_lib/resource.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "aws-cloudformation__cloudformation-cli-python-plugin-238",
+   "top": {
+    "fix_hybrid": [
+     "README.md",
+     "python/rpdk/python/codegen.py"
+    ],
+    "handoff": [
+     "setup.cfg",
+     "src/cloudformation_cli_python_lib/resource.py",
+     "README.md"
+    ],
+    "retry_agent": [
+     "src/cloudformation_cli_python_lib/resource.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "aws_xray_sdk/ext/resources/aws_para_whitelist.json"
+   ],
+   "retry_first_needed_step": 8,
+   "task": "aws__aws-xray-sdk-python-93",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "aws_xray_sdk/ext/resources/aws_para_whitelist.json",
+     "aws_xray_sdk/ext/boto_utils.py"
+    ],
+    "retry_agent": [
+     "aws_xray_sdk/ext/boto_utils.py",
+     "aws_xray_sdk/ext/resources/aws_para_whitelist.json"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "cfn_flip/yaml_dumper.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "awslabs__aws-cfn-template-flip-43",
+   "top": {
+    "fix_hybrid": [
+     "cfn_flip/__init__.py",
+     "cfn_flip/clean.py",
+     "cfn_flip/custom_yaml.py"
+    ],
+    "handoff": [
+     "cfn_flip/__init__.py",
+     "cfn_flip/clean.py",
+     "cfn_flip/custom_yaml.py"
+    ],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "pybatfish/datamodel/flow.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "batfish__pybatfish-232",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "pybatfish/datamodel/flow.py"
+    ],
+    "retry_agent": [
+     "tests/datamodel/test_traceevent.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "pybatfish/question/question.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "batfish__pybatfish-244",
+   "top": {
+    "fix_hybrid": [
+     "pybatfish/datamodel/flow.py"
+    ],
+    "handoff": [
+     "pybatfish/client/session.py",
+     "pybatfish/datamodel/flow.py"
+    ],
+    "retry_agent": [
+     "pybatfish/question/bfq.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "CHANGELOG.md",
+    "nmoscommon/aggregator.py",
+    "setup.py"
+   ],
+   "retry_first_needed_step": 3,
+   "task": "bbc__nmos-common-55",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "nmoscommon/aggregator.py"
+    ],
+    "retry_agent": [
+     "nmoscommon/aggregator.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "sasdocs/objects.py"
+   ],
+   "retry_first_needed_step": 10,
+   "task": "benjamincorcoran__sasdocs-37",
+   "top": {
+    "fix_hybrid": [
+     "sasdocs/objects.py"
+    ],
+    "handoff": [
+     "sasdocs/objects.py",
+     "requirements.txt",
+     "sasdocs/program.py"
+    ],
+    "retry_agent": [
+     "sasdocs/rules.py",
+     "tests/samples/macro_1.sas",
+     "tests/test_program.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "sasdocs/objects.py"
+   ],
+   "retry_first_needed_step": 17,
+   "task": "benjamincorcoran__sasdocs-41",
+   "top": {
+    "fix_hybrid": [
+     "sasdocs/objects.py"
+    ],
+    "handoff": [
+     "sasdocs/objects.py"
+    ],
+    "retry_agent": [
+     "tests/samples/simple_1.sas",
+     "sasdocs/program.py",
+     "sasdocs/objects.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    ".gitignore",
+    "binpacking/to_constant_volume.py"
+   ],
+   "retry_first_needed_step": 5,
+   "task": "benmaier__binpacking-16",
+   "top": {
+    "fix_hybrid": [
+     "binpacking/to_constant_bin_number.py",
+     "binpacking/to_constant_volume.py"
+    ],
+    "handoff": [
+     "binpacking/to_constant_volume.py",
+     "binpacking/to_constant_bin_number.py"
+    ],
+    "retry_agent": [
+     "binpacking/to_constant_volume.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "bids/modeling/transformations/base.py",
+    "bids/modeling/transformations/compute.py",
+    "bids/modeling/transformations/munge.py"
+   ],
+   "retry_first_needed_step": 10,
+   "task": "bids-standard__pybids-836",
+   "top": {
+    "fix_hybrid": [
+     "bids/layout/layout.py",
+     "bids/layout/models.py",
+     "bids/layout/writing.py"
+    ],
+    "handoff": [
+     "bids/layout/layout.py",
+     "bids/layout/models.py",
+     "bids/layout/writing.py"
+    ],
+    "retry_agent": [
+     "bids/modeling/transformations/__init__.py",
+     "bids/modeling/transformations/base.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "biomedsheets/io_tsv/germline.py",
+    "biomedsheets/shortcuts/germline.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "bihealth__biomedsheets-25",
+   "top": {
+    "fix_hybrid": [
+     "biomedsheets/io_tsv/germline.py"
+    ],
+    "handoff": [
+     "biomedsheets/io_tsv/germline.py"
+    ],
+    "retry_agent": [
+     "setup.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "bmt/utils.py"
+   ],
+   "retry_first_needed_step": 12,
+   "task": "biolink__biolink-model-toolkit-52",
+   "top": {
+    "fix_hybrid": [
+     "bmt/utils.py"
+    ],
+    "handoff": [
+     "bmt/utils.py",
+     "bmt/toolkit.py"
+    ],
+    "retry_agent": [
+     "bmt/toolkit.py",
+     "bmt/utils.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "biolinkml/generators/pythongen.py"
+   ],
+   "retry_first_needed_step": 7,
+   "task": "biolink__biolinkml-369",
+   "top": {
+    "fix_hybrid": [
+     "biolinkml/generators/jsonschemagen.py"
+    ],
+    "handoff": [
+     "biolinkml/generators/pythongen.py",
+     "biolinkml/generators/jsonschemagen.py"
+    ],
+    "retry_agent": [
+     "biolinkml/generators/pythongen.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "xbout/load.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "boutproject__xBOUT-190",
+   "top": {
+    "fix_hybrid": [
+     "README.md",
+     "xbout/boutdataset.py",
+     "xbout/load.py"
+    ],
+    "handoff": [
+     "xbout/load.py",
+     "README.md",
+     "xbout/boutdataset.py"
+    ],
+    "retry_agent": [
+     "xbout/load.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "HISTORY.rst",
+    "mutmut/__init__.py",
+    "mutmut/__main__.py"
+   ],
+   "retry_first_needed_step": 3,
+   "task": "boxed__mutmut-228",
+   "top": {
+    "fix_hybrid": [
+     "mutmut/__init__.py",
+     "mutmut/__main__.py",
+     "HISTORY.rst"
+    ],
+    "handoff": [
+     "mutmut/__main__.py",
+     "mutmut/__init__.py",
+     "HISTORY.rst"
+    ],
+    "retry_agent": [
+     "mutmut/__main__.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "bpython/curtsiesfrontend/manual_readline.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "bpython__bpython-691",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "bpython/curtsies.py"
+    ],
+    "retry_agent": [
+     "bpython/keys.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "pytailor/__version__.py",
+    "pytailor/tailor.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "bradleygolden__pytailor-15",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "examples/basic/app.py",
+     "pytailor/tailor.py",
+     "tests/test_tailor.py"
+    ],
+    "retry_agent": [
+     "pytailor/tailor.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "sgp4/exporter.py"
+   ],
+   "retry_first_needed_step": 6,
+   "task": "brandon-rhodes__python-sgp4-73",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "sgp4/exporter.py",
+     "sgp4/io.py",
+     "sgp4/model.py"
+    ],
+    "retry_agent": [
+     "sgp4/io.py",
+     "sgp4/exporter.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "README.md",
+    "automata/fa/dfa.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "caleb531__automata-63",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "automata/fa/dfa.py",
+     "automata/fa/nfa.py"
+    ],
+    "retry_agent": [
+     "automata/fa/nfa.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "ops/model.py"
+   ],
+   "retry_first_needed_step": 7,
+   "task": "canonical__operator-702",
+   "top": {
+    "fix_hybrid": [
+     "ops/model.py",
+     "ops/pebble.py",
+     "ops/charm.py"
+    ],
+    "handoff": [
+     "ops/model.py",
+     "ops/pebble.py",
+     "ops/charm.py"
+    ],
+    "retry_agent": [
+     "ops/model.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "ops/model.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "canonical__operator-805",
+   "top": {
+    "fix_hybrid": [
+     "ops/model.py",
+     "ops/charm.py",
+     "ops/framework.py"
+    ],
+    "handoff": [
+     "ops/model.py",
+     "ops/charm.py",
+     "ops/framework.py"
+    ],
+    "retry_agent": [
+     "ops/model.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "ops/model.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "canonical__operator-823",
+   "top": {
+    "fix_hybrid": [
+     "ops/framework.py",
+     "ops/model.py",
+     "ops/charm.py"
+    ],
+    "handoff": [
+     "ops/framework.py",
+     "ops/model.py",
+     "ops/charm.py"
+    ],
+    "retry_agent": [
+     "ops/model.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "README.md",
+    "casbin/enforcer.py",
+    "casbin/util/util.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "casbin__pycasbin-53",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [],
+    "retry_agent": [
+     "casbin/core_enforcer.py",
+     "casbin/internal_enforcer.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "gabbi/utils.py",
+    "tox.ini"
+   ],
+   "retry_first_needed_step": 7,
+   "task": "cdent__gabbi-292",
+   "top": {
+    "fix_hybrid": [
+     "gabbi/runner.py",
+     "docs/source/format.rst",
+     "gabbi/suite.py"
+    ],
+    "handoff": [
+     "gabbi/utils.py",
+     "gabbi/runner.py",
+     "docs/source/format.rst"
+    ],
+    "retry_agent": [
+     "gabbi/utils.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "cekit/builders/docker_builder.py",
+    "cekit/builders/osbs.py"
+   ],
+   "retry_first_needed_step": 1,
+   "task": "cekit__cekit-510",
+   "top": {
+    "fix_hybrid": [
+     "cekit/builders/osbs.py",
+     "cekit/tools.py",
+     ".github/ISSUE_TEMPLATE/bug_report.md"
+    ],
+    "handoff": [
+     "cekit/builders/docker_builder.py",
+     "cekit/builders/osbs.py",
+     "cekit/tools.py"
+    ],
+    "retry_agent": [
+     "cekit/builders/docker_builder.py",
+     "tests/test_unit_builder_docker.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "cekit/tools.py"
+   ],
+   "retry_first_needed_step": 9,
+   "task": "cekit__cekit-532",
+   "top": {
+    "fix_hybrid": [
+     "cekit/builders/osbs.py",
+     "cekit/tools.py",
+     "cekit/builders/docker_builder.py"
+    ],
+    "handoff": [
+     "cekit/generator/osbs.py",
+     "cekit/builders/osbs.py",
+     "cekit/tools.py"
+    ],
+    "retry_agent": [
+     "cekit/generator/osbs.py",
+     "docs/handbook/redhat.rst",
+     "cekit/tools.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "amqp/transport.py"
+   ],
+   "retry_first_needed_step": 4,
+   "task": "celery__py-amqp-344",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "amqp/transport.py"
+    ],
+    "retry_agent": [
+     "amqp/transport.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "AUTHORS",
+    "Changelog",
+    "amqp/transport.py"
+   ],
+   "retry_first_needed_step": 14,
+   "task": "celery__py-amqp-357",
+   "top": {
+    "fix_hybrid": [
+     "amqp/transport.py"
+    ],
+    "handoff": [
+     "amqp/transport.py"
+    ],
+    "retry_agent": [
+     "amqp/transport.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "cherrypy/_cperror.py"
+   ],
+   "retry_first_needed_step": 4,
+   "task": "cherrypy__cherrypy-1578",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "cherrypy/tutorial/tut10_http_errors.py"
+    ],
+    "retry_agent": [
+     "cherrypy/_cperror.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "pyhocon/config_parser.py"
+   ],
+   "retry_first_needed_step": 9,
+   "task": "chimpler__pyhocon-173",
+   "top": {
+    "fix_hybrid": [
+     "pyhocon/config_tree.py",
+     ".travis.yml",
+     "pyhocon/tool.py"
+    ],
+    "handoff": [
+     "pyhocon/config_parser.py",
+     "pyhocon/config_tree.py",
+     ".travis.yml"
+    ],
+    "retry_agent": [
+     "pyhocon/config_parser.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "pyhocon/config_parser.py"
+   ],
+   "retry_first_needed_step": 9,
+   "task": "chimpler__pyhocon-92",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "pyhocon/config_parser.py"
+    ],
+    "retry_agent": [
+     "pyhocon/config_parser.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "coverage.svg",
+    "knackpy/models.py",
+    "setup.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "cityofaustin__knackpy-110",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "knackpy/formatters.py",
+     "knackpy/fields.py"
+    ],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "CHANGELOG.rst",
+    "qrbill/bill.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "claudep__swiss-qr-bill-76",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "qrbill/bill.py"
+    ],
+    "retry_agent": [
+     "qrbill/bill.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "clldutils/badge.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "clld__clldutils-27",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "clldutils/badge.py"
+    ],
+    "retry_agent": [
+     "clldutils/badge.py",
+     "clldutils/tests/test_badge.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "cloudevents/sdk/http/__init__.py",
+    "cloudevents/sdk/http/event.py"
+   ],
+   "retry_first_needed_step": 8,
+   "task": "cloudevents__sdk-python-72",
+   "top": {
+    "fix_hybrid": [
+     "cloudevents/sdk/event/base.py"
+    ],
+    "handoff": [
+     "cloudevents/sdk/http/event.py",
+     "cloudevents/sdk/event/base.py"
+    ],
+    "retry_agent": [
+     "cloudevents/sdk/http/event.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "docs/source/index.md",
+    "flask_sieve/lang/en.py",
+    "flask_sieve/rules_processor.py"
+   ],
+   "retry_first_needed_step": 7,
+   "task": "codingedward__flask-sieve-28",
+   "top": {
+    "fix_hybrid": [
+     "flask_sieve/conditional_inclusion_rules.py",
+     "flask_sieve/rules_processor.py",
+     "watch.sh"
+    ],
+    "handoff": [
+     "flask_sieve/validator.py",
+     "flask_sieve/conditional_inclusion_rules.py",
+     "flask_sieve/rules_processor.py"
+    ],
+    "retry_agent": [
+     "flask_sieve/validator.py",
+     "flask_sieve/rules_processor.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "HISTORY.md",
+    "zpretty/prettifier.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "collective__zpretty-122",
+   "top": {
+    "fix_hybrid": [
+     "HISTORY.md",
+     "zpretty/prettifier.py"
+    ],
+    "handoff": [
+     "HISTORY.md",
+     "zpretty/prettifier.py"
+    ],
+    "retry_agent": [
+     "zpretty/tests/test_zpretty.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "HISTORY.md",
+    "zpretty/prettifier.py"
+   ],
+   "retry_first_needed_step": 7,
+   "task": "collective__zpretty-36",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "zpretty/attributes.py",
+     "zpretty/elements.py",
+     "zpretty/prettifier.py"
+    ],
+    "retry_agent": [
+     "zpretty/prettifier.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "README.md",
+    "flask_compress.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "colour-science__flask-compress-14",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "flask_compress.py"
+    ],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "psm_utils/io/idxml.py",
+    "psm_utils/io/xtandem.py",
+    "psm_utils/peptidoform.py"
+   ],
+   "retry_first_needed_step": 8,
+   "task": "compomics__psm_utils-61",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [],
+    "retry_agent": [
+     "psm_utils/io/idxml.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "rioxarray/exceptions.py",
+    "rioxarray/rioxarray.py",
+    "sphinx/history.rst"
+   ],
+   "retry_first_needed_step": null,
+   "task": "corteva__rioxarray-14",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "rioxarray/rioxarray.py",
+     "rioxarray/crs.py"
+    ],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "fakeredis/_msgs.py",
+    "fakeredis/commands_mixins/sortedset_mixin.py",
+    "fakeredis/commands_mixins/string_mixin.py"
+   ],
+   "retry_first_needed_step": 8,
+   "task": "cunla__fakeredis-py-127",
+   "top": {
+    "fix_hybrid": [
+     "fakeredis/_commands.py",
+     "fakeredis/_basefakesocket.py",
+     "fakeredis/commands_mixins/generic_mixin.py"
+    ],
+    "handoff": [
+     "fakeredis/commands_mixins/sortedset_mixin.py",
+     "fakeredis/_commands.py",
+     "fakeredis/_basefakesocket.py"
+    ],
+    "retry_agent": [
+     "fakeredis/_server.py",
+     "fakeredis/commands_mixins/sortedset_mixin.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "music21/figuredBass/realizer.py",
+    "music21/meter/base.py"
+   ],
+   "retry_first_needed_step": 6,
+   "task": "cuthbertLab__music21-1138",
+   "top": {
+    "fix_hybrid": [
+     "music21/stream/makeNotation.py",
+     "music21/musicxml/xmlToM21.py",
+     "music21/_version.py"
+    ],
+    "handoff": [
+     "music21/stream/makeNotation.py",
+     "music21/musicxml/xmlToM21.py",
+     "music21/_version.py"
+    ],
+    "retry_agent": [
+     "music21/meter/base.py",
+     "music21/meter/core.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "music21/duration.py",
+    "music21/stream/base.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "cuthbertLab__music21-958",
+   "top": {
+    "fix_hybrid": [
+     "music21/stream/makeNotation.py",
+     "music21/stream/__init__.py",
+     "music21/stream/base.py"
+    ],
+    "handoff": [
+     "music21/duration.py",
+     "music21/stream/base.py",
+     "music21/stream/makeNotation.py"
+    ],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "music21/duration.py",
+    "music21/harmony.py",
+    "music21/musicxml/xmlToM21.py"
+   ],
+   "retry_first_needed_step": 6,
+   "task": "cuthbertLab__music21-960",
+   "top": {
+    "fix_hybrid": [
+     "music21/stream/base.py",
+     "music21/stream/makeNotation.py",
+     "music21/stream/__init__.py"
+    ],
+    "handoff": [
+     "music21/duration.py",
+     "music21/stream/base.py",
+     "music21/stream/makeNotation.py"
+    ],
+    "retry_agent": [
+     "music21/duration.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "python_jsonschema_objects/descriptors.py",
+    "python_jsonschema_objects/pattern_properties.py",
+    "tox.ini"
+   ],
+   "retry_first_needed_step": 8,
+   "task": "cwacek__python-jsonschema-objects-234",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [],
+    "retry_agent": [
+     "test/test_regression_214.py",
+     "python_jsonschema_objects/descriptors.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "fmt/fmt.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "damnever__fmt-16",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "fmt/fmt.py"
+    ],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "dandi/cli/cmd_ls.py",
+    "dandi/cli/formatter.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "dandi__dandi-cli-654",
+   "top": {
+    "fix_hybrid": [
+     "dandi/utils.py",
+     "dandi/download.py",
+     "dandi/cli/cmd_ls.py"
+    ],
+    "handoff": [
+     "dandi/cli/cmd_ls.py",
+     "dandi/utils.py",
+     "dandi/download.py"
+    ],
+    "retry_agent": [
+     "dandi/cli/cmd_ls.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "datalad/support/github_.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "datalad__datalad-5603",
+   "top": {
+    "fix_hybrid": [
+     "datalad/interface/__init__.py",
+     "datalad/interface/results.py",
+     "datalad/interface/shell_completion.py"
+    ],
+    "handoff": [
+     "datalad/support/github_.py",
+     "datalad/interface/__init__.py",
+     "datalad/interface/results.py"
+    ],
+    "retry_agent": [
+     "datalad/support/tests/test_github_.py",
+     "Makefile"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "datalad_next/constraints/compound.py"
+   ],
+   "retry_first_needed_step": 4,
+   "task": "datalad__datalad-next-278",
+   "top": {
+    "fix_hybrid": [
+     "datalad_next/annexremotes/uncurl.py",
+     "datalad_next/credman/manager.py",
+     "datalad_next/url_operations/any.py"
+    ],
+    "handoff": [
+     "datalad_next/constraints/compound.py",
+     "datalad_next/constraints/__init__.py",
+     "datalad_next/annexremotes/uncurl.py"
+    ],
+    "retry_agent": [
+     "datalad_next/constraints/__init__.py",
+     "datalad_next/constraints/compound.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "docs/MANUAL.md",
+    "pydatajson/ckan_utils.py",
+    "pydatajson/federation.py"
+   ],
+   "retry_first_needed_step": 3,
+   "task": "datosgobar__pydatajson-125",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "docs/MANUAL.md",
+     "pydatajson/federation.py"
+    ],
+    "retry_agent": [
+     "pydatajson/federation.py",
+     "pydatajson/ckan_utils.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "deepchem/data/datasets.py"
+   ],
+   "retry_first_needed_step": 5,
+   "task": "deepchem__deepchem-2802",
+   "top": {
+    "fix_hybrid": [
+     "deepchem/dock/pose_generation.py",
+     "env.common.yml",
+     "requirements/env_common.yml"
+    ],
+    "handoff": [
+     "deepchem/dock/pose_generation.py",
+     "env.common.yml",
+     "requirements/env_common.yml"
+    ],
+    "retry_agent": [
+     "deepchem/data/datasets.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "CHANGELOG.md",
+    "delphin/tdl.py",
+    "docs/api/delphin.tdl.rst"
+   ],
+   "retry_first_needed_step": 3,
+   "task": "delph-in__pydelphin-362",
+   "top": {
+    "fix_hybrid": [
+     ".github/workflows/checks.yml",
+     "CHANGELOG.md",
+     "delphin/cli/convert.py"
+    ],
+    "handoff": [
+     "delphin/tdl.py",
+     "delphin/tsdb.py",
+     "delphin/util.py"
+    ],
+    "retry_agent": [
+     "delphin/tdl.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "pandas_vet/__init__.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "deppen8__pandas-vet-42",
+   "top": {
+    "fix_hybrid": [
+     "pandas_vet/__init__.py"
+    ],
+    "handoff": [
+     "pandas_vet/__init__.py"
+    ],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "atdate/api.py",
+    "atdate/atdate_format.py",
+    "docs/README.md"
+   ],
+   "retry_first_needed_step": 5,
+   "task": "destag__at-date-17",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "atdate/api.py",
+     "atdate/atdate_format.py"
+    ],
+    "retry_agent": [
+     "atdate/atdate_format.py",
+     "atdate/api.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "src/emcee/ensemble.py",
+    "tox.ini"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "dfm__emcee-510",
+   "top": {
+    "fix_hybrid": [
+     "src/emcee/ensemble.py",
+     "src/emcee/autocorr.py",
+     "src/emcee/backends/hdf.py"
+    ],
+    "handoff": [
+     "src/emcee/ensemble.py",
+     "src/emcee/autocorr.py",
+     "src/emcee/backends/hdf.py"
+    ],
+    "retry_agent": [
+     "src/emcee/ensemble.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "djmoney/money.py",
+    "docs/changes.rst"
+   ],
+   "retry_first_needed_step": 10,
+   "task": "django-money__django-money-596",
+   "top": {
+    "fix_hybrid": [
+     "djmoney/money.py",
+     "docs/changes.rst"
+    ],
+    "handoff": [
+     "djmoney/money.py",
+     "docs/changes.rst"
+    ],
+    "retry_agent": [
+     "djmoney/money.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "asgiref/wsgi.py"
+   ],
+   "retry_first_needed_step": 3,
+   "task": "django__asgiref-183",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "asgiref/wsgi.py"
+    ],
+    "retry_agent": [
+     "asgiref/wsgi.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    ".pre-commit-config.yaml",
+    "asgiref/sync.py"
+   ],
+   "retry_first_needed_step": 6,
+   "task": "django__asgiref-320",
+   "top": {
+    "fix_hybrid": [
+     "asgiref/wsgi.py",
+     "asgiref/sync.py",
+     "CHANGELOG.txt"
+    ],
+    "handoff": [
+     "asgiref/wsgi.py",
+     "asgiref/sync.py",
+     "CHANGELOG.txt"
+    ],
+    "retry_agent": [
+     "asgiref/sync.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "asgiref/sync.py"
+   ],
+   "retry_first_needed_step": 7,
+   "task": "django__asgiref-325",
+   "top": {
+    "fix_hybrid": [
+     "asgiref/sync.py",
+     "asgiref/wsgi.py",
+     ".pre-commit-config.yaml"
+    ],
+    "handoff": [
+     "asgiref/sync.py",
+     "asgiref/wsgi.py",
+     ".pre-commit-config.yaml"
+    ],
+    "retry_agent": [
+     "asgiref/sync.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "CHANGELOG.md",
+    "easy_profile/profiler.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "dmvass__sqlalchemy-easy-profile-19",
+   "top": {
+    "fix_hybrid": [
+     "CHANGELOG.md",
+     "easy_profile/profiler.py"
+    ],
+    "handoff": [
+     "easy_profile/middleware.py",
+     "easy_profile/reporters.py",
+     "CHANGELOG.md"
+    ],
+    "retry_agent": [
+     "easy_profile/middleware.py",
+     "easy_profile/reporters.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "holidays/countries/spain.py"
+   ],
+   "retry_first_needed_step": 5,
+   "task": "dr-prodigy__python-holidays-555",
+   "top": {
+    "fix_hybrid": [
+     "CHANGES",
+     "README.rst",
+     "holidays/countries/__init__.py"
+    ],
+    "handoff": [
+     "holidays/holiday_base.py",
+     "CHANGES",
+     "README.rst"
+    ],
+    "retry_agent": [
+     "holidays/countries/spain.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "parliament/__init__.py",
+    "parliament/cli.py",
+    "parliament/statement.py"
+   ],
+   "retry_first_needed_step": 6,
+   "task": "duo-labs__parliament-177",
+   "top": {
+    "fix_hybrid": [
+     "parliament/statement.py",
+     "parliament/__init__.py",
+     "utils/update_iam_data.py"
+    ],
+    "handoff": [
+     "parliament/statement.py",
+     "parliament/__init__.py",
+     "utils/update_iam_data.py"
+    ],
+    "retry_agent": [
+     "parliament/community_auditors/sensitive_access.py",
+     "parliament/__init__.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "webauthn/helpers/parse_authenticator_data.py"
+   ],
+   "retry_first_needed_step": 6,
+   "task": "duo-labs__py_webauthn-167",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "webauthn/helpers/parse_authenticator_data.py"
+    ],
+    "retry_agent": [
+     "webauthn/helpers/parse_authenticator_data.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "era5cli/cli.py"
+   ],
+   "retry_first_needed_step": 3,
+   "task": "eWaterCycle__era5cli-102",
+   "top": {
+    "fix_hybrid": [
+     "era5cli/cli.py",
+     "era5cli/fetch.py"
+    ],
+    "handoff": [
+     "era5cli/cli.py",
+     "era5cli/fetch.py"
+    ],
+    "retry_agent": [
+     "era5cli/cli.py",
+     "era5cli/fetch.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "era5cli/cli.py",
+    "era5cli/fetch.py"
+   ],
+   "retry_first_needed_step": 3,
+   "task": "eWaterCycle__era5cli-58",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "era5cli/fetch.py"
+    ],
+    "retry_agent": [
+     "era5cli/cli.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "src/wayback/_client.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "edgi-govdata-archiving__wayback-159",
+   "top": {
+    "fix_hybrid": [
+     "requirements-dev.txt",
+     "wayback/_client.py",
+     "wayback/_utils.py"
+    ],
+    "handoff": [
+     "src/wayback/_client.py",
+     "requirements-dev.txt",
+     "wayback/_client.py"
+    ],
+    "retry_agent": [
+     "src/wayback/_client.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "pycparser/c_generator.py",
+    "pycparser/c_parser.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "eliben__pycparser-394",
+   "top": {
+    "fix_hybrid": [
+     "pycparser/c_parser.py",
+     "pycparser/ast_transforms.py",
+     "README.rst"
+    ],
+    "handoff": [
+     "pycparser/c_generator.py",
+     "pycparser/c_parser.py",
+     "pycparser/ast_transforms.py"
+    ],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "emg3d/electrodes.py"
+   ],
+   "retry_first_needed_step": 5,
+   "task": "emsig__emg3d-325",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "emg3d/electrodes.py",
+     "emg3d/fields.py"
+    ],
+    "retry_agent": [
+     "emg3d/electrodes.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "starlette/middleware/httpsredirect.py",
+    "starlette/responses.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "encode__starlette-563",
+   "top": {
+    "fix_hybrid": [
+     "starlette/responses.py",
+     "starlette/datastructures.py",
+     "starlette/routing.py"
+    ],
+    "handoff": [
+     "starlette/routing.py",
+     "starlette/responses.py",
+     "starlette/datastructures.py"
+    ],
+    "retry_agent": [
+     "starlette/routing.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "README.md",
+    "starlette/decorators.py",
+    "starlette/request.py"
+   ],
+   "retry_first_needed_step": 4,
+   "task": "encode__starlette-8",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "starlette/request.py"
+    ],
+    "retry_agent": [
+     "starlette/request.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "starlette/middleware/cors.py"
+   ],
+   "retry_first_needed_step": 3,
+   "task": "encode__starlette-92",
+   "top": {
+    "fix_hybrid": [
+     "docs/background.md",
+     "docs/middleware.md",
+     "starlette/datastructures.py"
+    ],
+    "handoff": [
+     "starlette/middleware/cors.py",
+     "docs/background.md",
+     "docs/middleware.md"
+    ],
+    "retry_agent": [
+     "starlette/middleware/cors.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "uvicorn/__init__.py",
+    "uvicorn/protocols/http/h11.py",
+    "uvicorn/protocols/http/httptools.py"
+   ],
+   "retry_first_needed_step": 11,
+   "task": "encode__uvicorn-114",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [],
+    "retry_agent": [
+     "uvicorn/protocols/http/httptools.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "uvicorn/middleware/message_logger.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "encode__uvicorn-227",
+   "top": {
+    "fix_hybrid": [
+     "uvicorn/protocols/http/h11.py",
+     "uvicorn/protocols/http/httptools.py",
+     "uvicorn/__init__.py"
+    ],
+    "handoff": [
+     "uvicorn/protocols/http/h11.py",
+     "uvicorn/protocols/http/httptools.py",
+     "uvicorn/__init__.py"
+    ],
+    "retry_agent": [
+     "uvicorn/lifespan.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "src/enochecker/enochecker.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "enowars__enochecker-79",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "src/enochecker/enochecker.py"
+    ],
+    "retry_agent": [
+     "src/enochecker/enochecker.py",
+     "example/examplechecker.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "src/enochecker/enochecker.py"
+   ],
+   "retry_first_needed_step": 4,
+   "task": "enowars__enochecker-80",
+   "top": {
+    "fix_hybrid": [
+     "src/enochecker/enochecker.py"
+    ],
+    "handoff": [
+     "src/enochecker/enochecker.py"
+    ],
+    "retry_agent": [
+     "src/enochecker/results.py",
+     "src/enochecker/enochecker.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "src/enochecker/enochecker.py"
+   ],
+   "retry_first_needed_step": 5,
+   "task": "enowars__enochecker-82",
+   "top": {
+    "fix_hybrid": [
+     "src/enochecker/enochecker.py"
+    ],
+    "handoff": [
+     "src/enochecker/enochecker.py"
+    ],
+    "retry_agent": [
+     "src/enochecker/enochecker.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "requirements.txt",
+    "src/cirrus/docker.py"
+   ],
+   "retry_first_needed_step": 9,
+   "task": "evansde77__cirrus-198",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "src/cirrus/build.py",
+     "cirrus.conf",
+     "containers/update_build.sh"
+    ],
+    "retry_agent": [
+     "containers/run_tests.sh",
+     "src/cirrus/docker.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "myst_parser/parsers/directives.py",
+    "myst_parser/parsers/options.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "executablebooks__MyST-Parser-924",
+   "top": {
+    "fix_hybrid": [
+     "myst_parser/sphinx_ext/myst_refs.py"
+    ],
+    "handoff": [
+     "myst_parser/sphinx_ext/myst_refs.py"
+    ],
+    "retry_agent": [
+     "myst_parser/parsers/docutils_.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "bowler/query.py",
+    "bowler/tool.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "facebookincubator__Bowler-2",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "bowler/query.py",
+     "bowler/tests/query.py"
+    ],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "ptr.py",
+    "setup.cfg.sample",
+    "setup.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "facebookincubator__ptr-109",
+   "top": {
+    "fix_hybrid": [
+     "ptr.py",
+     "setup.py",
+     "ci.py"
+    ],
+    "handoff": [
+     "ptr.py",
+     "setup.py",
+     "ci.py"
+    ],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "docs/src/markdown/about/changelog.md",
+    "pymdownx/arithmatex.py"
+   ],
+   "retry_first_needed_step": 6,
+   "task": "facelessuser__pymdown-extensions-889",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "pymdownx/arithmatex.py"
+    ],
+    "retry_agent": [
+     "pymdownx/arithmatex.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "nanopub/setup_nanopub_profile.py"
+   ],
+   "retry_first_needed_step": 4,
+   "task": "fair-workflows__nanopub-140",
+   "top": {
+    "fix_hybrid": [
+     "nanopub/profile.py",
+     "nanopub/client.py",
+     "CHANGELOG.md"
+    ],
+    "handoff": [
+     "nanopub/setup_nanopub_profile.py",
+     "tests/test_setup_profile.py",
+     "nanopub/profile.py"
+    ],
+    "retry_agent": [
+     "tests/test_setup_profile.py",
+     "nanopub/setup_nanopub_profile.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "AUTHORS.md",
+    "docs/user_guide/installation_and_version_guide/v0.7.1.rst",
+    "fairlearn/metrics/_metric_frame.py"
+   ],
+   "retry_first_needed_step": 7,
+   "task": "fairlearn__fairlearn-896",
+   "top": {
+    "fix_hybrid": [
+     "fairlearn/metrics/_group_metric_set.py",
+     "fairlearn/metrics/_metric_frame.py",
+     "CHANGES.md"
+    ],
+    "handoff": [
+     "fairlearn/metrics/_metric_frame.py",
+     "fairlearn/metrics/_group_metric_set.py",
+     "CHANGES.md"
+    ],
+    "retry_agent": [
+     "fairlearn/metrics/_metric_frame.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "falcon/app.py",
+    "falcon/asgi/app.py"
+   ],
+   "retry_first_needed_step": 4,
+   "task": "falconry__falcon-1829",
+   "top": {
+    "fix_hybrid": [
+     "falcon/app.py",
+     "docs/_newsfragments/1717.newandimproved.rst",
+     "falcon/response.py"
+    ],
+    "handoff": [
+     "falcon/app.py",
+     "docs/_newsfragments/1717.newandimproved.rst",
+     "falcon/response.py"
+    ],
+    "retry_agent": [
+     "falcon/app.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "boule/sphere.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "fatiando__boule-52",
+   "top": {
+    "fix_hybrid": [
+     "boule/ellipsoid.py",
+     "boule/__init__.py",
+     "boule/sphere.py"
+    ],
+    "handoff": [
+     "boule/sphere.py",
+     "boule/ellipsoid.py",
+     "boule/__init__.py"
+    ],
+    "retry_agent": [
+     "boule/sphere.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "harmonica/filters/_filters.py"
+   ],
+   "retry_first_needed_step": 11,
+   "task": "fatiando__harmonica-479",
+   "top": {
+    "fix_hybrid": [
+     "doc/api/index.rst",
+     "harmonica/__init__.py",
+     "harmonica/forward/prism_layer.py"
+    ],
+    "handoff": [
+     "harmonica/filters/_filters.py",
+     "doc/api/index.rst",
+     "harmonica/__init__.py"
+    ],
+    "retry_agent": [
+     "harmonica/filters/_filters.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "pooch/processors.py"
+   ],
+   "retry_first_needed_step": 5,
+   "task": "fatiando__pooch-365",
+   "top": {
+    "fix_hybrid": [
+     "pooch/core.py",
+     "pooch/processors.py",
+     "pooch/utils.py"
+    ],
+    "handoff": [
+     "pooch/processors.py",
+     "pooch/core.py",
+     "pooch/utils.py"
+    ],
+    "retry_agent": [
+     "pooch/processors.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "feature_engine/outliers/base_outlier.py",
+    "feature_engine/outliers/trimmer.py",
+    "feature_engine/outliers/winsorizer.py"
+   ],
+   "retry_first_needed_step": 4,
+   "task": "feature-engine__feature_engine-340",
+   "top": {
+    "fix_hybrid": [
+     "feature_engine/selection/target_mean_selection.py",
+     "feature_engine/variable_manipulation.py"
+    ],
+    "handoff": [
+     "feature_engine/outliers/base_outlier.py",
+     "feature_engine/outliers/winsorizer.py",
+     "feature_engine/selection/target_mean_selection.py"
+    ],
+    "retry_agent": [
+     "feature_engine/outliers/winsorizer.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "feature_engine/encoding/mean_encoding.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "feature-engine__feature_engine-531",
+   "top": {
+    "fix_hybrid": [
+     "feature_engine/variable_manipulation.py",
+     "feature_engine/encoding/mean_encoding.py",
+     "feature_engine/encoding/ordinal.py"
+    ],
+    "handoff": [
+     "feature_engine/encoding/mean_encoding.py",
+     "feature_engine/encoding/base_encoder.py",
+     "feature_engine/variable_manipulation.py"
+    ],
+    "retry_agent": [
+     "feature_engine/encoding/mean_encoding.py",
+     "feature_engine/encoding/base_encoder.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "statemachine/callbacks.py",
+    "statemachine/statemachine.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "fgmacedo__python-statemachine-425",
+   "top": {
+    "fix_hybrid": [
+     "statemachine/dispatcher.py",
+     "docs/releases/2.0.0.md",
+     "statemachine/signature.py"
+    ],
+    "handoff": [
+     "statemachine/dispatcher.py",
+     "docs/releases/2.0.0.md",
+     "statemachine/signature.py"
+    ],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "wheniwork/__init__.py"
+   ],
+   "retry_first_needed_step": 10,
+   "task": "fimion__wheniwork-api-py-3",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "wheniwork/__init__.py"
+    ],
+    "retry_agent": [
+     "conf.py",
+     "Makefile",
+     "setup.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    ".gitignore",
+    "fitbenchmarking/cli/main.py",
+    "fitbenchmarking/utils/options.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "fitbenchmarking__fitbenchmarking-664",
+   "top": {
+    "fix_hybrid": [
+     "fitbenchmarking/utils/options.py",
+     "examples/options_template.ini",
+     "fitbenchmarking/utils/default_options.ini"
+    ],
+    "handoff": [
+     "fitbenchmarking/utils/options.py",
+     "examples/options_template.ini",
+     "fitbenchmarking/utils/default_options.ini"
+    ],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "syntok/_segmentation_states.py"
+   ],
+   "retry_first_needed_step": 6,
+   "task": "fnl__syntok-24",
+   "top": {
+    "fix_hybrid": [
+     "syntok/tokenizer.py"
+    ],
+    "handoff": [
+     "syntok/tokenizer.py"
+    ],
+    "retry_agent": [
+     "syntok/segmenter.py",
+     "syntok/_segmentation_states.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "marko/block.py",
+    "marko/helpers.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "frostming__marko-123",
+   "top": {
+    "fix_hybrid": [
+     ".github/workflows/ci.yml",
+     "marko/_compat.py",
+     "marko/block.py"
+    ],
+    "handoff": [
+     "README.md",
+     ".github/workflows/ci.yml",
+     "marko/_compat.py"
+    ],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "fsspec/implementations/cached.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "fsspec__filesystem_spec-1202",
+   "top": {
+    "fix_hybrid": [
+     "fsspec/mapping.py",
+     "fsspec/spec.py",
+     "README.md"
+    ],
+    "handoff": [
+     "fsspec/mapping.py",
+     "fsspec/spec.py",
+     "fsspec/implementations/local.py"
+    ],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "fsspec/core.py",
+    "fsspec/generic.py"
+   ],
+   "retry_first_needed_step": 4,
+   "task": "fsspec__filesystem_spec-1452",
+   "top": {
+    "fix_hybrid": [
+     ".github/workflows/main.yaml",
+     "fsspec/archive.py",
+     "tox.ini"
+    ],
+    "handoff": [
+     "fsspec/core.py",
+     ".github/workflows/main.yaml",
+     "fsspec/archive.py"
+    ],
+    "retry_agent": [
+     "fsspec/core.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "fsspec/implementations/memory.py"
+   ],
+   "retry_first_needed_step": 6,
+   "task": "fsspec__filesystem_spec-926",
+   "top": {
+    "fix_hybrid": [
+     "ci/environment-win.yml",
+     "fsspec/dircache.py",
+     "fsspec/implementations/local.py"
+    ],
+    "handoff": [
+     "fsspec/implementations/memory.py",
+     "ci/environment-win.yml",
+     "fsspec/dircache.py"
+    ],
+    "retry_agent": [
+     "fsspec/implementations/memory.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    ".github/workflows/main.yaml",
+    "fsspec/archive.py",
+    "tox.ini"
+   ],
+   "retry_first_needed_step": null,
+   "task": "fsspec__filesystem_spec-996",
+   "top": {
+    "fix_hybrid": [
+     "fsspec/mapping.py",
+     "fsspec/spec.py",
+     "fsspec/implementations/http.py"
+    ],
+    "handoff": [
+     "fsspec/archive.py",
+     "fsspec/mapping.py",
+     "fsspec/spec.py"
+    ],
+    "retry_agent": [
+     "fsspec/implementations/http.py",
+     "fsspec/spec.py",
+     "fsspec/registry.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "CHANGES.txt",
+    "nikola/post.py",
+    "nikola/utils.py"
+   ],
+   "retry_first_needed_step": 12,
+   "task": "getnikola__nikola-3504",
+   "top": {
+    "fix_hybrid": [
+     "AUTHORS.txt",
+     "CHANGES.txt",
+     "nikola/plugins/compile/rest/doc.py"
+    ],
+    "handoff": [
+     "nikola/conf.py.in",
+     "AUTHORS.txt",
+     "CHANGES.txt"
+    ],
+    "retry_agent": [
+     "nikola/post.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "m3u8/model.py",
+    "m3u8/parser.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "globocom__m3u8-231",
+   "top": {
+    "fix_hybrid": [
+     "m3u8/model.py",
+     "m3u8/parser.py",
+     "README.rst"
+    ],
+    "handoff": [
+     "m3u8/model.py",
+     "m3u8/parser.py",
+     "README.rst"
+    ],
+    "retry_agent": [
+     "m3u8/model.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "changelog.txt",
+    "signac/contrib/project.py"
+   ],
+   "retry_first_needed_step": 5,
+   "task": "glotzerlab__signac-323",
+   "top": {
+    "fix_hybrid": [
+     "changelog.txt",
+     "signac/contrib/project.py",
+     "signac/contrib/collection.py"
+    ],
+    "handoff": [
+     "signac/contrib/project.py",
+     "changelog.txt",
+     "signac/contrib/collection.py"
+    ],
+    "retry_agent": [
+     "signac/contrib/project.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "src/securescaffold/views.py"
+   ],
+   "retry_first_needed_step": 5,
+   "task": "google__gae-secure-scaffold-python3-14",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [],
+    "retry_agent": [
+     "src/securescaffold/views.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    ".gitignore",
+    "pyproject.toml",
+    "src/latexify/latexify_visitor.py"
+   ],
+   "retry_first_needed_step": 10,
+   "task": "google__latexify_py-67",
+   "top": {
+    "fix_hybrid": [
+     "src/latexify/frontend.py",
+     "src/latexify/latexify_visitor.py",
+     "src/latexify/transformers/__init__.py"
+    ],
+    "handoff": [
+     "src/latexify/latexify_visitor.py",
+     "src/latexify/frontend.py",
+     "src/latexify/__init__.py"
+    ],
+    "retry_agent": [
+     "src/latexify/__init__.py",
+     "src/latexify/frontend.py",
+     "src/latexify/latexify_visitor.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "mobly/config_parser.py",
+    "mobly/controllers/android_device.py",
+    "mobly/controllers/android_device_lib/jsonrpc_client_base.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "google__mobly-472",
+   "top": {
+    "fix_hybrid": [
+     "mobly/controllers/android_device.py",
+     "mobly/controllers/android_device_lib/snippet_client.py",
+     "mobly/signals.py"
+    ],
+    "handoff": [
+     "mobly/config_parser.py",
+     "mobly/controllers/android_device.py",
+     "mobly/controllers/android_device_lib/snippet_client.py"
+    ],
+    "retry_agent": [
+     "mobly/config_parser.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "CHANGELOG",
+    "yapf/yapflib/pytree_unwrapper.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "google__yapf-441",
+   "top": {
+    "fix_hybrid": [
+     "CHANGELOG",
+     "plugins/README.rst",
+     "yapf/__init__.py"
+    ],
+    "handoff": [
+     "CHANGELOG",
+     "plugins/README.rst",
+     "yapf/__init__.py"
+    ],
+    "retry_agent": [
+     "yapftests/reformatter_pep8_test.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "gapic/schema/metadata.py",
+    "gapic/schema/wrappers.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "googleapis__gapic-generator-python-654",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [],
+    "retry_agent": [
+     "CHANGELOG.md",
+     "gapic/schema/naming.py",
+     "gapic/samplegen_utils/utils.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "google/cloud/devtools/containeranalysis_v1/services/container_analysis/async_client.py",
+    "google/cloud/devtools/containeranalysis_v1/services/container_analysis/client.py",
+    "owlbot.py"
+   ],
+   "retry_first_needed_step": 18,
+   "task": "googleapis__python-containeranalysis-251",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "google/cloud/devtools/containeranalysis_v1/services/container_analysis/client.py"
+    ],
+    "retry_agent": [
+     "google/cloud/devtools/containeranalysis_v1/services/container_analysis/client.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "google/cloud/spanner_dbapi/parse_utils.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "googleapis__python-spanner-317",
+   "top": {
+    "fix_hybrid": [
+     "google/cloud/spanner_dbapi/parse_utils.py"
+    ],
+    "handoff": [
+     "google/cloud/spanner_dbapi/parse_utils.py",
+     "google/cloud/spanner_dbapi/cursor.py"
+    ],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "dbtmetabase/manifest.py",
+    "sandbox/models/schema.yml"
+   ],
+   "retry_first_needed_step": 8,
+   "task": "gouline__dbt-metabase-234",
+   "top": {
+    "fix_hybrid": [
+     "dbtmetabase/parsers/dbt_manifest.py",
+     "Makefile",
+     "dbtmetabase/metabase.py"
+    ],
+    "handoff": [
+     "dbtmetabase/manifest.py",
+     "sandbox/models/schema.yml",
+     "dbtmetabase/_models.py"
+    ],
+    "retry_agent": [
+     "tests/fixtures/manifest-v11.json",
+     "dbtmetabase/manifest.py",
+     "dbtmetabase/_models.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "grappa/operators/raises.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "grappa-py__grappa-65",
+   "top": {
+    "fix_hybrid": [
+     "grappa/operators/raises.py"
+    ],
+    "handoff": [
+     "grappa/operators/raises.py"
+    ],
+    "retry_agent": [
+     "tests/conftest.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "hcloud/servers/client.py",
+    "hcloud/servers/domain.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "hetznercloud__hcloud-python-276",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "hcloud/servers/client.py"
+    ],
+    "retry_agent": [
+     "hcloud/images/domain.py",
+     "hcloud/_client.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "recipe_scrapers/_utils.py",
+    "recipe_scrapers/nihhealthyeating.py",
+    "recipe_scrapers/tastykitchen.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "hhursev__recipe-scrapers-915",
+   "top": {
+    "fix_hybrid": [
+     "recipe_scrapers/realsimple.py",
+     "README.rst",
+     "recipe_scrapers/domesticateme.py"
+    ],
+    "handoff": [
+     "recipe_scrapers/__init__.py",
+     "recipe_scrapers/_utils.py",
+     "recipe_scrapers/panelinha.py"
+    ],
+    "retry_agent": [
+     "recipe_scrapers/_utils.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "fastjsonschema/draft04.py",
+    "fastjsonschema/generator.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "horejsek__python-fastjsonschema-88",
+   "top": {
+    "fix_hybrid": [
+     "fastjsonschema/draft04.py",
+     "fastjsonschema/generator.py"
+    ],
+    "handoff": [
+     "fastjsonschema/generator.py",
+     "fastjsonschema/draft04.py"
+    ],
+    "retry_agent": [
+     "fastjsonschema/generator.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "pypistats/cli.py"
+   ],
+   "retry_first_needed_step": 3,
+   "task": "hugovk__pypistats-41",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "pypistats/cli.py"
+    ],
+    "retry_agent": [
+     "pypistats/cli.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "NEWS.rst",
+    "hy/reader/hy_reader.py"
+   ],
+   "retry_first_needed_step": 12,
+   "task": "hylang__hy-2454",
+   "top": {
+    "fix_hybrid": [
+     "NEWS.rst",
+     "docs/cli.rst",
+     "hy/cmdline.py"
+    ],
+    "handoff": [
+     "hy/reader/reader.py",
+     "hy/reader/hy_reader.py",
+     "NEWS.rst"
+    ],
+    "retry_agent": [
+     "hy/models.py",
+     "hy/reader/reader.py",
+     "hy/reader/hy_reader.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "pyhap/accessory.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "ikalchev__HAP-python-335",
+   "top": {
+    "fix_hybrid": [
+     "pyhap/camera.py",
+     "pyhap/hap_server.py"
+    ],
+    "handoff": [
+     "pyhap/camera.py",
+     "pyhap/hap_server.py"
+    ],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "README.md",
+    "typing_inspect.py"
+   ],
+   "retry_first_needed_step": 3,
+   "task": "ilevkivskyi__typing_inspect-26",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [],
+    "retry_agent": [
+     "typing_inspect.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "pycparserext/ext_c_parser.py"
+   ],
+   "retry_first_needed_step": 4,
+   "task": "inducer__pycparserext-46",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [],
+    "retry_agent": [
+     "pycparserext/ext_c_parser.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "pycparserext/ext_c_parser.py"
+   ],
+   "retry_first_needed_step": 3,
+   "task": "inducer__pycparserext-62",
+   "top": {
+    "fix_hybrid": [
+     "pycparserext/ext_c_parser.py",
+     "pycparserext/ext_c_generator.py",
+     "pycparserext/ext_c_lexer.py"
+    ],
+    "handoff": [
+     "pycparserext/ext_c_parser.py",
+     "pycparserext/ext_c_generator.py",
+     "pycparserext/ext_c_lexer.py"
+    ],
+    "retry_agent": [
+     "pycparserext/ext_c_parser.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "CHANGELOG.md",
+    "README.rst",
+    "influxdb_client/client/influxdb_client.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "influxdata__influxdb-client-python-203",
+   "top": {
+    "fix_hybrid": [
+     "CHANGELOG.md",
+     "influxdb_client/client/influxdb_client.py"
+    ],
+    "handoff": [
+     "influxdb_client/client/influxdb_client.py",
+     "CHANGELOG.md"
+    ],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "adam/ontology/phase1_ontology.py",
+    "adam/perception/high_level_semantics_situation_to_developmental_primitive_perception.py",
+    "requirements.txt"
+   ],
+   "retry_first_needed_step": 4,
+   "task": "isi-vista__adam-126",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "adam/situation/__init__.py",
+     "adam/situation/templates/__init__.py"
+    ],
+    "retry_agent": [
+     "adam/ontology/phase1_ontology.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "adam/curriculum/phase1_curriculum.py",
+    "adam/ontology/phase1_ontology.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "isi-vista__adam-304",
+   "top": {
+    "fix_hybrid": [
+     "adam/ontology/phase1_ontology.py",
+     "adam/language_specific/english/english_language_generator.py",
+     "adam/perception/high_level_semantics_situation_to_developmental_primitive_perception.py"
+    ],
+    "handoff": [
+     "adam/language/lexicon.py",
+     "adam/perception/high_level_semantics_situation_to_developmental_primitive_perception.py",
+     "adam/situation/templates/phase1_templates.py"
+    ],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "adam/curriculum/verbs_with_dynamic_prepositions_curriculum.py",
+    "adam/curriculum_to_html.py",
+    "parameters/html/curriculum_to_html.dynamic-prepositions.params"
+   ],
+   "retry_first_needed_step": null,
+   "task": "isi-vista__adam-581",
+   "top": {
+    "fix_hybrid": [
+     "adam/ontology/phase1_ontology.py",
+     "adam/curriculum/phase1_curriculum.py",
+     "adam/curriculum_to_html.py"
+    ],
+    "handoff": [
+     "adam/ontology/phase1_ontology.py",
+     "adam/curriculum/phase1_curriculum.py",
+     "adam/curriculum_to_html.py"
+    ],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "vistautils/parameters.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "isi-vista__vistautils-116",
+   "top": {
+    "fix_hybrid": [
+     "vistautils/parameters.py",
+     "vistautils/scripts/directory_to_key_value_store.py",
+     "vistautils/range.py"
+    ],
+    "handoff": [
+     "vistautils/io_utils.py",
+     "vistautils/parameters.py",
+     "vistautils/scripts/directory_to_key_value_store.py"
+    ],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "requests_mock/mocker.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "jamielennox__requests-mock-116",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "src/humanize/number.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "jmoiron__humanize-123",
+   "top": {
+    "fix_hybrid": [
+     ".pre-commit-config.yaml",
+     ".github/PULL_REQUEST_TEMPLATE.md",
+     "src/humanize/number.py"
+    ],
+    "handoff": [
+     "src/humanize/number.py",
+     "setup.py",
+     ".pre-commit-config.yaml"
+    ],
+    "retry_agent": [
+     "src/humanize/number.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "aioredlock/algorithm.py",
+    "aioredlock/lock.py"
+   ],
+   "retry_first_needed_step": 3,
+   "task": "joanvila__aioredlock-77",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "aioredlock/__init__.py",
+     "aioredlock/algorithm.py",
+     "aioredlock/lock.py"
+    ],
+    "retry_agent": [
+     "aioredlock/lock.py",
+     "tests/acceptance/test_aioredlock.py",
+     "aioredlock/algorithm.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "joblib/format_stack.py"
+   ],
+   "retry_first_needed_step": 16,
+   "task": "joblib__joblib-444",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [],
+    "retry_agent": [
+     "joblib/parallel.py",
+     "joblib/format_stack.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "CHANGELOG.rst",
+    "environ/environ.py"
+   ],
+   "retry_first_needed_step": 4,
+   "task": "joke2k__django-environ-332",
+   "top": {
+    "fix_hybrid": [
+     "environ/environ.py",
+     "CHANGELOG.rst",
+     "docs/tips.rst"
+    ],
+    "handoff": [
+     "environ/environ.py",
+     "CHANGELOG.rst",
+     "docs/tips.rst"
+    ],
+    "retry_agent": [
+     "environ/environ.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "hubspot3/base.py"
+   ],
+   "retry_first_needed_step": 17,
+   "task": "jpetrucciani__hubspot3-78",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "hubspot3/__init__.py",
+     "hubspot3/base.py"
+    ],
+    "retry_agent": [
+     "hubspot3/__init__.py",
+     "hubspot3/base.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "CHANGES.rst",
+    "src/hibpcli/cli.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "jugmac00__hibpcli-59",
+   "top": {
+    "fix_hybrid": [
+     "CHANGELOG.md",
+     "hibpcli/cli.py",
+     "hibpcli/exceptions.py"
+    ],
+    "handoff": [
+     "src/hibpcli/cli.py",
+     "tests/test_cli_for_check_keepass.py",
+     "CHANGELOG.md"
+    ],
+    "retry_agent": [
+     "src/hibpcli/cli.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "nbformat/json_compat.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "jupyter__nbformat-198",
+   "top": {
+    "fix_hybrid": [
+     "nbformat/__init__.py"
+    ],
+    "handoff": [
+     "nbformat/v4/nbformat.v4.schema.json",
+     "nbformat/__init__.py"
+    ],
+    "retry_agent": [
+     "nbformat/validator.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "kubespawner/objects.py",
+    "kubespawner/spawner.py"
+   ],
+   "retry_first_needed_step": 4,
+   "task": "jupyterhub__kubespawner-239",
+   "top": {
+    "fix_hybrid": [
+     "kubespawner/objects.py",
+     "kubespawner/spawner.py",
+     "jupyterhub_config.py"
+    ],
+    "handoff": [
+     "kubespawner/spawner.py",
+     "kubespawner/objects.py",
+     "jupyterhub_config.py"
+    ],
+    "retry_agent": [
+     "kubespawner/spawner.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "fffw/encoding/filters.py",
+    "fffw/graph/meta.py"
+   ],
+   "retry_first_needed_step": 18,
+   "task": "just-work__fffw-106",
+   "top": {
+    "fix_hybrid": [
+     "fffw/encoding/filters.py",
+     "fffw/graph/meta.py",
+     "fffw/wrapper/base.py"
+    ],
+    "handoff": [
+     "fffw/encoding/filters.py",
+     "fffw/graph/meta.py",
+     "fffw/wrapper/base.py"
+    ],
+    "retry_agent": [
+     "fffw/encoding/filters.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "fffw/encoding/filters.py"
+   ],
+   "retry_first_needed_step": 5,
+   "task": "just-work__fffw-64",
+   "top": {
+    "fix_hybrid": [
+     "fffw/graph/meta.py",
+     "examples/overlay.py",
+     "fffw/encoding/outputs.py"
+    ],
+    "handoff": [
+     "fffw/encoding/filters.py",
+     "fffw/wrapper/params.py",
+     "fffw/graph/meta.py"
+    ],
+    "retry_agent": [
+     "fffw/encoding/filters.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "fffw/encoding/filters.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "just-work__fffw-68",
+   "top": {
+    "fix_hybrid": [
+     "fffw/encoding/filters.py",
+     "fffw/graph/meta.py",
+     "examples/overlay.py"
+    ],
+    "handoff": [
+     "fffw/encoding/filters.py",
+     "fffw/wrapper/base.py",
+     "fffw/graph/meta.py"
+    ],
+    "retry_agent": [
+     "fffw/encoding/complex.py",
+     "fffw/encoding/ffmpeg.py",
+     "fffw/encoding/inputs.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "fdbk/data_tools/_utils.py",
+    "fdbk/schemas/statistics-out.json"
+   ],
+   "retry_first_needed_step": 3,
+   "task": "kangasta__fdbk-77",
+   "top": {
+    "fix_hybrid": [
+     "fdbk/_db_connection.py",
+     "fdbk/data_tools/_aggregate.py",
+     "fdbk/data_tools/_utils.py"
+    ],
+    "handoff": [
+     "fdbk/data_tools/_utils.py",
+     "fdbk/data_tools/functions/_chart_funcs.py",
+     "fdbk/data_tools/functions/_collection_funcs.py"
+    ],
+    "retry_agent": [
+     "fdbk/data_tools/_utils.py",
+     "fdbk/data_tools/_aggregate.py",
+     "fdbk/data_tools/functions/_value_funcs.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "ncbi_genome_download/core.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "kblin__ncbi-genome-download-25",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "ncbi_genome_download/core.py"
+    ],
+    "retry_agent": [
+     "ncbi_genome_download/core.py",
+     "ncbi_genome_download/summary.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "skfem/utils.py"
+   ],
+   "retry_first_needed_step": 4,
+   "task": "kinnala__scikit-fem-622",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "skfem/utils.py"
+    ],
+    "retry_agent": [
+     "skfem/utils.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "pyof/v0x04/controller2switch/common.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "kytos__python-openflow-288",
+   "top": {
+    "fix_hybrid": [
+     "pyof/v0x04/common/action.py",
+     "pyof/v0x04/controller2switch/common.py",
+     "pyof/v0x04/common/port.py"
+    ],
+    "handoff": [
+     "pyof/v0x04/common/action.py",
+     "pyof/v0x04/controller2switch/common.py",
+     "pyof/v0x04/common/port.py"
+    ],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "lark/common.py",
+    "lark/lark.py",
+    "lark/parser_frontends.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "lark-parser__lark-650",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "lark/lark.py",
+     "lark/parse_tree_builder.py",
+     "lark/tools/standalone.py"
+    ],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "README.rst",
+    "flake8_array_spacing/__init__.py"
+   ],
+   "retry_first_needed_step": 17,
+   "task": "larsoner__flake8-array-spacing-3",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "flake8_array_spacing/__init__.py"
+    ],
+    "retry_agent": [
+     "setup.py",
+     "flake8_array_spacing/tests/test_array_spacing.py",
+     "README.rst"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "flake8_array_spacing/__init__.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "larsoner__flake8-array-spacing-4",
+   "top": {
+    "fix_hybrid": [
+     "README.rst",
+     "flake8_array_spacing/__init__.py"
+    ],
+    "handoff": [
+     "flake8_array_spacing/__init__.py",
+     "README.rst"
+    ],
+    "retry_agent": [
+     "flake8_array_spacing/__init__.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "CHANGELOG.md",
+    "laterpay/signing.py"
+   ],
+   "retry_first_needed_step": 3,
+   "task": "laterpay__laterpay-client-python-85",
+   "top": {
+    "fix_hybrid": [
+     "laterpay/__init__.py"
+    ],
+    "handoff": [
+     "laterpay/signing.py",
+     "laterpay/__init__.py"
+    ],
+    "retry_agent": [
+     "laterpay/signing.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "constructible.py"
+   ],
+   "retry_first_needed_step": 5,
+   "task": "leovt__constructible-3",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "constructible.py"
+    ],
+    "retry_agent": [
+     "constructible.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "morphi/messages/manager.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "level12__morphi-6",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "morphi/messages/manager.py"
+    ],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "dataclasses_json/mm.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "lidatong__dataclasses-json-123",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "dataclasses_json/mm.py",
+     "dataclasses_json/api.py",
+     "dataclasses_json/core.py"
+    ],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "phc/easy/patients/__init__.py",
+    "phc/easy/patients/address.py"
+   ],
+   "retry_first_needed_step": 5,
+   "task": "lifeomic__phc-sdk-py-69",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "phc/easy/patients/__init__.py",
+     "phc/easy/patients/address.py",
+     "phc/easy/frame.py"
+    ],
+    "retry_agent": [
+     "phc/easy/patients/address.py",
+     "phc/session.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "pyventory/asset.py",
+    "pyventory/export.py",
+    "pyventory/inventory.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "lig__pyventory-18",
+   "top": {
+    "fix_hybrid": [
+     ".gitignore",
+     "pyventory/asset.py",
+     "pyventory/errors.py"
+    ],
+    "handoff": [
+     "pyventory/asset.py",
+     ".gitignore",
+     "pyventory/errors.py"
+    ],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "setup.cfg",
+    "src/shiv/builder.py"
+   ],
+   "retry_first_needed_step": 3,
+   "task": "linkedin__shiv-237",
+   "top": {
+    "fix_hybrid": [
+     "src/shiv/bootstrap/__init__.py",
+     "src/shiv/cli.py",
+     "src/shiv/constants.py"
+    ],
+    "handoff": [
+     "src/shiv/builder.py",
+     "src/shiv/bootstrap/__init__.py",
+     "src/shiv/cli.py"
+    ],
+    "retry_agent": [
+     "src/shiv/bootstrap/__init__.py",
+     "src/shiv/builder.py",
+     "src/shiv/cli.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "linkml/generators/linkmlgen.py"
+   ],
+   "retry_first_needed_step": 17,
+   "task": "linkml__linkml-1226",
+   "top": {
+    "fix_hybrid": [
+     "linkml/generators/jsonschemagen.py",
+     "linkml/utils/converter.py",
+     "linkml/_version.py"
+    ],
+    "handoff": [
+     "docs/schemas/imports.md",
+     "linkml/utils/generator.py",
+     "linkml/generators/linkmlgen.py"
+    ],
+    "retry_agent": [
+     "pyproject.toml",
+     "tests/test_generators/test_linkmlgen.py",
+     "linkml/generators/linkmlgen.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "linkml/generators/jsonschemagen.py",
+    "linkml/generators/pydanticgen.py"
+   ],
+   "retry_first_needed_step": 4,
+   "task": "linkml__linkml-1411",
+   "top": {
+    "fix_hybrid": [
+     "linkml/generators/jsonschemagen.py",
+     "linkml/linter/cli.py",
+     "linkml/linter/formatters/terminal_formatter.py"
+    ],
+    "handoff": [
+     "linkml/generators/jsonschemagen.py",
+     "linkml/linter/cli.py",
+     "linkml/linter/formatters/terminal_formatter.py"
+    ],
+    "retry_agent": [
+     "linkml/generators/jsonschemagen.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "respx/patterns.py",
+    "respx/utils.py"
+   ],
+   "retry_first_needed_step": 31,
+   "task": "lundberg__respx-259",
+   "top": {
+    "fix_hybrid": [
+     "respx/patterns.py",
+     "docs/api.md",
+     "respx/utils.py"
+    ],
+    "handoff": [
+     "respx/models.py",
+     "respx/router.py",
+     "respx/patterns.py"
+    ],
+    "retry_agent": [
+     "CHANGELOG.md",
+     "respx/mocks.py",
+     "respx/router.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "nmigen/hdl/rec.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "m-labs__nmigen-50",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "nmigen/hdl/rec.py"
+    ],
+    "retry_agent": [
+     "nmigen/hdl/rec.py",
+     "nmigen/test/test_hdl_rec.py",
+     "nmigen/compat/genlib/record.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "sql_metadata/parser.py"
+   ],
+   "retry_first_needed_step": 9,
+   "task": "macbre__sql-metadata-143",
+   "top": {
+    "fix_hybrid": [
+     "sql_metadata/parser.py",
+     "sql_metadata/token.py",
+     "sql_metadata.py"
+    ],
+    "handoff": [
+     "sql_metadata/parser.py",
+     "sql_metadata/token.py",
+     "sql_metadata.py"
+    ],
+    "retry_agent": [
+     "sql_metadata/parser.py",
+     "sql_metadata/token.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "language_formatters_pre_commit_hooks/pretty_format_toml.py"
+   ],
+   "retry_first_needed_step": 3,
+   "task": "macisamuele__language-formatters-pre-commit-hooks-160",
+   "top": {
+    "fix_hybrid": [
+     ".gitattributes",
+     ".github/workflows/build.yaml",
+     "language_formatters_pre_commit_hooks/pretty_format_golang.py"
+    ],
+    "handoff": [
+     "language_formatters_pre_commit_hooks/pretty_format_toml.py",
+     ".gitattributes",
+     ".github/workflows/build.yaml"
+    ],
+    "retry_agent": [
+     "language_formatters_pre_commit_hooks/pretty_format_toml.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "boltons/dictutils.py"
+   ],
+   "retry_first_needed_step": 7,
+   "task": "mahmoud__boltons-341",
+   "top": {
+    "fix_hybrid": [
+     "boltons/funcutils.py",
+     "boltons/socketutils.py",
+     "boltons/urlutils.py"
+    ],
+    "handoff": [
+     "boltons/dictutils.py",
+     "boltons/funcutils.py",
+     "boltons/socketutils.py"
+    ],
+    "retry_agent": [
+     "boltons/dictutils.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    ".github/workflows/coverage.yml",
+    ".github/workflows/pre-commit.yml",
+    "dataclass_cli/parser.py"
+   ],
+   "retry_first_needed_step": 5,
+   "task": "malte-soe__dataclass-cli-6",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "dataclass_cli/parser.py",
+     "dataclass_cli/__init__.py"
+    ],
+    "retry_agent": [
+     "dataclass_cli/parser.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "README.md",
+    "htmlproofer/plugin.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "manuzhang__mkdocs-htmlproofer-plugin-75",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "htmlproofer/plugin.py"
+    ],
+    "retry_agent": [
+     "htmlproofer/plugin.py",
+     "tests/unit/test_plugin.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "README.rst",
+    "cligj/features.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "mapbox__cligj-14",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "cligj/features.py",
+     "tests/test_features.py"
+    ],
+    "retry_agent": [
+     "cligj/features.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "src/cutadapt/report.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "marcelm__cutadapt-781",
+   "top": {
+    "fix_hybrid": [
+     "src/cutadapt/adapters.py",
+     "src/cutadapt/kmer_heuristic.py"
+    ],
+    "handoff": [
+     "src/cutadapt/report.py",
+     "src/cutadapt/adapters.py",
+     "src/cutadapt/kmer_heuristic.py"
+    ],
+    "retry_agent": [
+     "src/cutadapt/adapters.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "dataclasses_avroschema/model_generator/generator.py"
+   ],
+   "retry_first_needed_step": 6,
+   "task": "marcosschroh__dataclasses-avroschema-236",
+   "top": {
+    "fix_hybrid": [
+     "dataclasses_avroschema/fields.py",
+     "dataclasses_avroschema/utils.py"
+    ],
+    "handoff": [
+     "dataclasses_avroschema/model_generator/templates.py",
+     "dataclasses_avroschema/model_generator/generator.py",
+     "dataclasses_avroschema/fields.py"
+    ],
+    "retry_agent": [
+     "dataclasses_avroschema/model_generator/generator.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "dataclasses_avroschema/fields.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "marcosschroh__dataclasses-avroschema-244",
+   "top": {
+    "fix_hybrid": [
+     "dataclasses_avroschema/fields.py",
+     "dataclasses_avroschema/schema_definition.py",
+     "dataclasses_avroschema/schema_generator.py"
+    ],
+    "handoff": [
+     "dataclasses_avroschema/fields.py",
+     "dataclasses_avroschema/schema_definition.py",
+     "dataclasses_avroschema/schema_generator.py"
+    ],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "dataclasses_avroschema/model_generator/generator.py"
+   ],
+   "retry_first_needed_step": 11,
+   "task": "marcosschroh__dataclasses-avroschema-403",
+   "top": {
+    "fix_hybrid": [
+     "dataclasses_avroschema/fields.py",
+     "dataclasses_avroschema/schema_definition.py",
+     "dataclasses_avroschema/model_generator/generator.py"
+    ],
+    "handoff": [
+     "dataclasses_avroschema/model_generator/generator.py",
+     "dataclasses_avroschema/fields.py",
+     "dataclasses_avroschema/schema_definition.py"
+    ],
+    "retry_agent": [
+     "dataclasses_avroschema/fields/fields.py",
+     "dataclasses_avroschema/__init__.py",
+     "dataclasses_avroschema/model_generator/generator.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "vermouth/processors/canonicalize_modifications.py"
+   ],
+   "retry_first_needed_step": 4,
+   "task": "marrink-lab__vermouth-martinize-280",
+   "top": {
+    "fix_hybrid": [
+     "vermouth/processors/average_beads.py"
+    ],
+    "handoff": [
+     "vermouth/processors/canonicalize_modifications.py",
+     "vermouth/processors/repair_graph.py",
+     "vermouth/processors/average_beads.py"
+    ],
+    "retry_agent": [
+     "vermouth/processors/canonicalize_modifications.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "CHANGELOG.rst",
+    "src/apispec_webframeworks/bottle.py"
+   ],
+   "retry_first_needed_step": 8,
+   "task": "marshmallow-code__apispec-webframeworks-64",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [],
+    "retry_agent": [
+     "src/apispec_webframeworks/bottle.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "matchms/similarity/spectrum_similarity_functions.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "matchms__matchms-212",
+   "top": {
+    "fix_hybrid": [
+     "CHANGELOG.md",
+     "matchms/filtering/add_parent_mass.py"
+    ],
+    "handoff": [
+     "matchms/similarity/spectrum_similarity_functions.py",
+     "CHANGELOG.md",
+     "matchms/filtering/add_parent_mass.py"
+    ],
+    "retry_agent": [
+     "matchms/similarity/spectrum_similarity_functions.py",
+     "tests/test_scores.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "CHANGELOG.md",
+    "matchms/networking/SimilarityNetwork.py"
+   ],
+   "retry_first_needed_step": 5,
+   "task": "matchms__matchms-349",
+   "top": {
+    "fix_hybrid": [
+     "CHANGELOG.md",
+     "matchms/filtering/add_parent_mass.py",
+     "matchms/filtering/add_precursor_mz.py"
+    ],
+    "handoff": [
+     "matchms/networking/SimilarityNetwork.py",
+     "matchms/networking/networking_functions.py",
+     "CHANGELOG.md"
+    ],
+    "retry_agent": [
+     "matchms/networking/SimilarityNetwork.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "formulaic/materializers/base.py"
+   ],
+   "retry_first_needed_step": 9,
+   "task": "matthewwardrop__formulaic-43",
+   "top": {
+    "fix_hybrid": [
+     "formulaic/materializers/base.py",
+     "formulaic/materializers/pandas.py",
+     "formulaic/parser/parser.py"
+    ],
+    "handoff": [
+     "formulaic/transforms/encode_categorical.py",
+     "formulaic/materializers/base.py",
+     "formulaic/materializers/pandas.py"
+    ],
+    "retry_agent": [
+     "formulaic/sugar.py",
+     "formulaic/model_spec.py",
+     "formulaic/materializers/base.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "markdownify/__init__.py"
+   ],
+   "retry_first_needed_step": 7,
+   "task": "matthewwithanm__python-markdownify-23",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "markdownify/__init__.py"
+    ],
+    "retry_agent": [
+     "markdownify/__init__.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "markdownify/__init__.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "matthewwithanm__python-markdownify-36",
+   "top": {
+    "fix_hybrid": [
+     "markdownify/__init__.py"
+    ],
+    "handoff": [
+     "markdownify/__init__.py",
+     "LICENSE",
+     "setup.py"
+    ],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "asyncstdlib/asynctools.py"
+   ],
+   "retry_first_needed_step": 6,
+   "task": "maxfischer2781__asyncstdlib-14",
+   "top": {
+    "fix_hybrid": [
+     "asyncstdlib/itertools.py"
+    ],
+    "handoff": [
+     "asyncstdlib/asynctools.py",
+     "asyncstdlib/itertools.py"
+    ],
+    "retry_agent": [
+     "asyncstdlib/asynctools.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "asyncstdlib/functools.py"
+   ],
+   "retry_first_needed_step": 5,
+   "task": "maxfischer2781__asyncstdlib-49",
+   "top": {
+    "fix_hybrid": [
+     "asyncstdlib/builtins.py",
+     "docs/source/api/builtins.rst",
+     "asyncstdlib/asynctools.py"
+    ],
+    "handoff": [
+     "asyncstdlib/functools.py",
+     "asyncstdlib/builtins.py",
+     "docs/source/api/builtins.rst"
+    ],
+    "retry_agent": [
+     "asyncstdlib/functools.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "mockfirestore/main.py"
+   ],
+   "retry_first_needed_step": 3,
+   "task": "mdowds__python-mock-firestore-6",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "mockfirestore/main.py"
+    ],
+    "retry_agent": [
+     "mockfirestore/main.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "pymms/productevent.py"
+   ],
+   "retry_first_needed_step": 4,
+   "task": "metno__py-mms-26",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [],
+    "retry_agent": [
+     "pymms/productevent.py",
+     "setup.py",
+     "pyproject.toml"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "gitignore_parser.py"
+   ],
+   "retry_first_needed_step": 12,
+   "task": "mherrmann__gitignore_parser-17",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "gitignore_parser.py",
+     ".gitignore"
+    ],
+    "retry_agent": [
+     "gitignore_parser.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "docs/requirements.txt",
+    "galois/_fields/_array.py",
+    "galois/_fields/_factory.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "mhostetter__galois-393",
+   "top": {
+    "fix_hybrid": [
+     "galois/_polys/_poly.py",
+     "galois/_fields/_gf2m.py",
+     "galois/_fields/_gfp.py"
+    ],
+    "handoff": [
+     "galois/_fields/_array.py",
+     "galois/_domains/_array.py",
+     "galois/_domains/_meta.py"
+    ],
+    "retry_agent": [
+     "galois/_fields/_gf2.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "src/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_reload.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "microsoft__debugpy-683",
+   "top": {
+    "fix_hybrid": [
+     "src/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_safe_repr.py"
+    ],
+    "handoff": [
+     "src/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_safe_repr.py"
+    ],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "src/electionguard/serializable.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "microsoft__electionguard-python-169",
+   "top": {
+    "fix_hybrid": [
+     "src/electionguard/group.py",
+     "src/electionguard/guardian.py",
+     "src/electionguard/hash.py"
+    ],
+    "handoff": [
+     "src/electionguard/group.py",
+     "src/electionguard/guardian.py",
+     "src/electionguard/hash.py"
+    ],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "src/electionguard_gui/services/plaintext_ballot_service.py",
+    "src/electionguard_gui/web/components/shared/view-plaintext-ballot-component.js"
+   ],
+   "retry_first_needed_step": 5,
+   "task": "microsoft__electionguard-python-759",
+   "top": {
+    "fix_hybrid": [
+     "src/electionguard/utils.py",
+     "src/electionguard_gui/models/decryption_dto.py",
+     "src/electionguard/hash.py"
+    ],
+    "handoff": [
+     "src/electionguard/tally.py",
+     "src/electionguard/utils.py",
+     "src/electionguard_gui/models/decryption_dto.py"
+    ],
+    "retry_agent": [
+     "src/electionguard/ballot.py",
+     "src/electionguard/manifest.py",
+     "src/electionguard_gui/services/plaintext_ballot_service.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "upnpavcontrol/core/oberserver.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "mikedevnull__upnp-av-control-106",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "upnpavcontrol/core/oberserver.py",
+     "upnpavcontrol/core/mediarenderer.py"
+    ],
+    "retry_agent": [
+     "upnpavcontrol/core/oberserver.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "minio/commonconfig.py",
+    "minio/tagging.py",
+    "minio/xml.py"
+   ],
+   "retry_first_needed_step": 10,
+   "task": "minio__minio-py-1054",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "minio/commonconfig.py",
+     "minio/api.py"
+    ],
+    "retry_agent": [
+     "minio/api.py",
+     "minio/commonconfig.py",
+     "minio/tagging.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "mt940_writer.py"
+   ],
+   "retry_first_needed_step": 6,
+   "task": "ministryofjustice__mt940-writer-12",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "mt940_writer.py",
+     "tests/test_mt940_writer.py"
+    ],
+    "retry_agent": [
+     "mt940_writer.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "README.md",
+    "wurlitzer.py"
+   ],
+   "retry_first_needed_step": 3,
+   "task": "minrk__wurlitzer-83",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [],
+    "retry_agent": [
+     "wurlitzer.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "CHANGELOG.md",
+    "ariadne/contrib/federation/schema.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "mirumee__ariadne-565",
+   "top": {
+    "fix_hybrid": [
+     "CHANGELOG.md",
+     "ariadne/utils.py",
+     "ariadne/executable_schema.py"
+    ],
+    "handoff": [
+     "ariadne/contrib/federation/schema.py",
+     "CHANGELOG.md",
+     "ariadne/utils.py"
+    ],
+    "retry_agent": [
+     "ariadne/contrib/federation/schema.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "mpf/config_spec.yaml",
+    "mpf/devices/logic_blocks.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "missionpinball__mpf-1564",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "mpf/devices/logic_blocks.py",
+     "mpf/core/device_manager.py",
+     "mpf/core/events.py"
+    ],
+    "retry_agent": [
+     "mpf/core/machine.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "docs/source/changes.rst",
+    "src/hydra_zen/structured_configs/_implementations.py"
+   ],
+   "retry_first_needed_step": 3,
+   "task": "mit-ll-responsible-ai__hydra-zen-459",
+   "top": {
+    "fix_hybrid": [
+     "src/hydra_zen/wrapper/_implementations.py",
+     "docs/source/changes.rst",
+     "src/hydra_zen/structured_configs/_implementations.py"
+    ],
+    "handoff": [
+     "src/hydra_zen/structured_configs/_make_config.py",
+     "src/hydra_zen/wrapper/_implementations.py",
+     "docs/source/changes.rst"
+    ],
+    "retry_agent": [
+     "src/hydra_zen/structured_configs/_make_config.py",
+     "src/hydra_zen/structured_configs/_implementations.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "aqt/updater.py",
+    "ci/generate_azure_pipelines_matrices.py",
+    "ci/steps.yml"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "miurahr__aqtinstall-510",
+   "top": {
+    "fix_hybrid": [
+     "aqt/archives.py",
+     "aqt/installer.py",
+     "ci/generate_azure_pipelines_matrices.py"
+    ],
+    "handoff": [
+     "aqt/archives.py",
+     "aqt/installer.py",
+     "ci/generate_azure_pipelines_matrices.py"
+    ],
+    "retry_agent": [
+     "aqt/updater.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "aqt/installer.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "miurahr__aqtinstall-654",
+   "top": {
+    "fix_hybrid": [
+     "ci/generate_azure_pipelines_matrices.py",
+     "aqt/installer.py",
+     "aqt/updater.py"
+    ],
+    "handoff": [
+     "aqt/installer.py",
+     "ci/generate_azure_pipelines_matrices.py",
+     "aqt/updater.py"
+    ],
+    "retry_agent": [
+     "aqt/installer.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "aqt/exceptions.py",
+    "aqt/installer.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "miurahr__aqtinstall-657",
+   "top": {
+    "fix_hybrid": [
+     "aqt/archives.py",
+     "aqt/installer.py",
+     "ci/generate_azure_pipelines_matrices.py"
+    ],
+    "handoff": [
+     "aqt/archives.py",
+     "aqt/installer.py",
+     "ci/generate_azure_pipelines_matrices.py"
+    ],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "trakt/core.py",
+    "trakt/errors.py",
+    "trakt/users.py"
+   ],
+   "retry_first_needed_step": 5,
+   "task": "moogar0880__PyTrakt-120",
+   "top": {
+    "fix_hybrid": [
+     "HISTORY.rst",
+     "trakt/__init__.py",
+     "trakt/sync.py"
+    ],
+    "handoff": [
+     "trakt/core.py",
+     "trakt/users.py",
+     "HISTORY.rst"
+    ],
+    "retry_agent": [
+     "trakt/users.py",
+     "trakt/core.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "mopidy_spotify/translator.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "mopidy__mopidy-spotify-376",
+   "top": {
+    "fix_hybrid": [
+     "mopidy_spotify/images.py",
+     "mopidy_spotify/web.py",
+     "tox.ini"
+    ],
+    "handoff": [
+     "mopidy_spotify/translator.py",
+     "mopidy_spotify/images.py",
+     "mopidy_spotify/web.py"
+    ],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "aiohttp_xmlrpc/__init__.py",
+    "aiohttp_xmlrpc/handler.py"
+   ],
+   "retry_first_needed_step": 19,
+   "task": "mosquito__aiohttp-xmlrpc-38",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "aiohttp_xmlrpc/handler.py"
+    ],
+    "retry_agent": [
+     "README.rst",
+     "aiohttp_xmlrpc/handler.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "jose/jws.py"
+   ],
+   "retry_first_needed_step": 4,
+   "task": "mpdavis__python-jose-185",
+   "top": {
+    "fix_hybrid": [
+     "CHANGELOG.rst",
+     "CHANGELOG.md",
+     "jose/backends/cryptography_backend.py"
+    ],
+    "handoff": [
+     "jose/jws.py",
+     "jose/jwt.py",
+     "CHANGELOG.rst"
+    ],
+    "retry_agent": [
+     "jose/jws.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "src/mutagentools/flac/convert.py"
+   ],
+   "retry_first_needed_step": 3,
+   "task": "naftulikay__mutagen-tools-23",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "src/mutagentools/flac/convert.py",
+     "src/mutagentools/cli/__init__.py",
+     "src/mutagentools/cli/flac2id3/__init__.py"
+    ],
+    "retry_agent": [
+     "src/mutagentools/flac/convert.py",
+     "src/mutagentools/flac/tests.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "napalm_s350/s350.py"
+   ],
+   "retry_first_needed_step": 1,
+   "task": "napalm-automation-community__napalm-s350-39",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "napalm_s350/s350.py"
+    ],
+    "retry_agent": [
+     "napalm_s350/s350.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "SPF2IP.py",
+    "setup.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "nathandines__SPF2IP-3",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "SPF2IP.py"
+    ],
+    "retry_agent": [
+     "SPF2IP.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "doc/developer/deprecations.rst",
+    "doc/release/release_dev.rst",
+    "networkx/algorithms/matching.py"
+   ],
+   "retry_first_needed_step": 5,
+   "task": "networkx__networkx-5394",
+   "top": {
+    "fix_hybrid": [
+     "networkx/algorithms/community/louvain.py",
+     "networkx/readwrite/json_graph/tree.py",
+     "networkx/algorithms/bipartite/matching.py"
+    ],
+    "handoff": [
+     "networkx/algorithms/matching.py",
+     "networkx/algorithms/community/louvain.py",
+     "networkx/readwrite/json_graph/tree.py"
+    ],
+    "retry_agent": [
+     "networkx/algorithms/matching.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "networkx/algorithms/traversal/depth_first_search.py"
+   ],
+   "retry_first_needed_step": 6,
+   "task": "networkx__networkx-6240",
+   "top": {
+    "fix_hybrid": [
+     "networkx/classes/graph.py",
+     "networkx/algorithms/dag.py",
+     "networkx/algorithms/swap.py"
+    ],
+    "handoff": [
+     "networkx/algorithms/traversal/depth_first_search.py",
+     "networkx/classes/graph.py",
+     "networkx/algorithms/dag.py"
+    ],
+    "retry_agent": [
+     "networkx/algorithms/traversal/depth_first_search.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "honcho/command.py"
+   ],
+   "retry_first_needed_step": 10,
+   "task": "nickstenning__honcho-174",
+   "top": {
+    "fix_hybrid": [
+     "honcho/export/templates/upstart/process.conf",
+     "honcho/manager.py",
+     "honcho/process.py"
+    ],
+    "handoff": [
+     "honcho/command.py",
+     "honcho/export/templates/upstart/process.conf",
+     "honcho/manager.py"
+    ],
+    "retry_agent": [
+     "honcho/manager.py",
+     "honcho/command.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "nessclient/event.py"
+   ],
+   "retry_first_needed_step": 6,
+   "task": "nickw444__nessclient-29",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "nessclient/event.py"
+    ],
+    "retry_agent": [
+     "nessclient/event.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "nion/data/Core.py"
+   ],
+   "retry_first_needed_step": 7,
+   "task": "nion-software__niondata-20",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [],
+    "retry_agent": [
+     "nion/data/xdata_1_0.py",
+     "nion/data/Core.py",
+     "nion/data/TemplateMatching.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "heudiconv/convert.py",
+    "heudiconv/heuristics/reproin.py",
+    "heudiconv/utils.py"
+   ],
+   "retry_first_needed_step": 8,
+   "task": "nipy__heudiconv-342",
+   "top": {
+    "fix_hybrid": [
+     "heudiconv/dicoms.py",
+     "heudiconv/cli/run.py",
+     "heudiconv/queue.py"
+    ],
+    "handoff": [
+     "heudiconv/utils.py",
+     "heudiconv/dicoms.py",
+     "heudiconv/cli/run.py"
+    ],
+    "retry_agent": [
+     "heudiconv/utils.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "pydra/engine/core.py",
+    "pydra/engine/helpers_file.py",
+    "pydra/engine/task.py"
+   ],
+   "retry_first_needed_step": 11,
+   "task": "nipype__pydra-211",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "pydra/engine/helpers_file.py",
+     "pydra/engine/specs.py"
+    ],
+    "retry_agent": [
+     "pydra/engine/helpers_file.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "pydra/engine/helpers.py",
+    "pydra/engine/workers.py"
+   ],
+   "retry_first_needed_step": 4,
+   "task": "nipype__pydra-236",
+   "top": {
+    "fix_hybrid": [
+     "pydra/engine/helpers.py",
+     "pydra/engine/helpers_state.py",
+     "pydra/engine/state.py"
+    ],
+    "handoff": [
+     "pydra/engine/workers.py",
+     "pydra/engine/helpers.py",
+     "pydra/engine/helpers_state.py"
+    ],
+    "retry_agent": [
+     "pydra/engine/workers.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "nose2/main.py",
+    "nose2/session.py"
+   ],
+   "retry_first_needed_step": 10,
+   "task": "nose-devs__nose2-410",
+   "top": {
+    "fix_hybrid": [
+     ".travis.yml",
+     "README.rst",
+     "nose2/plugins/layers.py"
+    ],
+    "handoff": [
+     "unittest.cfg",
+     ".travis.yml",
+     "README.rst"
+    ],
+    "retry_agent": [
+     "nose2/config.py",
+     "nose2/main.py",
+     "nose2/runner.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "numpy_financial/_financial.py"
+   ],
+   "retry_first_needed_step": 7,
+   "task": "numpy__numpy-financial-54",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "numpy_financial/_financial.py"
+    ],
+    "retry_agent": [
+     "numpy_financial/_financial.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "doc/release_notes.rst",
+    "numpydoc/docscrape.py",
+    "numpydoc/numpydoc.py"
+   ],
+   "retry_first_needed_step": 20,
+   "task": "numpy__numpydoc-269",
+   "top": {
+    "fix_hybrid": [
+     "numpydoc/docscrape.py",
+     "numpydoc/docscrape_sphinx.py",
+     "doc/format.rst"
+    ],
+    "handoff": [
+     "doc/conf.py",
+     ".circleci/config.yml",
+     ".github/workflows/main.yml"
+    ],
+    "retry_agent": [
+     "numpydoc/docscrape_sphinx.py",
+     "setup.py",
+     "numpydoc/numpydoc.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "doc/install.rst",
+    "numpydoc/docscrape.py",
+    "numpydoc/xref.py"
+   ],
+   "retry_first_needed_step": 8,
+   "task": "numpy__numpydoc-286",
+   "top": {
+    "fix_hybrid": [
+     "numpydoc/docscrape.py",
+     "numpydoc/numpydoc.py",
+     "numpydoc/docscrape_sphinx.py"
+    ],
+    "handoff": [
+     "numpydoc/docscrape.py",
+     "numpydoc/numpydoc.py",
+     "numpydoc/docscrape_sphinx.py"
+    ],
+    "retry_agent": [
+     "numpydoc/docscrape.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "stix2validator/scripts/stix2_validator.py",
+    "stix2validator/util.py"
+   ],
+   "retry_first_needed_step": 4,
+   "task": "oasis-open__cti-stix-validator-55",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "stix2validator/scripts/stix2_validator.py"
+    ],
+    "retry_agent": [
+     "stix2validator/scripts/stix2_validator.py",
+     "stix2validator/util.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "src/oemof/network/network/nodes.py"
+   ],
+   "retry_first_needed_step": 6,
+   "task": "oemof__oemof-network-31",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "src/oemof/network/network/nodes.py"
+    ],
+    "retry_agent": [
+     "src/oemof/network/network/nodes.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "bit/transaction.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "ofek__bit-72",
+   "top": {
+    "fix_hybrid": [
+     ".gitignore",
+     "bit/network/fees.py",
+     "bit/transaction.py"
+    ],
+    "handoff": [
+     "bit/network/services.py",
+     "bit/wallet.py",
+     ".gitignore"
+    ],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "pypinfo/core.py"
+   ],
+   "retry_first_needed_step": 5,
+   "task": "ofek__pypinfo-109",
+   "top": {
+    "fix_hybrid": [
+     "pypinfo/core.py",
+     "pypinfo/fields.py"
+    ],
+    "handoff": [
+     "pypinfo/core.py",
+     "pypinfo/fields.py"
+    ],
+    "retry_agent": [
+     "pypinfo/cli.py",
+     "pypinfo/core.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "aiogoogle/auth/utils.py",
+    "aiogoogle/utils.py"
+   ],
+   "retry_first_needed_step": 4,
+   "task": "omarryhan__aiogoogle-49",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "aiogoogle/auth/utils.py"
+    ],
+    "retry_agent": [
+     "aiogoogle/auth/utils.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "omegaconf/config.py",
+    "omegaconf/omegaconf.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "omry__omegaconf-53",
+   "top": {
+    "fix_hybrid": [
+     "omegaconf/config.py",
+     "omegaconf/dictconfig.py",
+     "omegaconf/listconfig.py"
+    ],
+    "handoff": [
+     "omegaconf/omegaconf.py",
+     "omegaconf/config.py",
+     "omegaconf/dictconfig.py"
+    ],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "raiseorlaunch/raiseorlaunch.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "open-dynaMIX__raiseorlaunch-44",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "raiseorlaunch/__main__.py"
+    ],
+    "retry_agent": [
+     "raiseorlaunch/raiseorlaunch.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "suspect/processing/denoising.py"
+   ],
+   "retry_first_needed_step": 3,
+   "task": "openmrslab__suspect-40",
+   "top": {
+    "fix_hybrid": [
+     "suspect/processing/denoising.py",
+     "suspect/io/__init__.py",
+     "suspect/io/_common.py"
+    ],
+    "handoff": [
+     "suspect/processing/denoising.py",
+     "suspect/io/__init__.py",
+     "suspect/io/_common.py"
+    ],
+    "retry_agent": [
+     "suspect/processing/denoising.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "nokia/__init__.py"
+   ],
+   "retry_first_needed_step": 6,
+   "task": "orcasgit__python-nokia-28",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "nokia/__init__.py"
+    ],
+    "retry_agent": [
+     "nokia/__init__.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "CHANGELOG.rst",
+    "rest_framework_dataclasses/field_utils.py",
+    "rest_framework_dataclasses/typing_utils.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "oxan__djangorestframework-dataclasses-53",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "rest_framework_dataclasses/serializers.py"
+    ],
+    "retry_agent": [
+     "rest_framework_dataclasses/serializers.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "rest_framework_dataclasses/serializers.py"
+   ],
+   "retry_first_needed_step": 7,
+   "task": "oxan__djangorestframework-dataclasses-80",
+   "top": {
+    "fix_hybrid": [
+     "CHANGELOG.rst",
+     "rest_framework_dataclasses/field_utils.py",
+     "rest_framework_dataclasses/typing_utils.py"
+    ],
+    "handoff": [
+     "rest_framework_dataclasses/serializers.py",
+     "CHANGELOG.rst",
+     "rest_framework_dataclasses/field_utils.py"
+    ],
+    "retry_agent": [
+     "rest_framework_dataclasses/serializers.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "pyls/plugins/pycodestyle_lint.py",
+    "vscode-client/package.json"
+   ],
+   "retry_first_needed_step": 16,
+   "task": "palantir__python-language-server-146",
+   "top": {
+    "fix_hybrid": [
+     "pyls/server.py",
+     "pyls/python_ls.py",
+     "pyls/language_server.py"
+    ],
+    "handoff": [
+     "pyls/config.py",
+     "pyls/server.py",
+     "pyls/python_ls.py"
+    ],
+    "retry_agent": [
+     "pyls/plugins/pycodestyle_lint.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "pyls/__main__.py",
+    "pyls/server.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "palantir__python-language-server-63",
+   "top": {
+    "fix_hybrid": [
+     "circle.yml",
+     "pyls/providers/code_lens.py",
+     "pyls/providers/completion.py"
+    ],
+    "handoff": [
+     "pyls/server.py",
+     "circle.yml",
+     "pyls/providers/code_lens.py"
+    ],
+    "retry_agent": [
+     "pyls/server.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "pyls/python_ls.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "palantir__python-language-server-754",
+   "top": {
+    "fix_hybrid": [
+     "pyls/plugins/pycodestyle_lint.py",
+     "pyls/language_server.py",
+     "pyls/python_ls.py"
+    ],
+    "handoff": [
+     "pyls/python_ls.py",
+     "pyls/plugins/pycodestyle_lint.py",
+     "pyls/language_server.py"
+    ],
+    "retry_agent": [
+     "pyls/python_ls.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "pcdsutils/profile.py"
+   ],
+   "retry_first_needed_step": 3,
+   "task": "pcdshub__pcdsutils-59",
+   "top": {
+    "fix_hybrid": [
+     "pcdsutils/__init__.py",
+     "pcdsutils/enum.py",
+     "pcdsutils/requirements.py"
+    ],
+    "handoff": [
+     "pcdsutils/profile.py",
+     "pcdsutils/__init__.py",
+     "pcdsutils/enum.py"
+    ],
+    "retry_agent": [
+     "pcdsutils/profile.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "pysmiles/smiles_helper.py"
+   ],
+   "retry_first_needed_step": 8,
+   "task": "pckroon__pysmiles-24",
+   "top": {
+    "fix_hybrid": [
+     "README.md",
+     "pysmiles/read_smiles.py",
+     "pysmiles/smiles_helper.py"
+    ],
+    "handoff": [
+     "pysmiles/read_smiles.py",
+     "README.md",
+     "pysmiles/smiles_helper.py"
+    ],
+    "retry_agent": [
+     "pysmiles/read_smiles.py",
+     "pysmiles/smiles_helper.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "README.rst",
+    "persistqueue/sqlackqueue.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "peter-wangxu__persist-queue-127",
+   "top": {
+    "fix_hybrid": [
+     "persistqueue/sqlbase.py",
+     "persistqueue/sqlqueue.py",
+     "persistqueue/__init__.py"
+    ],
+    "handoff": [
+     "persistqueue/sqlackqueue.py",
+     "persistqueue/sqlbase.py",
+     "persistqueue/sqlqueue.py"
+    ],
+    "retry_agent": [
+     "persistqueue/sqlackqueue.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "ross/results.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "petrobras__ross-972",
+   "top": {
+    "fix_hybrid": [
+     "ross/results.py",
+     "ross/__init__.py",
+     "ross/probe.py"
+    ],
+    "handoff": [
+     "ross/results.py",
+     "ross/__init__.py",
+     "ross/probe.py"
+    ],
+    "retry_agent": [
+     "ross/results.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "phys2bids/phys2bids.py",
+    "phys2bids/viz.py"
+   ],
+   "retry_first_needed_step": 8,
+   "task": "physiopy__phys2bids-193",
+   "top": {
+    "fix_hybrid": [
+     "phys2bids/cli/run.py",
+     "phys2bids/phys2bids.py",
+     "phys2bids/physio_obj.py"
+    ],
+    "handoff": [
+     "phys2bids/viz.py",
+     "phys2bids/cli/run.py",
+     "phys2bids/phys2bids.py"
+    ],
+    "retry_agent": [
+     "phys2bids/viz.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "CHANGELOG.rst",
+    "khal/icalendar.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "pimutils__khal-1074",
+   "top": {
+    "fix_hybrid": [
+     "CHANGELOG.rst",
+     "khal/settings/utils.py",
+     "AUTHORS.txt"
+    ],
+    "handoff": [
+     "doc/source/configure.rst",
+     "CHANGELOG.rst",
+     "khal/settings/utils.py"
+    ],
+    "retry_agent": [
+     "khal.conf",
+     "doc/source/configure.rst"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "CHANGELOG.rst",
+    "khal/khalendar/event.py"
+   ],
+   "retry_first_needed_step": 6,
+   "task": "pimutils__khal-1145",
+   "top": {
+    "fix_hybrid": [
+     "CHANGELOG.rst",
+     "khal/settings/utils.py",
+     "khal/icalendar.py"
+    ],
+    "handoff": [
+     "bin/ikhal",
+     "khal/cli.py",
+     "CHANGELOG.rst"
+    ],
+    "retry_agent": [
+     "khal/ui/__init__.py",
+     "khal/khalendar/event.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "todoman/cli.py",
+    "todoman/model.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "pimutils__todoman-68",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "todoman/cli.py",
+     "todoman/model.py"
+    ],
+    "retry_agent": [
+     "todoman/cli.py",
+     "tests/test_filtering.py",
+     "setup.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "dash/development/_py_components_generation.py",
+    "dash/development/_r_components_generation.py"
+   ],
+   "retry_first_needed_step": 7,
+   "task": "plotly__dash-726",
+   "top": {
+    "fix_hybrid": [
+     "CHANGELOG.md",
+     "dash/_utils.py",
+     "dash/dash.py"
+    ],
+    "handoff": [
+     "dash/__init__.py",
+     "dash/development/_r_components_generation.py",
+     "CHANGELOG.md"
+    ],
+    "retry_agent": [
+     "dash/dash.py",
+     "dash/development/_r_components_generation.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "dash/development/_py_components_generation.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "plotly__dash-796",
+   "top": {
+    "fix_hybrid": [
+     "dash/development/_py_components_generation.py",
+     "dash/development/_r_components_generation.py",
+     "CHANGELOG.md"
+    ],
+    "handoff": [
+     "dash/development/_py_components_generation.py",
+     "dash/development/_r_components_generation.py",
+     "CHANGELOG.md"
+    ],
+    "retry_agent": [
+     "dash/development/_py_components_generation.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "pyatv/mrp/__init__.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "postlund__pyatv-923",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "pyatv/mrp/__init__.py",
+     "pyatv/interface.py"
+    ],
+    "retry_agent": [
+     "pyatv/scripts/atvremote.py",
+     "pyatv/interface.py",
+     "pyatv/dmap/__init__.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "CHANGES.rst",
+    "praw/exceptions.py",
+    "praw/models/reddit/subreddit.py"
+   ],
+   "retry_first_needed_step": 1,
+   "task": "praw-dev__praw-1307",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "praw/models/reddit/subreddit.py"
+    ],
+    "retry_agent": [
+     "praw/models/reddit/subreddit.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "AUTHORS.rst",
+    "CHANGES.rst",
+    "prawcore/rate_limit.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "praw-dev__prawcore-90",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "prawcore/rate_limit.py"
+    ],
+    "retry_agent": [
+     "prawcore/rate_limit.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "pre_commit/commands/install_uninstall.py"
+   ],
+   "retry_first_needed_step": 9,
+   "task": "pre-commit__pre-commit-1299",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "pre_commit/commands/install_uninstall.py",
+     "pre_commit/commands/init_templatedir.py",
+     "pre_commit/constants.py"
+    ],
+    "retry_agent": [
+     "pre_commit/git.py",
+     "pre_commit/hook.py",
+     "pre_commit/commands/install_uninstall.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "pre_commit/commands/run.py",
+    "pre_commit/staged_files_only.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "pre-commit__pre-commit-1422",
+   "top": {
+    "fix_hybrid": [
+     "pre_commit/commands/hook_impl.py",
+     "pre_commit/commands/run.py",
+     "pre_commit/constants.py"
+    ],
+    "handoff": [
+     "pre_commit/commands/hook_impl.py",
+     "pre_commit/commands/run.py",
+     "pre_commit/constants.py"
+    ],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "pre_commit/commands/migrate_config.py"
+   ],
+   "retry_first_needed_step": 1,
+   "task": "pre-commit__pre-commit-1448",
+   "top": {
+    "fix_hybrid": [
+     "pre_commit/commands/run.py",
+     "pre_commit/staged_files_only.py",
+     "pre_commit/error_handler.py"
+    ],
+    "handoff": [
+     "pre_commit/commands/migrate_config.py",
+     "pre_commit/commands/run.py",
+     "pre_commit/staged_files_only.py"
+    ],
+    "retry_agent": [
+     "pre_commit/commands/migrate_config.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "src/pybel/parser/parse_concept.py",
+    "src/pybel/parser/parse_metadata.py",
+    "src/pybel/parser/utils.py"
+   ],
+   "retry_first_needed_step": 16,
+   "task": "pybel__pybel-460",
+   "top": {
+    "fix_hybrid": [
+     "src/pybel/parser/parse_bel.py",
+     "src/pybel/constants.py",
+     "src/pybel/dsl/__init__.py"
+    ],
+    "handoff": [
+     "src/pybel/parser/parse_bel.py",
+     "src/pybel/constants.py",
+     "src/pybel/io/jgif.py"
+    ],
+    "retry_agent": [
+     "src/pybel/grounding.py",
+     "src/pybel/parser/parse_concept.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    ".travis.yml",
+    "README.md",
+    "casbin_sqlalchemy_adapter/adapter.py"
+   ],
+   "retry_first_needed_step": 5,
+   "task": "pycasbin__sqlalchemy-adapter-34",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [],
+    "retry_agent": [
+     "casbin_sqlalchemy_adapter/adapter.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "jenkinsapi/build.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "pycontribs__jenkinsapi-511",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [],
+    "retry_agent": [
+     "jenkinsapi/utils/requester.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "auditwheel/policy/policy.json"
+   ],
+   "retry_first_needed_step": 5,
+   "task": "pypa__auditwheel-300",
+   "top": {
+    "fix_hybrid": [
+     "auditwheel/policy/__init__.py",
+     "auditwheel/policy/policy.json"
+    ],
+    "handoff": [
+     "auditwheel/policy/policy.json",
+     "auditwheel/policy/__init__.py"
+    ],
+    "retry_agent": [
+     "auditwheel/policy/policy.json"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "src/build/__init__.py",
+    "src/build/env.py"
+   ],
+   "retry_first_needed_step": 4,
+   "task": "pypa__build-339",
+   "top": {
+    "fix_hybrid": [
+     "src/build/__init__.py",
+     "CHANGELOG.rst",
+     "src/build/env.py"
+    ],
+    "handoff": [
+     "src/build/env.py",
+     "src/build/__init__.py",
+     "CHANGELOG.rst"
+    ],
+    "retry_agent": [
+     "src/build/env.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "docs/history.md",
+    "src/hatch/project/config.py"
+   ],
+   "retry_first_needed_step": 27,
+   "task": "pypa__hatch-415",
+   "top": {
+    "fix_hybrid": [
+     "docs/history.md",
+     "src/hatch/cli/application.py",
+     "src/hatch/cli/env/show.py"
+    ],
+    "handoff": [
+     "hatch.toml",
+     "src/hatch/cli/env/create.py",
+     "src/hatch/cli/env/run.py"
+    ],
+    "retry_agent": [
+     "docs/config/environment/overview.md",
+     "src/hatch/cli/env/run.py",
+     "src/hatch/cli/__init__.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "CHANGES.txt",
+    "wheel/install.py",
+    "wheel/metadata.py"
+   ],
+   "retry_first_needed_step": 9,
+   "task": "pypa__wheel-213",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "wheel/metadata.py"
+    ],
+    "retry_agent": [
+     "wheel/metadata.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "babel/messages/extract.py",
+    "babel/messages/frontend.py",
+    "docs/cmdline.rst"
+   ],
+   "retry_first_needed_step": 4,
+   "task": "python-babel__babel-1015",
+   "top": {
+    "fix_hybrid": [
+     "babel/numbers.py",
+     "babel/messages/extract.py",
+     "babel/messages/jslexer.py"
+    ],
+    "handoff": [
+     "babel/messages/frontend.py",
+     "tests/messages/test_frontend.py",
+     "babel/numbers.py"
+    ],
+    "retry_agent": [
+     "babel/messages/extract.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "babel/numbers.py",
+    "docs/api/numbers.rst",
+    "scripts/import_cldr.py"
+   ],
+   "retry_first_needed_step": 7,
+   "task": "python-babel__babel-585",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "scripts/import_cldr.py",
+     "babel/numbers.py"
+    ],
+    "retry_agent": [
+     "scripts/import_cldr.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "cmd2/argparse_completer.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "python-cmd2__cmd2-1069",
+   "top": {
+    "fix_hybrid": [
+     "CHANGELOG.md",
+     "cmd2/cmd2.py",
+     "cmd2/argparse_completer.py"
+    ],
+    "handoff": [
+     "cmd2/argparse_completer.py",
+     "CHANGELOG.md",
+     "cmd2/cmd2.py"
+    ],
+    "retry_agent": [
+     "cmd2/argparse_completer.py",
+     "cmd2/cmd2.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "CHANGELOG.md",
+    "cmd2/cmd2.py",
+    "docs/argument_processing.rst"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "python-cmd2__cmd2-681",
+   "top": {
+    "fix_hybrid": [
+     "cmd2/cmd2.py",
+     "CHANGELOG.md",
+     "cmd2/argparse_completer.py"
+    ],
+    "handoff": [
+     "cmd2/cmd2.py",
+     "tests/test_cmd2.py",
+     "CHANGELOG.md"
+    ],
+    "retry_agent": [
+     "cmd2/cmd2.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "CHANGELOG.rst",
+    "src/check_jsonschema/transforms/azure_pipelines.py"
+   ],
+   "retry_first_needed_step": 7,
+   "task": "python-jsonschema__check-jsonschema-166",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "src/check_jsonschema/transforms/azure_pipelines.py",
+     "docs/precommit_usage.rst"
+    ],
+    "retry_agent": [
+     "src/check_jsonschema/transforms/azure_pipelines.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "metar/Datatypes.py",
+    "metar/Metar.py"
+   ],
+   "retry_first_needed_step": 5,
+   "task": "python-metar__python-metar-115",
+   "top": {
+    "fix_hybrid": [
+     "metar/Metar.py",
+     "MANIFEST",
+     "MANIFEST.in"
+    ],
+    "handoff": [
+     "metar/Metar.py",
+     "metar/Datatypes.py",
+     "parse_metar.py"
+    ],
+    "retry_agent": [
+     "metar/Metar.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "folium/features.py"
+   ],
+   "retry_first_needed_step": 5,
+   "task": "python-visualization__folium-1155",
+   "top": {
+    "fix_hybrid": [
+     "CHANGES.txt",
+     "folium/__init__.py",
+     "folium/plugins/heat_map_withtime.py"
+    ],
+    "handoff": [
+     "folium/features.py",
+     "CHANGES.txt",
+     "folium/__init__.py"
+    ],
+    "retry_agent": [
+     "folium/features.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "folium/plugins/boat_marker.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "python-visualization__folium-668",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "folium/plugins/boat_marker.py",
+     "tests/plugins/test_boat_marker.py"
+    ],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "pyvisa/rname.py"
+   ],
+   "retry_first_needed_step": 26,
+   "task": "pyvisa__pyvisa-780",
+   "top": {
+    "fix_hybrid": [
+     "CHANGES",
+     "docs/source/introduction/shell.rst",
+     "pyvisa/cmd_line_tools.py"
+    ],
+    "handoff": [
+     "pyproject.toml",
+     "pyvisa/testsuite/test_highlevel.py",
+     "setup.py"
+    ],
+    "retry_agent": [
+     "pyvisa/errors.py",
+     "pyvisa/resources/tcpip.py",
+     "pyvisa/rname.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "src/qibolab/pulses.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "qiboteam__qibolab-660",
+   "top": {
+    "fix_hybrid": [
+     ".pre-commit-config.yaml",
+     "src/qibolab/instruments/qblox/controller.py",
+     "src/qibolab/instruments/zhinst.py"
+    ],
+    "handoff": [
+     "src/qibolab/instruments/icarusqfpga.py",
+     "src/qibolab/pulses.py",
+     "src/qibolab/instruments/icarusq.py"
+    ],
+    "retry_agent": [
+     "src/qibolab/instruments/icarusqfpga.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "pykern/pkunit.py"
+   ],
+   "retry_first_needed_step": 4,
+   "task": "radiasoft__pykern-282",
+   "top": {
+    "fix_hybrid": [
+     "pykern/pkcli/__init__.py",
+     "pykern/pkunit.py",
+     "pykern/pkio.py"
+    ],
+    "handoff": [
+     "pykern/pkunit.py",
+     "pykern/pkcli/__init__.py",
+     "pykern/pkio.py"
+    ],
+    "retry_agent": [
+     "pykern/pkunit.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "docs/commandline.rst",
+    "radish/utils.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "radish-bdd__radish-307",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "radish/core.py",
+     "radish/loader.py",
+     "radish/main.py"
+    ],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "README.md",
+    "jsons/_datetime_impl.py",
+    "jsons/_meta.py"
+   ],
+   "retry_first_needed_step": 7,
+   "task": "ramonhagenaars__jsons-143",
+   "top": {
+    "fix_hybrid": [
+     "jsons/serializers/default_primitive.py",
+     "jsons/__init__.py",
+     "README.md"
+    ],
+    "handoff": [
+     "jsons/_datetime_impl.py",
+     "jsons/serializers/default_primitive.py",
+     "jsons/__init__.py"
+    ],
+    "retry_agent": [
+     "jsons/_datetime_impl.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "defusedcsv/csv.py"
+   ],
+   "retry_first_needed_step": 11,
+   "task": "raphaelm__defusedcsv-6",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "defusedcsv/csv.py"
+    ],
+    "retry_agent": [
+     "defusedcsv/csv.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "repobee/cli.py",
+    "repobee/exception.py",
+    "repobee/github_api.py"
+   ],
+   "retry_first_needed_step": 5,
+   "task": "repobee__repobee-202",
+   "top": {
+    "fix_hybrid": [
+     "repobee/github_api.py",
+     "docs/getting_started.rst",
+     "docs/migrate.rst"
+    ],
+    "handoff": [
+     "repobee/exception.py",
+     "repobee/github_api.py",
+     "docs/getting_started.rst"
+    ],
+    "retry_agent": [
+     "repobee/exception.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "pyquil/quilatom.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "rigetti__pyquil-1756",
+   "top": {
+    "fix_hybrid": [
+     "CHANGELOG.md",
+     "pyquil/_parser/grammar.lark",
+     "pyquil/api/_qpu.py"
+    ],
+    "handoff": [
+     "pyquil/quilbase.py",
+     "CHANGELOG.md",
+     "pyquil/_parser/grammar.lark"
+    ],
+    "retry_agent": [
+     "pyquil/quilbase.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "docs/extending/extending.rst",
+    "src/SeleniumLibrary/base/context.py"
+   ],
+   "retry_first_needed_step": 12,
+   "task": "robotframework__SeleniumLibrary-1431",
+   "top": {
+    "fix_hybrid": [
+     "docs/extending/extending.rst",
+     "src/SeleniumLibrary/__init__.py"
+    ],
+    "handoff": [
+     "src/SeleniumLibrary/base/librarycomponent.py",
+     "docs/extending/extending.rst",
+     "src/SeleniumLibrary/__init__.py"
+    ],
+    "retry_agent": [
+     "src/SeleniumLibrary/base/librarycomponent.py",
+     "src/SeleniumLibrary/base/context.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "Pipfile.lock",
+    "radon/visitors.py"
+   ],
+   "retry_first_needed_step": 6,
+   "task": "rubik__radon-212",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "radon/visitors.py",
+     "radon/complexity.py"
+    ],
+    "retry_agent": [
+     "radon/visitors.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "homu/parse_issue_comment.py",
+    "homu/server.py"
+   ],
+   "retry_first_needed_step": 9,
+   "task": "rust-lang__homu-124",
+   "top": {
+    "fix_hybrid": [
+     "homu/main.py"
+    ],
+    "handoff": [
+     "homu/main.py"
+    ],
+    "retry_agent": [
+     "homu/parse_issue_comment.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "sanic/http/http1.py",
+    "sanic/request.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "sanic-org__sanic-2615",
+   "top": {
+    "fix_hybrid": [
+     "sanic/worker/loader.py"
+    ],
+    "handoff": [
+     "sanic/app.py",
+     "sanic/worker/loader.py"
+    ],
+    "retry_agent": [
+     "sanic/middleware.py",
+     "sanic/mixins/middleware.py",
+     "sanic/app.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "sanic/app.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "sanic-org__sanic-2704",
+   "top": {
+    "fix_hybrid": [
+     "sanic/request.py",
+     "sanic/app.py",
+     "sanic/errorpages.py"
+    ],
+    "handoff": [
+     "sanic/app.py",
+     "sanic/request.py",
+     "sanic/errorpages.py"
+    ],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "appveyor.yml",
+    "ci/__main__.py",
+    "ci/driver.py"
+   ],
+   "retry_first_needed_step": 3,
+   "task": "scikit-build__scikit-ci-11",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "ci/driver.py",
+     "ci/__main__.py"
+    ],
+    "retry_agent": [
+     "ci/driver.py",
+     "requirements-dev.txt"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "setup.py",
+    "src/cabinetry/histo.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "scikit-hep__cabinetry-436",
+   "top": {
+    "fix_hybrid": [
+     "src/cabinetry/workspace.py",
+     "src/cabinetry/visualize/__init__.py",
+     "src/cabinetry/visualize/plot_model.py"
+    ],
+    "handoff": [
+     "src/cabinetry/histo.py",
+     "src/cabinetry/templates/__init__.py",
+     "src/cabinetry/templates/postprocessor.py"
+    ],
+    "retry_agent": [
+     "src/cabinetry/histo.py",
+     "src/cabinetry/templates/postprocessor.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "bibtexparser/bwriter.py"
+   ],
+   "retry_first_needed_step": 1,
+   "task": "sciunto-org__python-bibtexparser-316",
+   "top": {
+    "fix_hybrid": [
+     "bibtexparser/latexenc.py"
+    ],
+    "handoff": [
+     "bibtexparser/bwriter.py",
+     "bibtexparser/tests/test_bibdatabase.py",
+     "bibtexparser/tests/test_bibtex_strings.py"
+    ],
+    "retry_agent": [
+     "bibtexparser/bwriter.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "bibtexparser/middlewares/middleware.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "sciunto-org__python-bibtexparser-387",
+   "top": {
+    "fix_hybrid": [
+     "bibtexparser/library.py",
+     "bibtexparser/splitter.py",
+     "bibtexparser/model.py"
+    ],
+    "handoff": [
+     "bibtexparser/middlewares/middleware.py",
+     "bibtexparser/library.py",
+     "bibtexparser/splitter.py"
+    ],
+    "retry_agent": [
+     "bibtexparser/middlewares/middleware.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "bibtexparser/library.py"
+   ],
+   "retry_first_needed_step": 12,
+   "task": "sciunto-org__python-bibtexparser-424",
+   "top": {
+    "fix_hybrid": [
+     "bibtexparser/splitter.py",
+     "dev-utilities/bibtex-nameparsing/parsename.py",
+     "bibtexparser/library.py"
+    ],
+    "handoff": [
+     "bibtexparser/writer.py",
+     "bibtexparser/splitter.py",
+     "dev-utilities/bibtex-nameparsing/parsename.py"
+    ],
+    "retry_agent": [
+     "bibtexparser/writer.py",
+     "bibtexparser/model.py",
+     "bibtexparser/library.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "pendulum/exceptions.py",
+    "pendulum/formatting/difference_formatter.py",
+    "pendulum/period.py"
+   ],
+   "retry_first_needed_step": 6,
+   "task": "sdispater__pendulum-99",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "pendulum/__init__.py",
+     "pendulum/exceptions.py"
+    ],
+    "retry_agent": [
+     "pendulum/parsing/exceptions/__init__.py",
+     "pendulum/exceptions.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "docs/source/parser.rst",
+    "secedgar/parser.py"
+   ],
+   "retry_first_needed_step": 4,
+   "task": "sec-edgar__sec-edgar-254",
+   "top": {
+    "fix_hybrid": [
+     "docs/source/whatsnew/v0.4.0.rst",
+     "secedgar/__init__.py",
+     "secedgar/filings/filing.py"
+    ],
+    "handoff": [
+     "secedgar/parser.py",
+     "secedgar/tests/core/test_company.py",
+     "secedgar/tests/test_cik_lookup.py"
+    ],
+    "retry_agent": [
+     "secedgar/parser.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "phial/bot.py",
+    "phial/wrappers.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "sedders123__phial-40",
+   "top": {
+    "fix_hybrid": [
+     "README.rst",
+     "phial/bot.py"
+    ],
+    "handoff": [
+     "phial/bot.py",
+     "phial/wrappers.py",
+     "README.rst"
+    ],
+    "retry_agent": [
+     "phial/wrappers.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "beniget/beniget.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "serge-sans-paille__beniget-80",
+   "top": {
+    "fix_hybrid": [
+     "beniget/beniget.py"
+    ],
+    "handoff": [
+     "beniget/beniget.py",
+     "tests/test_capture.py",
+     "tests/test_definitions.py"
+    ],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "cloudvolume/frontends/precomputed.py",
+    "cloudvolume/lib.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "seung-lab__cloud-volume-362",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "cloudvolume/datasource/precomputed/image/tx.py"
+    ],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "redbeat/decoder.py",
+    "requirements-dev.txt",
+    "setup.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "sibson__redbeat-245",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "redbeat/decoder.py"
+    ],
+    "retry_agent": [
+     "redbeat/decoder.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "jupyterhub/remoteappmanager_config.py",
+    "remoteappmanager/file_config.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "simphony__simphony-remote-171",
+   "top": {
+    "fix_hybrid": [
+     "remoteappmanager/restresources/container.py",
+     "remoteappmanager/docker/container.py",
+     "remoteappmanager/handlers/home_handler.py"
+    ],
+    "handoff": [
+     "remoteappmanager/file_config.py",
+     "remoteappmanager/restresources/container.py",
+     "remoteappmanager/docker/container.py"
+    ],
+    "retry_agent": [
+     "remoteappmanager/file_config.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "tornadowebapi/exceptions.py",
+    "tornadowebapi/handler.py"
+   ],
+   "retry_first_needed_step": 6,
+   "task": "simphony__tornado-webapi-27",
+   "top": {
+    "fix_hybrid": [
+     "tornadowebapi/exceptions.py",
+     "tox.ini",
+     "tornadowebapi/__init__.py"
+    ],
+    "handoff": [
+     "tornadowebapi/exceptions.py",
+     "tornadowebapi/resource.py",
+     "tox.ini"
+    ],
+    "retry_agent": [
+     "tornadowebapi/handler.py",
+     "tornadowebapi/resource.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "aiokatcp/core.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "ska-sa__aiokatcp-8",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "aiokatcp/core.py"
+    ],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "dev-requirements.txt",
+    "sendgrid_backend/mail.py"
+   ],
+   "retry_first_needed_step": 4,
+   "task": "sklarsa__django-sendgrid-v5-121",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "sendgrid_backend/mail.py"
+    ],
+    "retry_agent": [
+     "sendgrid_backend/mail.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "README.rst",
+    "sphinx_issues.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "sloria__sphinx-issues-29",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "sphinx_issues.py"
+    ],
+    "retry_agent": [
+     "sphinx_issues.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "examples/tracker_api_example/app.py",
+    "snowplow_tracker/events/event.py",
+    "snowplow_tracker/subject.py"
+   ],
+   "retry_first_needed_step": 8,
+   "task": "snowplow__snowplow-python-tracker-348",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "snowplow_tracker/events/page_ping.py",
+     "snowplow_tracker/events/page_view.py",
+     "snowplow_tracker/events/self_describing.py"
+    ],
+    "retry_agent": [
+     "snowplow_tracker/tracker.py",
+     "snowplow_tracker/events/page_view.py",
+     "snowplow_tracker/events/event.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "PyViCare/PyViCareDevice.py"
+   ],
+   "retry_first_needed_step": 14,
+   "task": "somm15__PyViCare-124",
+   "top": {
+    "fix_hybrid": [
+     "PyViCare/PyViCareDevice.py"
+    ],
+    "handoff": [
+     "PyViCare/PyViCareDevice.py",
+     "PyViCare/PyViCareService.py"
+    ],
+    "retry_agent": [
+     "PyViCare/PyViCareHeatPump.py",
+     "PyViCare/PyViCareDevice.py",
+     "PyViCare/PyViCareService.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "CHANGES.rst",
+    "gwcs/extension.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "spacetelescope__gwcs-475",
+   "top": {
+    "fix_hybrid": [
+     "CHANGES.rst",
+     "gwcs/api.py",
+     "gwcs/wcs.py"
+    ],
+    "handoff": [
+     "docs/index.rst",
+     "docs/conf.py",
+     "docs/gwcs/ifu.rst"
+    ],
+    "retry_agent": [
+     "docs/gwcs/using_wcs.rst"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "AUTHORS",
+    "mlir/astnodes.py",
+    "mlir/lark/mlir.lark"
+   ],
+   "retry_first_needed_step": 13,
+   "task": "spcl__pymlir-16",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "mlir/dialects/linalg.py",
+     "mlir/dialects/standard.py",
+     "mlir/lark/mlir.lark"
+    ],
+    "retry_agent": [
+     "mlir/parser.py",
+     "mlir/lark/mlir.lark",
+     "mlir/dialects/standard.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "sphinx_gallery/gen_rst.py"
+   ],
+   "retry_first_needed_step": 3,
+   "task": "sphinx-gallery__sphinx-gallery-480",
+   "top": {
+    "fix_hybrid": [
+     "sphinx_gallery/gen_rst.py",
+     "doc/advanced_configuration.rst",
+     "doc/conf.py"
+    ],
+    "handoff": [
+     "sphinx_gallery/gen_rst.py",
+     "doc/conf.py",
+     "setup.cfg"
+    ],
+    "retry_agent": [
+     "sphinx_gallery/gen_rst.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "sphinx_gallery/gen_gallery.py",
+    "sphinx_gallery/gen_rst.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "sphinx-gallery__sphinx-gallery-574",
+   "top": {
+    "fix_hybrid": [
+     "sphinx_gallery/gen_rst.py",
+     "sphinx_gallery/gen_gallery.py",
+     "doc/advanced_configuration.rst"
+    ],
+    "handoff": [
+     "sphinx_gallery/gen_gallery.py",
+     "sphinx_gallery/gen_rst.py",
+     "doc/advanced_configuration.rst"
+    ],
+    "retry_agent": [
+     "sphinx_gallery/gen_gallery.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "sphinx_gallery/gen_rst.py"
+   ],
+   "retry_first_needed_step": 3,
+   "task": "sphinx-gallery__sphinx-gallery-750",
+   "top": {
+    "fix_hybrid": [
+     "sphinx_gallery/gen_rst.py",
+     "sphinx_gallery/gen_gallery.py",
+     "doc/configuration.rst"
+    ],
+    "handoff": [
+     "sphinx_gallery/gen_rst.py",
+     "sphinx_gallery/gen_gallery.py",
+     "doc/configuration.rst"
+    ],
+    "retry_agent": [
+     "sphinx_gallery/gen_rst.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "cstar/job.py",
+    "cstar/nodetoolparser/simple.py"
+   ],
+   "retry_first_needed_step": 19,
+   "task": "spotify__cstar-22",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "cstar/job.py"
+    ],
+    "retry_agent": [
+     "cstar/output.py",
+     "cstar/cstarcli.py",
+     "cstar/job.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "draftjs_exporter/entity_state.py",
+    "draftjs_exporter/html.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "springload__draftjs_exporter-107",
+   "top": {
+    "fix_hybrid": [
+     "draftjs_exporter/html.py",
+     "draftjs_exporter/wrapper_state.py",
+     "draftjs_exporter/dom.py"
+    ],
+    "handoff": [
+     "draftjs_exporter/html.py",
+     "draftjs_exporter/dom.py",
+     "draftjs_exporter/command.py"
+    ],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "pyls_spyder/plugin.py"
+   ],
+   "retry_first_needed_step": 3,
+   "task": "spyder-ide__pyls-spyder-21",
+   "top": {
+    "fix_hybrid": [
+     "pyls_spyder/plugin.py",
+     "pyls_spyder/utils.py"
+    ],
+    "handoff": [
+     "pyls_spyder/plugin.py",
+     "pyls_spyder/utils.py"
+    ],
+    "retry_agent": [
+     "pyls_spyder/plugin.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "qtsass/api.py",
+    "qtsass/conformers.py",
+    "qtsass/functions.py"
+   ],
+   "retry_first_needed_step": 7,
+   "task": "spyder-ide__qtsass-59",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "qtsass/conformers.py"
+    ],
+    "retry_agent": [
+     "README.md",
+     "qtsass/functions.py",
+     "qtsass/api.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "spyder_kernels/console/kernel.py",
+    "spyder_kernels/console/start.py",
+    "spyder_kernels/customize/spyderpdb.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "spyder-ide__spyder-kernels-404",
+   "top": {
+    "fix_hybrid": [
+     "spyder_kernels/customize/spydercustomize.py"
+    ],
+    "handoff": [
+     "spyder_kernels/utils/nsview.py",
+     "spyder_kernels/utils/tests/test_nsview.py",
+     "spyder_kernels/customize/spydercustomize.py"
+    ],
+    "retry_agent": [
+     "spyder_kernels/console/tests/test_console_kernel.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "changelog",
+    "src/psyclone/psyir/symbols/datatypes.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "stfc__PSyclone-1101",
+   "top": {
+    "fix_hybrid": [
+     "changelog",
+     "src/psyclone/psyir/frontend/fparser2.py"
+    ],
+    "handoff": [
+     "changelog",
+     "src/psyclone/psyir/frontend/fparser2.py"
+    ],
+    "retry_agent": [
+     "src/psyclone/psyir/symbols/datatypes.py",
+     "src/psyclone/psyir/frontend/fparser2.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "changelog",
+    "src/psyclone/psyir/backend/fortran.py",
+    "src/psyclone/psyir/frontend/fparser2.py"
+   ],
+   "retry_first_needed_step": 4,
+   "task": "stfc__PSyclone-1138",
+   "top": {
+    "fix_hybrid": [
+     "changelog",
+     "src/psyclone/psyir/nodes/call.py",
+     "src/psyclone/psyir/frontend/fparser2.py"
+    ],
+    "handoff": [
+     "src/psyclone/psyir/backend/fortran.py",
+     "src/psyclone/psyir/nodes/routine.py",
+     "changelog"
+    ],
+    "retry_agent": [
+     "src/psyclone/psyir/nodes/routine.py",
+     "src/psyclone/psyir/frontend/fparser2.py",
+     "src/psyclone/psyir/backend/fortran.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "CHANGELOG.md",
+    "src/fparser/common/readfortran.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "stfc__fparser-287",
+   "top": {
+    "fix_hybrid": [
+     "CHANGELOG.md",
+     "src/fparser/common/readfortran.py",
+     "doc/developers_guide.rst"
+    ],
+    "handoff": [
+     "src/fparser/api.py",
+     "CHANGELOG.md",
+     "src/fparser/common/readfortran.py"
+    ],
+    "retry_agent": [
+     "src/fparser/api.py",
+     "src/fparser/one/parsefortran.py",
+     "src/fparser/one/block_statements.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "base62.py"
+   ],
+   "retry_first_needed_step": 5,
+   "task": "suminb__base62-22",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "base62.py"
+    ],
+    "retry_agent": [
+     "base62.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "lizard.py",
+    "lizard_ext/lizardns.py"
+   ],
+   "retry_first_needed_step": 6,
+   "task": "terryyin__lizard-120",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [],
+    "retry_agent": [
+     "lizard.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "paratemp/coordinate_analysis.py",
+    "requirements.txt",
+    "setup.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "theavey__ParaTemp-31",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "paratemp/coordinate_analysis.py"
+    ],
+    "retry_agent": [
+     "paratemp/coordinate_analysis.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "asks/request_object.py"
+   ],
+   "retry_first_needed_step": 20,
+   "task": "theelous3__asks-100",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [],
+    "retry_agent": [
+     "asks/request_object.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "asks/http_utils.py"
+   ],
+   "retry_first_needed_step": 11,
+   "task": "theelous3__asks-173",
+   "top": {
+    "fix_hybrid": [
+     "asks/request_object.py"
+    ],
+    "handoff": [
+     "asks/http_utils.py",
+     "asks/request_object.py"
+    ],
+    "retry_agent": [
+     "asks/http_utils.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "edk2toolext/environment/extdeptypes/git_dependency.py"
+   ],
+   "retry_first_needed_step": 14,
+   "task": "tianocore__edk2-pytool-extensions-125",
+   "top": {
+    "fix_hybrid": [
+     "edk2toolext/environment/extdeptypes/web_dependency.py"
+    ],
+    "handoff": [
+     "edk2toolext/environment/version_aggregator.py",
+     "edk2toolext/environment/extdeptypes/web_dependency.py"
+    ],
+    "retry_agent": [
+     "edk2toolext/environment/extdeptypes/git_dependency.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "mkdocs_table_reader_plugin/safe_eval.py",
+    "setup.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "timvink__mkdocs-table-reader-plugin-10",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "mkdocs_table_reader_plugin/safe_eval.py"
+    ],
+    "retry_agent": [
+     "mkdocs_table_reader_plugin/safe_eval.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "src/ecdsa/keys.py"
+   ],
+   "retry_first_needed_step": 5,
+   "task": "tlsfuzzer__python-ecdsa-281",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "src/ecdsa/ecdsa.py",
+     "src/ecdsa/keys.py"
+    ],
+    "retry_agent": [
+     "src/ecdsa/keys.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "Changelog.md",
+    "osmtogeojson/osmtogeojson.py",
+    "setup.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "tommyjcarpenter__osmtogeojson-8",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "osmtogeojson/osmtogeojson.py"
+    ],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "sievelib/parser.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "tonioo__sievelib-97",
+   "top": {
+    "fix_hybrid": [
+     "sievelib/commands.py",
+     "README.rst",
+     "sievelib/factory.py"
+    ],
+    "handoff": [
+     "sievelib/commands.py",
+     "README.rst",
+     "sievelib/factory.py"
+    ],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "src/syrupy/terminal.py"
+   ],
+   "retry_first_needed_step": 17,
+   "task": "tophat__syrupy-634",
+   "top": {
+    "fix_hybrid": [
+     "src/syrupy/report.py",
+     "src/syrupy/location.py"
+    ],
+    "handoff": [
+     "src/syrupy/report.py",
+     "src/syrupy/location.py"
+    ],
+    "retry_agent": [
+     "tests/syrupy/test_doctest.py",
+     "tests/syrupy/test_utils.py",
+     "tests/integration/test_snapshot_outside_directory.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "keyboa/button.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "torrua__keyboa-15",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "tests/test_keyboard.py"
+    ],
+    "retry_agent": [
+     "tests/test_button.py",
+     "tests/test_keyboard.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    ".pre-commit-config.yaml",
+    "tox.ini",
+    "tox_conda/plugin.py"
+   ],
+   "retry_first_needed_step": 4,
+   "task": "tox-dev__tox-conda-161",
+   "top": {
+    "fix_hybrid": [
+     "tox_conda/plugin.py"
+    ],
+    "handoff": [
+     ".tox/py39/lib/python3.9/site-packages/tox_conda/plugin.py",
+     "tox_conda/plugin.py"
+    ],
+    "retry_agent": [
+     "tox_conda/plugin.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "pyproject.toml",
+    "src/reportseff/job.py",
+    "src/reportseff/output_renderer.py"
+   ],
+   "retry_first_needed_step": 4,
+   "task": "troycomi__reportseff-42",
+   "top": {
+    "fix_hybrid": [
+     "pyproject.toml",
+     "README.md",
+     "src/reportseff/job.py"
+    ],
+    "handoff": [
+     "src/reportseff/job.py",
+     "pyproject.toml",
+     "README.md"
+    ],
+    "retry_agent": [
+     "src/reportseff/job.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "ruuvitag_sensor/ruuvi.py"
+   ],
+   "retry_first_needed_step": 4,
+   "task": "ttu__ruuvitag-sensor-41",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "ruuvitag_sensor/decoder.py"
+    ],
+    "retry_agent": [
+     "ruuvitag_sensor/ruuvi.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "docs/source/docformat/list-restructuredtext-support.rst",
+    "docs/source/docformat/restructuredtext.rst",
+    "pydoctor/epydoc/markup/restructuredtext.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "twisted__pydoctor-491",
+   "top": {
+    "fix_hybrid": [
+     "pydoctor/astbuilder.py"
+    ],
+    "handoff": [
+     "pydoctor/epydoc/markup/restructuredtext.py",
+     "pydoctor/test/epydoc/restructuredtext.doctest",
+     "pydoctor/astbuilder.py"
+    ],
+    "retry_agent": [
+     "pydoctor/epydoc/markup/epytext.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "tubes/protocol.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "twisted__tubes-78",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "tubes/protocol.py"
+    ],
+    "retry_agent": [
+     "tubes/protocol.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    ".travis.yml",
+    "pydbg.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "tylerwince__pydbg-4",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "pydbg.py"
+    ],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "conductr_cli/bndl_create.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "typesafehub__conductr-cli-466",
+   "top": {
+    "fix_hybrid": [
+     "conductr_cli/resolvers/bintray_resolver.py",
+     "conductr_cli/license_auth.py",
+     "conductr_cli/resolvers/docker_resolver.py"
+    ],
+    "handoff": [
+     "conductr_cli/bndl_create.py",
+     "conductr_cli/bndl_utils.py",
+     "conductr_cli/resolvers/bintray_resolver.py"
+    ],
+    "retry_agent": [
+     "conductr_cli/bndl_create.py",
+     "conductr_cli/bndl_utils.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "edtf_validate/valid_edtf.py"
+   ],
+   "retry_first_needed_step": 4,
+   "task": "unt-libraries__edtf-validate-25",
+   "top": {
+    "fix_hybrid": [
+     "CHANGELOG.md",
+     "edtf_validate/valid_edtf.py"
+    ],
+    "handoff": [
+     "edtf_validate/valid_edtf.py",
+     "CHANGELOG.md"
+    ],
+    "retry_agent": [
+     "edtf_validate/valid_edtf.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "examples/task-example.yaml",
+    "valohai_yaml/objs/task.py",
+    "valohai_yaml/schema/task.yaml"
+   ],
+   "retry_first_needed_step": 7,
+   "task": "valohai__valohai-yaml-135",
+   "top": {
+    "fix_hybrid": [
+     "examples/task-example.yaml",
+     "valohai_yaml/objs/task.py",
+     "valohai_yaml/schema/task.yaml"
+    ],
+    "handoff": [
+     "valohai_yaml/objs/task.py",
+     "valohai_yaml/__init__.py",
+     "valohai_yaml/objs/config.py"
+    ],
+    "retry_agent": [
+     "valohai_yaml/parsing.py",
+     "valohai_yaml/objs/base.py",
+     "valohai_yaml/objs/config.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "docs/src/tutorial/query/code010.py",
+    "ninja/signature/details.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "vitalik__django-ninja-133",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "docs/docs/tutorial/response-schema.md",
+    "ninja/orm/metaclass.py",
+    "ninja/schema.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "vitalik__django-ninja-317",
+   "top": {
+    "fix_hybrid": [
+     "ninja/signature/details.py",
+     "ninja/openapi/schema.py",
+     "docs/docs/tutorial/response-schema.md"
+    ],
+    "handoff": [
+     "ninja/signature/details.py",
+     "ninja/openapi/schema.py",
+     "docs/docs/tutorial/response-schema.md"
+    ],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "ninja/errors.py"
+   ],
+   "retry_first_needed_step": 5,
+   "task": "vitalik__django-ninja-838",
+   "top": {
+    "fix_hybrid": [
+     "ninja/signature/details.py",
+     "ninja/main.py",
+     "ninja/params_models.py"
+    ],
+    "handoff": [
+     "ninja/errors.py",
+     "ninja/signature/details.py",
+     "ninja/main.py"
+    ],
+    "retry_agent": [
+     "ninja/errors.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "wagtail/embeds/finders/oembed.py"
+   ],
+   "retry_first_needed_step": 1,
+   "task": "wagtail__wagtail-7427",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "wagtail/embeds/finders/oembed.py"
+    ],
+    "retry_agent": [
+     "wagtail/embeds/finders/oembed.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "saltlint/linter.py",
+    "saltlint/rules/JinjaVariableHasSpacesRule.py"
+   ],
+   "retry_first_needed_step": 12,
+   "task": "warpnet__salt-lint-196",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [],
+    "retry_agent": [
+     "tests/unit/TestJinjaPillarGrainsGetFormatRule.py",
+     "tests/unit/TestJinjaVariableHasSpaces.py",
+     "saltlint/config.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "docs/tutorial.rst",
+    "grole.py"
+   ],
+   "retry_first_needed_step": 3,
+   "task": "witchard__grole-21",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "grole.py"
+    ],
+    "retry_agent": [
+     "grole.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "CHANGELOG.rst",
+    "xskillscore/core/resampling.py"
+   ],
+   "retry_first_needed_step": 7,
+   "task": "xarray-contrib__xskillscore-339",
+   "top": {
+    "fix_hybrid": [
+     ".github/workflows/lint.yml",
+     ".github/workflows/xskillscore_installs.yml",
+     "CHANGELOG.rst"
+    ],
+    "handoff": [
+     "xskillscore/core/resampling.py",
+     ".github/workflows/lint.yml",
+     ".github/workflows/xskillscore_installs.yml"
+    ],
+    "retry_agent": [
+     "xskillscore/core/resampling.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "examples/union_operator.py",
+    "serde/compat.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "yukinarit__pyserde-229",
+   "top": {
+    "fix_hybrid": [
+     "pyproject.toml",
+     "serde/compat.py",
+     "serde/de.py"
+    ],
+    "handoff": [
+     "pyproject.toml",
+     "serde/compat.py",
+     "serde/de.py"
+    ],
+    "retry_agent": [
+     "serde/json.py",
+     "serde/__init__.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "serde/de.py"
+   ],
+   "retry_first_needed_step": 5,
+   "task": "yukinarit__pyserde-264",
+   "top": {
+    "fix_hybrid": [
+     "serde/compat.py",
+     "examples/union_operator.py",
+     "pyproject.toml"
+    ],
+    "handoff": [
+     "serde/de.py",
+     "serde/compat.py",
+     "examples/union_operator.py"
+    ],
+    "retry_agent": [
+     "serde/de.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "serde/de.py",
+    "serde/se.py"
+   ],
+   "retry_first_needed_step": 9,
+   "task": "yukinarit__pyserde-487",
+   "top": {
+    "fix_hybrid": [
+     "serde/de.py",
+     "serde/compat.py",
+     "serde/core.py"
+    ],
+    "handoff": [
+     "serde/json.py",
+     "serde/se.py",
+     "serde/de.py"
+    ],
+    "retry_agent": [
+     "serde/json.py",
+     "serde/se.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "pierone/cli.py"
+   ],
+   "retry_first_needed_step": 7,
+   "task": "zalando-stups__pierone-cli-37",
+   "top": {
+    "fix_hybrid": [
+     ".gitignore",
+     "pierone/cli.py",
+     "tox.ini"
+    ],
+    "handoff": [
+     "pierone/cli.py",
+     ".gitignore",
+     "tox.ini"
+    ],
+    "retry_agent": [
+     "pierone/cli.py",
+     "pierone/api.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "zign/api.py"
+   ],
+   "retry_first_needed_step": 8,
+   "task": "zalando-stups__zign-14",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "zign/api.py"
+    ],
+    "retry_agent": [
+     "zign/api.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "ocfl/data/validation-errors.json",
+    "ocfl/inventory_validator.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "zimeon__ocfl-py-54",
+   "top": {
+    "fix_hybrid": [],
+    "handoff": [
+     "ocfl/inventory_validator.py"
+    ],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "CHANGES.rst",
+    "src/ZODB/mvccadapter.py"
+   ],
+   "retry_first_needed_step": null,
+   "task": "zopefoundation__ZODB-291",
+   "top": {
+    "fix_hybrid": [
+     "CHANGES.rst",
+     "src/ZODB/DB.py",
+     "src/ZODB/scripts/repozo.py"
+    ],
+    "handoff": [
+     "src/ZODB/mvccadapter.py",
+     "src/ZODB/Connection.py",
+     "CHANGES.rst"
+    ],
+    "retry_agent": []
+   }
+  },
+  {
+   "gold": [
+    "CHANGES.rst",
+    "src/webdav/NullResource.py"
+   ],
+   "retry_first_needed_step": 2,
+   "task": "zopefoundation__Zope-1003",
+   "top": {
+    "fix_hybrid": [
+     "CHANGES.rst",
+     "src/OFS/SimpleItem.py",
+     "src/OFS/ObjectManager.py"
+    ],
+    "handoff": [
+     "README.rst",
+     "CHANGES.rst",
+     "src/OFS/SimpleItem.py"
+    ],
+    "retry_agent": [
+     "src/webdav/NullResource.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "CHANGES.rst",
+    "persistent/picklecache.py"
+   ],
+   "retry_first_needed_step": 4,
+   "task": "zopefoundation__persistent-161",
+   "top": {
+    "fix_hybrid": [
+     "CHANGES.rst",
+     "persistent/timestamp.py"
+    ],
+    "handoff": [
+     "persistent/picklecache.py",
+     "CHANGES.rst",
+     "persistent/timestamp.py"
+    ],
+    "retry_agent": [
+     "persistent/picklecache.py"
+    ]
+   }
+  },
+  {
+   "gold": [
+    "zulipterminal/ui_tools/buttons.py"
+   ],
+   "retry_first_needed_step": 3,
+   "task": "zulip__zulip-terminal-1424",
+   "top": {
+    "fix_hybrid": [
+     "zulipterminal/ui_tools/views.py",
+     "docs/hotkeys.md",
+     "zulipterminal/config/keys.py"
+    ],
+    "handoff": [
+     "zulipterminal/ui_tools/buttons.py",
+     "zulipterminal/ui_tools/views.py",
+     "docs/hotkeys.md"
+    ],
+    "retry_agent": [
+     "zulipterminal/ui_tools/buttons.py"
+    ]
+   }
+  }
+ ],
+ "fix_hybrid": {
+  "hit1": 0.251131,
+  "hit1_ci": {
+   "query_ci": [
+    0.210407,
+    0.294118
+   ],
+   "repo_ci": [
+    0.205418,
+    0.298673
+   ]
+  },
+  "hit1_when_retry_never_opened": 0.281818,
+  "hit5": 0.414027,
+  "hit5_ci": {
+   "query_ci": [
+    0.368778,
+    0.463801
+   ],
+   "repo_ci": [
+    0.361233,
+    0.460137
+   ]
+  }
+ },
+ "handoff": {
+  "hit1": 0.690045,
+  "hit1_ci": {
+   "query_ci": [
+    0.649321,
+    0.733032
+   ],
+   "repo_ci": [
+    0.651584,
+    0.734967
+   ]
+  },
+  "hit1_when_retry_never_opened": 0.463636,
+  "hit5": 0.846154,
+  "hit5_ci": {
+   "query_ci": [
+    0.81448,
+    0.88009
+   ],
+   "repo_ci": [
+    0.810044,
+    0.88196
+   ]
+  }
+ },
+ "hit1:handoff-fix_hybrid": {
+  "diff": 0.438914,
+  "query_ci": [
+   0.384615,
+   0.493213
+  ],
+  "repo_ci": [
+   0.386047,
+   0.49763
+  ]
+ },
+ "hit1:handoff-retry_agent": {
+  "diff": 0.090498,
+  "query_ci": [
+   0.047511,
+   0.142534
+  ],
+  "repo_ci": [
+   0.044496,
+   0.139211
+  ]
+ },
+ "hit1:retry_agent-fix_hybrid": {
+  "diff": 0.348416,
+  "query_ci": [
+   0.285068,
+   0.409502
+  ],
+  "repo_ci": [
+   0.284738,
+   0.40991
+  ]
+ },
+ "hit1_handoff_right_retry_wrong": 82,
+ "hit1_handoff_wrong_retry_right": 42,
+ "hit5:handoff-fix_hybrid": {
+  "diff": 0.432127,
+  "query_ci": [
+   0.386878,
+   0.4819
+  ],
+  "repo_ci": [
+   0.38565,
+   0.481481
+  ]
+ },
+ "hit5:handoff-retry_agent": {
+  "diff": 0.099548,
+  "query_ci": [
+   0.054299,
+   0.147059
+  ],
+  "repo_ci": [
+   0.049528,
+   0.148315
+  ]
+ },
+ "hit5:retry_agent-fix_hybrid": {
+  "diff": 0.332579,
+  "query_ci": [
+   0.273756,
+   0.395928
+  ],
+  "repo_ci": [
+   0.267974,
+   0.396226
+  ]
+ },
+ "repos": 361,
+ "retry_agent": {
+  "hit1": 0.599548,
+  "hit1_ci": {
+   "query_ci": [
+    0.552036,
+    0.644796
+   ],
+   "repo_ci": [
+    0.557047,
+    0.643016
+   ]
+  },
+  "hit1_when_retry_never_opened": 0.0,
+  "hit5": 0.746606,
+  "hit5_ci": {
+   "query_ci": [
+    0.708145,
+    0.78733
+   ],
+   "repo_ci": [
+    0.707589,
+    0.786026
+   ]
+  }
+ },
+ "retry_first_needed_step_median": 5.0,
+ "retry_never_opened_needed_file": 110,
+ "retry_resolved": 16,
+ "retry_steps_median": 18.0,
+ "tasks": 442
+}

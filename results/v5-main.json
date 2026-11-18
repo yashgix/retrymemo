@@ -1,0 +1,248 @@
+{
+ "tasks_failed_validation": [
+  "Tinche__cattrs-117",
+  "hynek__structlog-463",
+  "pypa__hatch-422",
+  "pypa__auditwheel-424",
+  "4degrees__clique-26",
+  "drvinceknight__nbchkr-19",
+  "betamaxpy__betamax-170",
+  "pybel__pybel-384",
+  "coverahealth__dataspec-4",
+  "adamchainz__time-machine-433",
+  "radiasoft__pykern-349",
+  "20c__ctl-3",
+  "wireservice__csvkit-645",
+  "asottile__add-trailing-comma-23",
+  "repobee__repobee-457",
+  "marshmallow-code__webargs-463",
+  "adamchainz__ec2-metadata-350",
+  "asottile__yesqa-41",
+  "microsoft__electionguard-python-654",
+  "florimondmanca__fountain-lang-7",
+  "terryyin__lizard-144",
+  "microsoft__electionguard-python-189",
+  "scrapy__itemadapter-18",
+  "stummjr__flake8-scrapy-19",
+  "mmerickel__wired-2",
+  "xlab-si__xopera-opera-52",
+  "matchms__matchms-539",
+  "marshmallow-code__webargs-541",
+  "miurahr__aqtinstall-633",
+  "astropy__sphinx-automodapi-142",
+  "ikalnytskyi__picobox-79",
+  "googlefonts__picosvg-240",
+  "adamchainz__apig-wsgi-187",
+  "TheFriendlyCoder__friendlypins-77",
+  "Pylons__webob-332",
+  "melexis__warnings-plugin-28",
+  "melexis__warnings-plugin-57",
+  "adamchainz__pip-lock-121",
+  "oasis-open__cti-python-stix2-489",
+  "mie-lab__trackintel-217",
+  "agronholm__anyio-307",
+  "pypa__setuptools_scm-538"
+ ],
+ "tasks_left_out_crash": [
+  "allo-media__text2num-96"
+ ],
+ "tasks_left_out_incomplete": [
+  "barrust__pyspellchecker-132"
+ ],
+ "train_fill_tasks": 44,
+ "spend_logged_runs": 12.4856,
+ "arms": {
+  "A": {
+   "runs": 288,
+   "resolved": 248,
+   "cost_total": 6.0653,
+   "cost_median": 0.0172,
+   "steps_median": 17.0,
+   "seconds_median": 80.0,
+   "input_tokens_median": 284756.0,
+   "output_tokens_median": 8084.5,
+   "first_needed_step_median": 2.0,
+   "never_touched_needed_file": 0,
+   "misled": 9,
+   "patch_not_applied": 0,
+   "submission_differs": 0,
+   "exit_status": {
+    "Submitted": 288
+   }
+  },
+  "B": {
+   "runs": 288,
+   "resolved": 252,
+   "cost_total": 6.3312,
+   "cost_median": 0.0192,
+   "steps_median": 17.0,
+   "seconds_median": 92.5,
+   "input_tokens_median": 306509.0,
+   "output_tokens_median": 8778.0,
+   "first_needed_step_median": 1.0,
+   "never_touched_needed_file": 0,
+   "misled": 15,
+   "patch_not_applied": 0,
+   "submission_differs": 0,
+   "exit_status": {
+    "Submitted": 288
+   }
+  }
+ },
+ "all_tasks": {
+  "tasks": 144,
+  "repos": 125,
+  "B-A": {
+   "steps": {
+    "base": 19.732639,
+    "other": 19.190972,
+    "diff": -0.541667,
+    "relative": -0.02745,
+    "query_ci": [
+     -1.427083,
+     0.375
+    ],
+    "repo_ci": [
+     -1.475352,
+     0.264085
+    ],
+    "clear": false
+   },
+   "cost": {
+    "base": 0.02106,
+    "other": 0.021983,
+    "diff": 0.000923,
+    "relative": 0.043839,
+    "query_ci": [
+     -0.000289,
+     0.002071
+    ],
+    "repo_ci": [
+     -0.000362,
+     0.002071
+    ],
+    "clear": false
+   },
+   "resolved": {
+    "base": 0.861111,
+    "other": 0.875,
+    "diff": 0.013889,
+    "relative": 0.016129,
+    "query_ci": [
+     -0.017361,
+     0.048611
+    ],
+    "repo_ci": [
+     -0.020979,
+     0.045775
+    ],
+    "clear": false
+   },
+   "mcnemar_p": 0.557197093963623
+  }
+ },
+ "dev_tasks_only": {
+  "tasks": 100,
+  "repos": 90,
+  "B-A": {
+   "steps": {
+    "base": 19.865,
+    "other": 19.1,
+    "diff": -0.765,
+    "relative": -0.03851,
+    "query_ci": [
+     -2.075,
+     0.485
+    ],
+    "repo_ci": [
+     -1.970297,
+     0.505
+    ],
+    "clear": false
+   },
+   "cost": {
+    "base": 0.021594,
+    "other": 0.022695,
+    "diff": 0.001101,
+    "relative": 0.051,
+    "query_ci": [
+     -0.000498,
+     0.002689
+    ],
+    "repo_ci": [
+     -0.000524,
+     0.002754
+    ],
+    "clear": false
+   },
+   "resolved": {
+    "base": 0.88,
+    "other": 0.875,
+    "diff": -0.005,
+    "relative": -0.005682,
+    "query_ci": [
+     -0.04,
+     0.04
+    ],
+    "repo_ci": [
+     -0.04902,
+     0.034653
+    ],
+    "clear": false
+   },
+   "mcnemar_p": 1.0
+  }
+ },
+ "stalled_subgroup": {
+  "tasks": 29,
+  "repos": 29,
+  "B-A": {
+   "steps": {
+    "base": 21.344828,
+    "other": 20.396552,
+    "diff": -0.948276,
+    "relative": -0.044426,
+    "query_ci": [
+     -3.741379,
+     1.206897
+    ],
+    "repo_ci": [
+     -3.741379,
+     1.206897
+    ],
+    "clear": false
+   },
+   "cost": {
+    "base": 0.021835,
+    "other": 0.022878,
+    "diff": 0.001043,
+    "relative": 0.047755,
+    "query_ci": [
+     -0.001612,
+     0.003416
+    ],
+    "repo_ci": [
+     -0.001612,
+     0.003416
+    ],
+    "clear": false
+   },
+   "resolved": {
+    "base": 0.896552,
+    "other": 0.862069,
+    "diff": -0.034483,
+    "relative": -0.038462,
+    "query_ci": [
+     -0.12069,
+     0.034483
+    ],
+    "repo_ci": [
+     -0.12069,
+     0.034483
+    ],
+    "clear": false
+   },
+   "mcnemar_p": 0.6875
+  }
+ }
+}

@@ -1,0 +1,17 @@
+[project]
+name = "recallbench"
+version = "0.1.0"
+description = "Which past coding-agent sessions point a new task to the files its real fix touched: a retrieval benchmark on public SWE-agent runs"
+requires-python = ">=3.14"
+dependencies = ["numpy==2.5.4"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py314"
+extend-exclude = ["data"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["recallbench"]

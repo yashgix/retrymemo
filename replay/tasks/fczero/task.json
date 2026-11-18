@@ -1,0 +1,31 @@
+{
+ "name": "fczero",
+ "project": "pullplug",
+ "source": "pullplug/repo",
+ "pre": "d1e4026766258f05cc372b7d6ff721d770e2f89c",
+ "reference": "4b676aafe4b3698aa5638bb01e4d6f7e3489db6f",
+ "first_attempt": null,
+ "cutoff": "2026-11-16T17:33:19-05:00",
+ "text": "`repro` results go straight into README claims. Make `repro` trustworthy enough for that. One known gap: `--plans` can point `repro` at plans with a scoring seed (1-1200), and `repro` must apply the same freeze check as `run` to every plan before running it (exit 5).\n\nThe hidden tests rely on this interface: `reproduce` and `reproduceAll` take an optional last argument, the schedule runner (default `runSchedule`), so tests can replace Docker.",
+ "tests": [
+  "test/repro.test.ts"
+ ],
+ "memory_tests": [
+  "zero replays",
+  "a harness error aborts"
+ ],
+ "database": null,
+ "gold_memory": [
+  "sendward/records/phase1/code-review/REVIEW-reviewer-m3-1.md",
+  "citecheck/records/phase1/code-review/REVIEW-reviewer-m2-1.md"
+ ],
+ "exclude_memory": {
+  "pullplug/records/phase1/code-review/REVIEW-reviewer-1.md": "the review this task comes from (17:27, six minutes before the cutoff): it states the fix"
+ },
+ "inputs": [],
+ "patches": [
+  "memory_only",
+  "reference",
+  "task_only"
+ ]
+}

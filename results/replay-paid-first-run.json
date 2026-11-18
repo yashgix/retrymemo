@@ -1,0 +1,45 @@
+{
+ "row": {
+  "task": "lock",
+  "arm": "none",
+  "seed": 1,
+  "exit_status": "Submitted",
+  "steps": 32,
+  "cost": 0.047065,
+  "tokens": {
+   "input": 1030943,
+   "cached_input": 993152,
+   "output": 24807,
+   "calls_without_usage": 0
+  },
+  "seconds": 213,
+  "prompt_chars": 545,
+  "applied": true,
+  "scoring_error": null,
+  "pass": true,
+  "avoided": true,
+  "task_failed": [],
+  "memory_failed": [],
+  "regression_failed": 0
+ },
+ "spend_json": {
+  "total": 0.047065
+ },
+ "balance": [
+  {
+   "before": 22.14,
+   "after": 22.13
+  }
+ ],
+ "audit": {
+  "runs": 1,
+  "spend_json": 0.047065,
+  "rows_total": 0.047065,
+  "problems": [
+   "lock.none.1: sent private text: </returncode> <output> e8fef24 (HEAD -> <private>-base) Snapshot at the start of the task",
+   "lock.none.1: sent private text: se) Snapshot at the start of the task * <private>-base SPEC.md:57:  `failed`, `unknown`, "
+  ],
+  "benign": []
+ },
+ "stopped": "privacy audit: the snapshot branch name <private>-base reached the model through git output"
+}

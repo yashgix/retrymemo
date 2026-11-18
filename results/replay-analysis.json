@@ -1,0 +1,2297 @@
+{
+ "runs": 127,
+ "counted": 125,
+ "complete_seeds": [
+  1,
+  2,
+  3,
+  4,
+  5
+ ],
+ "missing": [
+  {
+   "task": "simlink",
+   "arm": "oracle",
+   "seed": 5,
+   "exit_status": "crash:OSError: [Errno 28] No space left on device: '/Users/<user>/<work folder>/paid-run-2/simlink.oracle.5.traj.json'",
+   "scoring_error": "CalledProcessError: Command '['docker', 'run', '-d', '-w', '/testbed', '--rm', '--network', 'none', 'replay-simlink:edafc610c042', 'sleep', '3h']' returned non-zero exit status 1."
+  },
+  {
+   "task": "simlink",
+   "arm": "random",
+   "seed": 5,
+   "exit_status": "crash:PrivateTextBlocked: request not sent, it holds ['<user name>']",
+   "scoring_error": "CalledProcessError: Command '['docker', 'run', '-d', '-w', '/testbed', '--rm', '--network', 'none', 'replay-simlink:edafc610c042', 'sleep', '3h']' returned non-zero exit status 1."
+  }
+ ],
+ "enough_data": true,
+ "primary": {
+  "oracle vs none": {
+   "tasks": {
+    "lock": {
+     "rates": [
+      1,
+      1
+     ],
+     "wilson": [
+      [
+       0.5655,
+       1.0
+      ],
+      [
+       0.5655,
+       1.0
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0
+    },
+    "verifier": {
+     "rates": [
+      1,
+      1
+     ],
+     "wilson": [
+      [
+       0.5655,
+       1.0
+      ],
+      [
+       0.5655,
+       1.0
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0
+    },
+    "onnx": {
+     "rates": [
+      0.4,
+      0.4
+     ],
+     "wilson": [
+      [
+       0.1176,
+       0.7693
+      ],
+      [
+       0.1176,
+       0.7693
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0.0
+    },
+    "fczero": {
+     "rates": [
+      0,
+      0
+     ],
+     "wilson": [
+      [
+       0.0,
+       0.4345
+      ],
+      [
+       0.0,
+       0.4345
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0
+    }
+   },
+   "mean_difference": 0.0,
+   "p": 1.0,
+   "bootstrap_95": [
+    -0.15,
+    0.15
+   ],
+   "reading": "no clear effect",
+   "p_holm": 1.0
+  },
+  "retrieved vs none": {
+   "tasks": {
+    "lock": {
+     "rates": [
+      0.8,
+      1
+     ],
+     "wilson": [
+      [
+       0.3755,
+       0.9638
+      ],
+      [
+       0.5655,
+       1.0
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": -0.2
+    },
+    "verifier": {
+     "rates": [
+      1,
+      1
+     ],
+     "wilson": [
+      [
+       0.5655,
+       1.0
+      ],
+      [
+       0.5655,
+       1.0
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0
+    },
+    "onnx": {
+     "rates": [
+      1,
+      0.4
+     ],
+     "wilson": [
+      [
+       0.5655,
+       1.0
+      ],
+      [
+       0.1176,
+       0.7693
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0.6
+    },
+    "fczero": {
+     "rates": [
+      0,
+      0
+     ],
+     "wilson": [
+      [
+       0.0,
+       0.4345
+      ],
+      [
+       0.0,
+       0.4345
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0
+    }
+   },
+   "mean_difference": 0.1,
+   "p": 1.0,
+   "bootstrap_95": [
+    -0.2,
+    0.45
+   ],
+   "reading": "no clear effect",
+   "p_holm": 1.0
+  },
+  "oracle vs random": {
+   "tasks": {
+    "lock": {
+     "rates": [
+      1,
+      1
+     ],
+     "wilson": [
+      [
+       0.5655,
+       1.0
+      ],
+      [
+       0.5655,
+       1.0
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0
+    },
+    "verifier": {
+     "rates": [
+      1,
+      1
+     ],
+     "wilson": [
+      [
+       0.5655,
+       1.0
+      ],
+      [
+       0.5655,
+       1.0
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0
+    },
+    "onnx": {
+     "rates": [
+      0.4,
+      0.4
+     ],
+     "wilson": [
+      [
+       0.1176,
+       0.7693
+      ],
+      [
+       0.1176,
+       0.7693
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0.0
+    },
+    "fczero": {
+     "rates": [
+      0,
+      0
+     ],
+     "wilson": [
+      [
+       0.0,
+       0.4345
+      ],
+      [
+       0.0,
+       0.4345
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0
+    }
+   },
+   "mean_difference": 0.0,
+   "p": 1.0,
+   "bootstrap_95": [
+    -0.15,
+    0.15
+   ],
+   "reading": "no clear effect",
+   "p_holm": 1.0
+  }
+ },
+ "secondary_pass": {
+  "oracle vs none": {
+   "tasks": {
+    "lock": {
+     "rates": [
+      1,
+      1
+     ],
+     "wilson": [
+      [
+       0.5655,
+       1.0
+      ],
+      [
+       0.5655,
+       1.0
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0
+    },
+    "verifier": {
+     "rates": [
+      1,
+      1
+     ],
+     "wilson": [
+      [
+       0.5655,
+       1.0
+      ],
+      [
+       0.5655,
+       1.0
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0
+    },
+    "onnx": {
+     "rates": [
+      1,
+      1
+     ],
+     "wilson": [
+      [
+       0.5655,
+       1.0
+      ],
+      [
+       0.5655,
+       1.0
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0
+    },
+    "fczero": {
+     "rates": [
+      1,
+      1
+     ],
+     "wilson": [
+      [
+       0.5655,
+       1.0
+      ],
+      [
+       0.5655,
+       1.0
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0
+    }
+   },
+   "mean_difference": 0
+  },
+  "retrieved vs none": {
+   "tasks": {
+    "lock": {
+     "rates": [
+      1,
+      1
+     ],
+     "wilson": [
+      [
+       0.5655,
+       1.0
+      ],
+      [
+       0.5655,
+       1.0
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0
+    },
+    "verifier": {
+     "rates": [
+      1,
+      1
+     ],
+     "wilson": [
+      [
+       0.5655,
+       1.0
+      ],
+      [
+       0.5655,
+       1.0
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0
+    },
+    "onnx": {
+     "rates": [
+      1,
+      1
+     ],
+     "wilson": [
+      [
+       0.5655,
+       1.0
+      ],
+      [
+       0.5655,
+       1.0
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0
+    },
+    "fczero": {
+     "rates": [
+      1,
+      1
+     ],
+     "wilson": [
+      [
+       0.5655,
+       1.0
+      ],
+      [
+       0.5655,
+       1.0
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0
+    }
+   },
+   "mean_difference": 0
+  },
+  "oracle vs random": {
+   "tasks": {
+    "lock": {
+     "rates": [
+      1,
+      1
+     ],
+     "wilson": [
+      [
+       0.5655,
+       1.0
+      ],
+      [
+       0.5655,
+       1.0
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0
+    },
+    "verifier": {
+     "rates": [
+      1,
+      1
+     ],
+     "wilson": [
+      [
+       0.5655,
+       1.0
+      ],
+      [
+       0.5655,
+       1.0
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0
+    },
+    "onnx": {
+     "rates": [
+      1,
+      1
+     ],
+     "wilson": [
+      [
+       0.5655,
+       1.0
+      ],
+      [
+       0.5655,
+       1.0
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0
+    },
+    "fczero": {
+     "rates": [
+      1,
+      1
+     ],
+     "wilson": [
+      [
+       0.5655,
+       1.0
+      ],
+      [
+       0.5655,
+       1.0
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0
+    }
+   },
+   "mean_difference": 0
+  },
+  "instructions vs none": {
+   "tasks": {
+    "lock": {
+     "rates": [
+      1,
+      1
+     ],
+     "wilson": [
+      [
+       0.5655,
+       1.0
+      ],
+      [
+       0.5655,
+       1.0
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0
+    },
+    "verifier": {
+     "rates": [
+      1,
+      1
+     ],
+     "wilson": [
+      [
+       0.5655,
+       1.0
+      ],
+      [
+       0.5655,
+       1.0
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0
+    },
+    "onnx": {
+     "rates": [
+      1,
+      1
+     ],
+     "wilson": [
+      [
+       0.5655,
+       1.0
+      ],
+      [
+       0.5655,
+       1.0
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0
+    },
+    "fczero": {
+     "rates": [
+      1,
+      1
+     ],
+     "wilson": [
+      [
+       0.5655,
+       1.0
+      ],
+      [
+       0.5655,
+       1.0
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0
+    }
+   },
+   "mean_difference": 0
+  }
+ },
+ "instructions_avoided": {
+  "instructions vs none": {
+   "tasks": {
+    "lock": {
+     "rates": [
+      1,
+      1
+     ],
+     "wilson": [
+      [
+       0.5655,
+       1.0
+      ],
+      [
+       0.5655,
+       1.0
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0
+    },
+    "verifier": {
+     "rates": [
+      1,
+      1
+     ],
+     "wilson": [
+      [
+       0.5655,
+       1.0
+      ],
+      [
+       0.5655,
+       1.0
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0
+    },
+    "onnx": {
+     "rates": [
+      0.2,
+      0.4
+     ],
+     "wilson": [
+      [
+       0.0362,
+       0.6245
+      ],
+      [
+       0.1176,
+       0.7693
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": -0.2
+    },
+    "fczero": {
+     "rates": [
+      0,
+      0
+     ],
+     "wilson": [
+      [
+       0.0,
+       0.4345
+      ],
+      [
+       0.0,
+       0.4345
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0
+    }
+   },
+   "mean_difference": -0.05
+  }
+ },
+ "simlink": {
+  "oracle vs none": {
+   "tasks": {
+    "simlink": {
+     "rates": [
+      1,
+      1
+     ],
+     "wilson": [
+      [
+       0.5655,
+       1.0
+      ],
+      [
+       0.5655,
+       1.0
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0
+    }
+   },
+   "mean_difference": 0
+  },
+  "retrieved vs none": {
+   "tasks": {
+    "simlink": {
+     "rates": [
+      1,
+      1
+     ],
+     "wilson": [
+      [
+       0.5655,
+       1.0
+      ],
+      [
+       0.5655,
+       1.0
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0
+    }
+   },
+   "mean_difference": 0
+  },
+  "oracle vs random": {
+   "tasks": {
+    "simlink": {
+     "rates": [
+      1,
+      1
+     ],
+     "wilson": [
+      [
+       0.5655,
+       1.0
+      ],
+      [
+       0.5655,
+       1.0
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0
+    }
+   },
+   "mean_difference": 0
+  },
+  "instructions vs none": {
+   "tasks": {
+    "simlink": {
+     "rates": [
+      1,
+      1
+     ],
+     "wilson": [
+      [
+       0.5655,
+       1.0
+      ],
+      [
+       0.5655,
+       1.0
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0
+    }
+   },
+   "mean_difference": 0
+  }
+ },
+ "lesson_in_repo": {
+  "oracle vs none": {
+   "tasks": {
+    "lock": {
+     "rates": [
+      1,
+      1
+     ],
+     "wilson": [
+      [
+       0.5655,
+       1.0
+      ],
+      [
+       0.5655,
+       1.0
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0
+    },
+    "verifier": {
+     "rates": [
+      1,
+      1
+     ],
+     "wilson": [
+      [
+       0.5655,
+       1.0
+      ],
+      [
+       0.5655,
+       1.0
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0
+    },
+    "onnx": {
+     "rates": [
+      0.4,
+      0.4
+     ],
+     "wilson": [
+      [
+       0.1176,
+       0.7693
+      ],
+      [
+       0.1176,
+       0.7693
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0.0
+    }
+   },
+   "mean_difference": 0.0
+  },
+  "retrieved vs none": {
+   "tasks": {
+    "lock": {
+     "rates": [
+      0.8,
+      1
+     ],
+     "wilson": [
+      [
+       0.3755,
+       0.9638
+      ],
+      [
+       0.5655,
+       1.0
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": -0.2
+    },
+    "verifier": {
+     "rates": [
+      1,
+      1
+     ],
+     "wilson": [
+      [
+       0.5655,
+       1.0
+      ],
+      [
+       0.5655,
+       1.0
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0
+    },
+    "onnx": {
+     "rates": [
+      1,
+      0.4
+     ],
+     "wilson": [
+      [
+       0.5655,
+       1.0
+      ],
+      [
+       0.1176,
+       0.7693
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0.6
+    }
+   },
+   "mean_difference": 0.1333
+  },
+  "oracle vs random": {
+   "tasks": {
+    "lock": {
+     "rates": [
+      1,
+      1
+     ],
+     "wilson": [
+      [
+       0.5655,
+       1.0
+      ],
+      [
+       0.5655,
+       1.0
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0
+    },
+    "verifier": {
+     "rates": [
+      1,
+      1
+     ],
+     "wilson": [
+      [
+       0.5655,
+       1.0
+      ],
+      [
+       0.5655,
+       1.0
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0
+    },
+    "onnx": {
+     "rates": [
+      0.4,
+      0.4
+     ],
+     "wilson": [
+      [
+       0.1176,
+       0.7693
+      ],
+      [
+       0.1176,
+       0.7693
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0.0
+    }
+   },
+   "mean_difference": 0.0
+  }
+ },
+ "lesson_not_in_repo": {
+  "oracle vs none": {
+   "tasks": {
+    "fczero": {
+     "rates": [
+      0,
+      0
+     ],
+     "wilson": [
+      [
+       0.0,
+       0.4345
+      ],
+      [
+       0.0,
+       0.4345
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0
+    }
+   },
+   "mean_difference": 0
+  },
+  "retrieved vs none": {
+   "tasks": {
+    "fczero": {
+     "rates": [
+      0,
+      0
+     ],
+     "wilson": [
+      [
+       0.0,
+       0.4345
+      ],
+      [
+       0.0,
+       0.4345
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0
+    }
+   },
+   "mean_difference": 0
+  },
+  "oracle vs random": {
+   "tasks": {
+    "fczero": {
+     "rates": [
+      0,
+      0
+     ],
+     "wilson": [
+      [
+       0.0,
+       0.4345
+      ],
+      [
+       0.0,
+       0.4345
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0
+    }
+   },
+   "mean_difference": 0
+  }
+ },
+ "sensitivity_all_counted": {
+  "oracle vs none": {
+   "tasks": {
+    "lock": {
+     "rates": [
+      1,
+      1
+     ],
+     "wilson": [
+      [
+       0.5655,
+       1.0
+      ],
+      [
+       0.5655,
+       1.0
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0
+    },
+    "verifier": {
+     "rates": [
+      1,
+      1
+     ],
+     "wilson": [
+      [
+       0.5655,
+       1.0
+      ],
+      [
+       0.5655,
+       1.0
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0
+    },
+    "onnx": {
+     "rates": [
+      0.4,
+      0.4
+     ],
+     "wilson": [
+      [
+       0.1176,
+       0.7693
+      ],
+      [
+       0.1176,
+       0.7693
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0.0
+    },
+    "fczero": {
+     "rates": [
+      0,
+      0
+     ],
+     "wilson": [
+      [
+       0.0,
+       0.4345
+      ],
+      [
+       0.0,
+       0.4345
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0
+    }
+   },
+   "mean_difference": 0.0,
+   "p": 1.0,
+   "bootstrap_95": [
+    -0.15,
+    0.15
+   ],
+   "reading": "no clear effect",
+   "p_holm": 1.0
+  },
+  "retrieved vs none": {
+   "tasks": {
+    "lock": {
+     "rates": [
+      0.8,
+      1
+     ],
+     "wilson": [
+      [
+       0.3755,
+       0.9638
+      ],
+      [
+       0.5655,
+       1.0
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": -0.2
+    },
+    "verifier": {
+     "rates": [
+      1,
+      1
+     ],
+     "wilson": [
+      [
+       0.5655,
+       1.0
+      ],
+      [
+       0.5655,
+       1.0
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0
+    },
+    "onnx": {
+     "rates": [
+      1,
+      0.4
+     ],
+     "wilson": [
+      [
+       0.5655,
+       1.0
+      ],
+      [
+       0.1176,
+       0.7693
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0.6
+    },
+    "fczero": {
+     "rates": [
+      0,
+      0
+     ],
+     "wilson": [
+      [
+       0.0,
+       0.4345
+      ],
+      [
+       0.0,
+       0.4345
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0
+    }
+   },
+   "mean_difference": 0.1,
+   "p": 1.0,
+   "bootstrap_95": [
+    -0.2,
+    0.45
+   ],
+   "reading": "no clear effect",
+   "p_holm": 1.0
+  },
+  "oracle vs random": {
+   "tasks": {
+    "lock": {
+     "rates": [
+      1,
+      1
+     ],
+     "wilson": [
+      [
+       0.5655,
+       1.0
+      ],
+      [
+       0.5655,
+       1.0
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0
+    },
+    "verifier": {
+     "rates": [
+      1,
+      1
+     ],
+     "wilson": [
+      [
+       0.5655,
+       1.0
+      ],
+      [
+       0.5655,
+       1.0
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0
+    },
+    "onnx": {
+     "rates": [
+      0.4,
+      0.4
+     ],
+     "wilson": [
+      [
+       0.1176,
+       0.7693
+      ],
+      [
+       0.1176,
+       0.7693
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0.0
+    },
+    "fczero": {
+     "rates": [
+      0,
+      0
+     ],
+     "wilson": [
+      [
+       0.0,
+       0.4345
+      ],
+      [
+       0.0,
+       0.4345
+      ]
+     ],
+     "n": [
+      5,
+      5
+     ],
+     "difference": 0
+    }
+   },
+   "mean_difference": 0.0,
+   "p": 1.0,
+   "bootstrap_95": [
+    -0.15,
+    0.15
+   ],
+   "reading": "no clear effect",
+   "p_holm": 1.0
+  }
+ },
+ "retrieval": {
+  "lock": {
+   "gold_bm25_ranks": {
+    "sendward/records/phase1/code-review/REVIEW-reviewer-m2-1.md": 22,
+    "sendward/records/phase1/code-review/REVIEW-reviewer-m2-2.md": 24
+   },
+   "gold_in_retrieved_text": 0
+  },
+  "verifier": {
+   "gold_bm25_ranks": {
+    "aliasrank/records/phase1/code-review/REVIEW-reviewer-m2-2.md": 29,
+    "sendward/records/phase1/code-review/REVIEW-reviewer-m2-4.md": 45
+   },
+   "gold_in_retrieved_text": 0
+  },
+  "simlink": {
+   "gold_bm25_ranks": {
+    "helmdoctor/records/phase1/code-review/REVIEW-reviewer-1.md": 42,
+    "ci-recovery/records/phase2/auto-reviewer-review-report.md": 5
+   },
+   "gold_in_retrieved_text": 0
+  },
+  "onnx": {
+   "gold_bm25_ranks": {
+    "aliasrank/records/phase1/code-review/REVIEW-reviewer-1.md": 2,
+    "aliasrank/records/phase1/code-review/REVIEW-reviewer-2.md": 5
+   },
+   "gold_in_retrieved_text": 2
+  },
+  "fczero": {
+   "gold_bm25_ranks": {
+    "sendward/records/phase1/code-review/REVIEW-reviewer-m3-1.md": 14,
+    "citecheck/records/phase1/code-review/REVIEW-reviewer-m2-1.md": 51
+   },
+   "gold_in_retrieved_text": 0
+  }
+ },
+ "process": {
+  "overall": {
+   "none": {
+    "input": {
+     "mean": 540223.24,
+     "median": 504714
+    },
+    "cached_input": {
+     "mean": 511621.12,
+     "median": 471552
+    },
+    "output": {
+     "mean": 16530.08,
+     "median": 17305
+    },
+    "steps": {
+     "mean": 22.4,
+     "median": 22
+    },
+    "seconds": {
+     "mean": 240.36,
+     "median": 227
+    },
+    "cost": {
+     "mean": 0.0323,
+     "median": 0.031553
+    }
+   },
+   "instructions": {
+    "input": {
+     "mean": 707755.24,
+     "median": 632616
+    },
+    "cached_input": {
+     "mean": 674124.8,
+     "median": 606976
+    },
+    "output": {
+     "mean": 18378.12,
+     "median": 19971
+    },
+    "steps": {
+     "mean": 23.92,
+     "median": 24
+    },
+    "seconds": {
+     "mean": 274.24,
+     "median": 282
+    },
+    "cost": {
+     "mean": 0.038,
+     "median": 0.035699
+    }
+   },
+   "retrieved": {
+    "input": {
+     "mean": 599660.08,
+     "median": 562458
+    },
+    "cached_input": {
+     "mean": 572533.76,
+     "median": 536960
+    },
+    "output": {
+     "mean": 16453.12,
+     "median": 15525
+    },
+    "steps": {
+     "mean": 22.4,
+     "median": 23
+    },
+    "seconds": {
+     "mean": 223.16,
+     "median": 210
+    },
+    "cost": {
+     "mean": 0.0327,
+     "median": 0.031418
+    }
+   },
+   "oracle": {
+    "input": {
+     "mean": 759522.88,
+     "median": 723343
+    },
+    "cached_input": {
+     "mean": 726435.84,
+     "median": 700416
+    },
+    "output": {
+     "mean": 18653.36,
+     "median": 17746
+    },
+    "steps": {
+     "mean": 25.12,
+     "median": 25
+    },
+    "seconds": {
+     "mean": 266.28,
+     "median": 260
+    },
+    "cost": {
+     "mean": 0.0373,
+     "median": 0.037362
+    }
+   },
+   "random": {
+    "input": {
+     "mean": 748012.08,
+     "median": 673165
+    },
+    "cached_input": {
+     "mean": 713671.68,
+     "median": 637952
+    },
+    "output": {
+     "mean": 18387.44,
+     "median": 19781
+    },
+    "steps": {
+     "mean": 24.52,
+     "median": 24
+    },
+    "seconds": {
+     "mean": 247.64,
+     "median": 227
+    },
+    "cost": {
+     "mean": 0.0372,
+     "median": 0.03924
+    }
+   }
+  },
+  "lock": {
+   "none": {
+    "input": {
+     "mean": 687723.4,
+     "median": 699223
+    },
+    "cached_input": {
+     "mean": 654361.6,
+     "median": 662144
+    },
+    "output": {
+     "mean": 17949.8,
+     "median": 18656
+    },
+    "steps": {
+     "mean": 27.4,
+     "median": 27
+    },
+    "seconds": {
+     "mean": 338.2,
+     "median": 310
+    },
+    "cost": {
+     "mean": 0.0395,
+     "median": 0.038403
+    }
+   },
+   "instructions": {
+    "input": {
+     "mean": 827314.6,
+     "median": 856401
+    },
+    "cached_input": {
+     "mean": 786534.4,
+     "median": 809728
+    },
+    "output": {
+     "mean": 21885,
+     "median": 21664
+    },
+    "steps": {
+     "mean": 25.4,
+     "median": 26
+    },
+    "seconds": {
+     "mean": 350,
+     "median": 367
+    },
+    "cost": {
+     "mean": 0.0494,
+     "median": 0.04689
+    }
+   },
+   "retrieved": {
+    "input": {
+     "mean": 629137.8,
+     "median": 671051
+    },
+    "cached_input": {
+     "mean": 598528,
+     "median": 637696
+    },
+    "output": {
+     "mean": 17250.8,
+     "median": 16675
+    },
+    "steps": {
+     "mean": 22,
+     "median": 22
+    },
+    "seconds": {
+     "mean": 246.6,
+     "median": 250
+    },
+    "cost": {
+     "mean": 0.0378,
+     "median": 0.037799
+    }
+   },
+   "oracle": {
+    "input": {
+     "mean": 688015.8,
+     "median": 635831
+    },
+    "cached_input": {
+     "mean": 652569.6,
+     "median": 602496
+    },
+    "output": {
+     "mean": 20104.2,
+     "median": 18744
+    },
+    "steps": {
+     "mean": 23.6,
+     "median": 26
+    },
+    "seconds": {
+     "mean": 293,
+     "median": 260
+    },
+    "cost": {
+     "mean": 0.0407,
+     "median": 0.041856
+    }
+   },
+   "random": {
+    "input": {
+     "mean": 1098672.2,
+     "median": 1007015
+    },
+    "cached_input": {
+     "mean": 1055027.2,
+     "median": 961920
+    },
+    "output": {
+     "mean": 22251.2,
+     "median": 21346
+    },
+    "steps": {
+     "mean": 30.2,
+     "median": 28
+    },
+    "seconds": {
+     "mean": 304.4,
+     "median": 246
+    },
+    "cost": {
+     "mean": 0.0483,
+     "median": 0.04525
+    }
+   }
+  },
+  "verifier": {
+   "none": {
+    "input": {
+     "mean": 299135,
+     "median": 334753
+    },
+    "cached_input": {
+     "mean": 274329.6,
+     "median": 306688
+    },
+    "output": {
+     "mean": 9477.8,
+     "median": 10089
+    },
+    "steps": {
+     "mean": 16,
+     "median": 16
+    },
+    "seconds": {
+     "mean": 155.2,
+     "median": 155
+    },
+    "cost": {
+     "mean": 0.0205,
+     "median": 0.020458
+    }
+   },
+   "instructions": {
+    "input": {
+     "mean": 371317.2,
+     "median": 368142
+    },
+    "cached_input": {
+     "mean": 342809.6,
+     "median": 341632
+    },
+    "output": {
+     "mean": 9747.6,
+     "median": 8329
+    },
+    "steps": {
+     "mean": 17,
+     "median": 17
+    },
+    "seconds": {
+     "mean": 126,
+     "median": 122
+    },
+    "cost": {
+     "mean": 0.0224,
+     "median": 0.020436
+    }
+   },
+   "retrieved": {
+    "input": {
+     "mean": 354270.6,
+     "median": 354991
+    },
+    "cached_input": {
+     "mean": 331212.8,
+     "median": 331392
+    },
+    "output": {
+     "mean": 9760.4,
+     "median": 9456
+    },
+    "steps": {
+     "mean": 17.6,
+     "median": 18
+    },
+    "seconds": {
+     "mean": 133.2,
+     "median": 124
+    },
+    "cost": {
+     "mean": 0.0207,
+     "median": 0.020173
+    }
+   },
+   "oracle": {
+    "input": {
+     "mean": 514135.8,
+     "median": 578695
+    },
+    "cached_input": {
+     "mean": 482022.4,
+     "median": 543360
+    },
+    "output": {
+     "mean": 11263.8,
+     "median": 10472
+    },
+    "steps": {
+     "mean": 19.6,
+     "median": 20
+    },
+    "seconds": {
+     "mean": 213,
+     "median": 139
+    },
+    "cost": {
+     "mean": 0.0263,
+     "median": 0.027048
+    }
+   },
+   "random": {
+    "input": {
+     "mean": 392292,
+     "median": 365307
+    },
+    "cached_input": {
+     "mean": 365721.6,
+     "median": 340864
+    },
+    "output": {
+     "mean": 9142.8,
+     "median": 8778
+    },
+    "steps": {
+     "mean": 18.2,
+     "median": 19
+    },
+    "seconds": {
+     "mean": 150.2,
+     "median": 154
+    },
+    "cost": {
+     "mean": 0.0211,
+     "median": 0.01981
+    }
+   }
+  },
+  "simlink": {
+   "none": {
+    "input": {
+     "mean": 667984,
+     "median": 662652
+    },
+    "cached_input": {
+     "mean": 645068.8,
+     "median": 637184
+    },
+    "output": {
+     "mean": 27323,
+     "median": 28513
+    },
+    "steps": {
+     "mean": 27,
+     "median": 23
+    },
+    "seconds": {
+     "mean": 310.4,
+     "median": 289
+    },
+    "cost": {
+     "mean": 0.0435,
+     "median": 0.045679
+    }
+   },
+   "instructions": {
+    "input": {
+     "mean": 739266.8,
+     "median": 629673
+    },
+    "cached_input": {
+     "mean": 714035.2,
+     "median": 606976
+    },
+    "output": {
+     "mean": 26625.8,
+     "median": 25730
+    },
+    "steps": {
+     "mean": 26.6,
+     "median": 26
+    },
+    "seconds": {
+     "mean": 401.8,
+     "median": 387
+    },
+    "cost": {
+     "mean": 0.0461,
+     "median": 0.043488
+    }
+   },
+   "retrieved": {
+    "input": {
+     "mean": 546129.2,
+     "median": 554870
+    },
+    "cached_input": {
+     "mean": 527180.8,
+     "median": 536960
+    },
+    "output": {
+     "mean": 24047,
+     "median": 25294
+    },
+    "steps": {
+     "mean": 23,
+     "median": 25
+    },
+    "seconds": {
+     "mean": 318.8,
+     "median": 284
+    },
+    "cost": {
+     "mean": 0.0398,
+     "median": 0.042585
+    }
+   },
+   "oracle": {
+    "input": {
+     "mean": 615244.2,
+     "median": 670565
+    },
+    "cached_input": {
+     "mean": 595686.4,
+     "median": 650368
+    },
+    "output": {
+     "mean": 24783.4,
+     "median": 25681
+    },
+    "steps": {
+     "mean": 25,
+     "median": 24
+    },
+    "seconds": {
+     "mean": 319.2,
+     "median": 307
+    },
+    "cost": {
+     "mean": 0.0401,
+     "median": 0.04203
+    }
+   },
+   "random": {
+    "input": {
+     "mean": 699508.6,
+     "median": 610472
+    },
+    "cached_input": {
+     "mean": 674483.2,
+     "median": 587136
+    },
+    "output": {
+     "mean": 25333.4,
+     "median": 25524
+    },
+    "steps": {
+     "mean": 25.4,
+     "median": 25
+    },
+    "seconds": {
+     "mean": 332.2,
+     "median": 301
+    },
+    "cost": {
+     "mean": 0.0421,
+     "median": 0.042937
+    }
+   }
+  },
+  "onnx": {
+   "none": {
+    "input": {
+     "mean": 602300,
+     "median": 587702
+    },
+    "cached_input": {
+     "mean": 571494.4,
+     "median": 555008
+    },
+    "output": {
+     "mean": 18366.8,
+     "median": 19071
+    },
+    "steps": {
+     "mean": 21.6,
+     "median": 21
+    },
+    "seconds": {
+     "mean": 242.4,
+     "median": 239
+    },
+    "cost": {
+     "mean": 0.0347,
+     "median": 0.036023
+    }
+   },
+   "instructions": {
+    "input": {
+     "mean": 994061.4,
+     "median": 872238
+    },
+    "cached_input": {
+     "mean": 956288,
+     "median": 834944
+    },
+    "output": {
+     "mean": 20552.8,
+     "median": 20250
+    },
+    "steps": {
+     "mean": 28.4,
+     "median": 28
+    },
+    "seconds": {
+     "mean": 276,
+     "median": 282
+    },
+    "cost": {
+     "mean": 0.0421,
+     "median": 0.041108
+    }
+   },
+   "retrieved": {
+    "input": {
+     "mean": 958048.8,
+     "median": 829106
+    },
+    "cached_input": {
+     "mean": 923980.8,
+     "median": 796288
+    },
+    "output": {
+     "mean": 19983.8,
+     "median": 18086
+    },
+    "steps": {
+     "mean": 28,
+     "median": 25
+    },
+    "seconds": {
+     "mean": 271.4,
+     "median": 258
+    },
+    "cost": {
+     "mean": 0.04,
+     "median": 0.036698
+    }
+   },
+   "oracle": {
+    "input": {
+     "mean": 1154444.6,
+     "median": 1237242
+    },
+    "cached_input": {
+     "mean": 1116134.4,
+     "median": 1196416
+    },
+    "output": {
+     "mean": 23957,
+     "median": 25123
+    },
+    "steps": {
+     "mean": 31.2,
+     "median": 31
+    },
+    "seconds": {
+     "mean": 332,
+     "median": 308
+    },
+    "cost": {
+     "mean": 0.0469,
+     "median": 0.049366
+    }
+   },
+   "random": {
+    "input": {
+     "mean": 834796.6,
+     "median": 731708
+    },
+    "cached_input": {
+     "mean": 795904,
+     "median": 696064
+    },
+    "output": {
+     "mean": 22086.8,
+     "median": 22063
+    },
+    "steps": {
+     "mean": 23.4,
+     "median": 22
+    },
+    "seconds": {
+     "mean": 261,
+     "median": 260
+    },
+    "cost": {
+     "mean": 0.0429,
+     "median": 0.039731
+    }
+   }
+  },
+  "fczero": {
+   "none": {
+    "input": {
+     "mean": 443973.8,
+     "median": 504714
+    },
+    "cached_input": {
+     "mean": 412851.2,
+     "median": 471552
+    },
+    "output": {
+     "mean": 9533,
+     "median": 9625
+    },
+    "steps": {
+     "mean": 20,
+     "median": 21
+    },
+    "seconds": {
+     "mean": 155.6,
+     "median": 163
+    },
+    "cost": {
+     "mean": 0.0234,
+     "median": 0.025138
+    }
+   },
+   "instructions": {
+    "input": {
+     "mean": 606816.2,
+     "median": 630002
+    },
+    "cached_input": {
+     "mean": 570956.8,
+     "median": 593152
+    },
+    "output": {
+     "mean": 13079.4,
+     "median": 12433
+    },
+    "steps": {
+     "mean": 22.2,
+     "median": 22
+    },
+    "seconds": {
+     "mean": 217.4,
+     "median": 217
+    },
+    "cost": {
+     "mean": 0.03,
+     "median": 0.029405
+    }
+   },
+   "retrieved": {
+    "input": {
+     "mean": 510714,
+     "median": 532323
+    },
+    "cached_input": {
+     "mean": 481766.4,
+     "median": 505728
+    },
+    "output": {
+     "mean": 11223.6,
+     "median": 11433
+    },
+    "steps": {
+     "mean": 21.4,
+     "median": 23
+    },
+    "seconds": {
+     "mean": 145.8,
+     "median": 153
+    },
+    "cost": {
+     "mean": 0.025,
+     "median": 0.025631
+    }
+   },
+   "oracle": {
+    "input": {
+     "mean": 825774,
+     "median": 802352
+    },
+    "cached_input": {
+     "mean": 785766.4,
+     "median": 763392
+    },
+    "output": {
+     "mean": 13158.4,
+     "median": 11867
+    },
+    "steps": {
+     "mean": 26.2,
+     "median": 26
+    },
+    "seconds": {
+     "mean": 174.2,
+     "median": 186
+    },
+    "cost": {
+     "mean": 0.0326,
+     "median": 0.030509
+    }
+   },
+   "random": {
+    "input": {
+     "mean": 714791,
+     "median": 644723
+    },
+    "cached_input": {
+     "mean": 677222.4,
+     "median": 609920
+    },
+    "output": {
+     "mean": 13123,
+     "median": 11930
+    },
+    "steps": {
+     "mean": 25.4,
+     "median": 25
+    },
+    "seconds": {
+     "mean": 190.4,
+     "median": 184
+    },
+    "cost": {
+     "mean": 0.0314,
+     "median": 0.027649
+    }
+   }
+  }
+ },
+ "total_cost": 4.47805,
+ "calls_without_usage": 0,
+ "cost_check": {
+  "runs_total": 4.47805,
+  "spend_json": 4.479513,
+  "balance_drop": 4.11,
+  "balance_receipts": [
+   {
+    "before": 22.09,
+    "after": 18.17
+   },
+   {
+    "before": 18.16,
+    "after": 17.97
+   }
+  ]
+ }
+}

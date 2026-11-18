@@ -1,0 +1,1419 @@
+{
+ "train_first_retries": {
+  "tasks": 2149,
+  "issue_names_fix_file": 0.265,
+  "fix_files_median": 2,
+  "multi_file_fix": 0.514,
+  "fix_lines_median": 15
+ },
+ "train_by_issue_naming": {
+  "issue_names_fix_file": {
+   "tasks": 570,
+   "issue_names_fix_file": 1.0,
+   "fix_files_median": 2.0,
+   "multi_file_fix": 0.518,
+   "fix_lines_median": 14.0,
+   "retry_2024_never_opened_needed_file": 0.161,
+   "retry_2024_first_needed_step_median": 4.0,
+   "handoff_hit1": 0.798,
+   "handoff_hit5": 0.912
+  },
+  "issue_names_no_fix_file": {
+   "tasks": 1579,
+   "issue_names_fix_file": 0.0,
+   "fix_files_median": 2,
+   "multi_file_fix": 0.513,
+   "fix_lines_median": 15,
+   "retry_2024_never_opened_needed_file": 0.36,
+   "retry_2024_first_needed_step_median": 5.0,
+   "handoff_hit1": 0.578,
+   "handoff_hit5": 0.755
+  }
+ },
+ "dev_first_retries": {
+  "tasks": 433,
+  "issue_names_fix_file": 0.275,
+  "fix_files_median": 2,
+  "multi_file_fix": 0.582,
+  "fix_lines_median": 17
+ },
+ "dev_with_image": {
+  "tasks": 159,
+  "issue_names_fix_file": 0.277,
+  "fix_files_median": 2,
+  "multi_file_fix": 0.528,
+  "fix_lines_median": 10,
+  "image_gb_median": 1.36,
+  "image_gb_total": 226.2,
+  "over_2gb": 2,
+  "repos": 145
+ },
+ "dev_without_image": {
+  "tasks": 274,
+  "issue_names_fix_file": 0.274,
+  "fix_files_median": 2.0,
+  "multi_file_fix": 0.613,
+  "fix_lines_median": 22.5
+ },
+ "pilot": {
+  "tasks": 13,
+  "issue_names_fix_file": 0.308,
+  "fix_files_median": 1,
+  "multi_file_fix": 0.385,
+  "fix_lines_median": 9
+ },
+ "pilot_tasks": [
+  {
+   "names_fix_file": false,
+   "fix_files": 1,
+   "fix_lines": 6,
+   "task": "M0r13n__pyais-56"
+  },
+  {
+   "names_fix_file": true,
+   "fix_files": 1,
+   "fix_lines": 4,
+   "task": "chimpler__pyhocon-133"
+  },
+  {
+   "names_fix_file": true,
+   "fix_files": 1,
+   "fix_lines": 4,
+   "task": "reframe-hpc__reframe-3058"
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 2,
+   "fix_lines": 18,
+   "task": "tobac-project__tobac-272"
+  },
+  {
+   "names_fix_file": true,
+   "fix_files": 1,
+   "fix_lines": 9,
+   "task": "karlicoss__promnesia-277"
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 1,
+   "fix_lines": 1,
+   "task": "mdowds__python-mock-firestore-34"
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 1,
+   "fix_lines": 42,
+   "task": "linkml__linkml-1772"
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 2,
+   "fix_lines": 4,
+   "task": "lucianopaz__compress_pickle-28"
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 2,
+   "fix_lines": 20,
+   "task": "vivisect__vivisect-447"
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 2,
+   "fix_lines": 19,
+   "task": "PaulSchweizer__flowpipe-127"
+  },
+  {
+   "names_fix_file": true,
+   "fix_files": 2,
+   "fix_lines": 8,
+   "task": "wireservice__agate-excel-25"
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 1,
+   "fix_lines": 39,
+   "task": "PyCQA__pyflakes-580"
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 1,
+   "fix_lines": 30,
+   "task": "ikamensh__flynt-163"
+  }
+ ],
+ "dev_with_image_tasks": [
+  {
+   "names_fix_file": false,
+   "fix_files": 2,
+   "fix_lines": 56,
+   "task": "20c__ctl-3",
+   "repo": "20c/ctl",
+   "image_bytes": 1359100246
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 1,
+   "fix_lines": 17,
+   "task": "4degrees__clique-26",
+   "repo": "4degrees/clique",
+   "image_bytes": 1345795851
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 1,
+   "fix_lines": 37,
+   "task": "ARM-software__mango-11",
+   "repo": "ARM-software/mango",
+   "image_bytes": 1764345417
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 2,
+   "fix_lines": 7,
+   "task": "ASFHyP3__hyp3-sdk-71",
+   "repo": "ASFHyP3/hyp3-sdk",
+   "image_bytes": 1348757490
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 1,
+   "fix_lines": 8,
+   "task": "Azure__msrest-for-python-55",
+   "repo": "Azure/msrest-for-python",
+   "image_bytes": 1348406915
+  },
+  {
+   "names_fix_file": true,
+   "fix_files": 2,
+   "fix_lines": 69,
+   "task": "Backblaze__B2_Command_Line_Tool-488",
+   "repo": "Backblaze/B2_Command_Line_Tool",
+   "image_bytes": 1355171449
+  },
+  {
+   "names_fix_file": true,
+   "fix_files": 2,
+   "fix_lines": 34,
+   "task": "DataDog__datadogpy-545",
+   "repo": "DataDog/datadogpy",
+   "image_bytes": 1350159551
+  },
+  {
+   "names_fix_file": true,
+   "fix_files": 1,
+   "fix_lines": 3,
+   "task": "DataDog__datadogpy-555",
+   "repo": "DataDog/datadogpy",
+   "image_bytes": 1350348493
+  },
+  {
+   "names_fix_file": true,
+   "fix_files": 2,
+   "fix_lines": 28,
+   "task": "Edinburgh-Genome-Foundry__DnaChisel-61",
+   "repo": "Edinburgh-Genome-Foundry/DnaChisel",
+   "image_bytes": 1455325229
+  },
+  {
+   "names_fix_file": true,
+   "fix_files": 1,
+   "fix_lines": 10,
+   "task": "Instagram__LibCST-417",
+   "repo": "Instagram/LibCST",
+   "image_bytes": 1626531959
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 1,
+   "fix_lines": 7,
+   "task": "LSSTDESC__ceci-84",
+   "repo": "LSSTDESC/ceci",
+   "image_bytes": 1451862134
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 2,
+   "fix_lines": 32,
+   "task": "MycroftAI__lingua-franca-32",
+   "repo": "MycroftAI/lingua-franca",
+   "image_bytes": 1344641298
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 2,
+   "fix_lines": 9,
+   "task": "NREL__hescore-hpxml-169",
+   "repo": "NREL/hescore-hpxml",
+   "image_bytes": 1560022015
+  },
+  {
+   "names_fix_file": true,
+   "fix_files": 1,
+   "fix_lines": 7,
+   "task": "Netflix-Skunkworks__policyuniverse-99",
+   "repo": "Netflix-Skunkworks/policyuniverse",
+   "image_bytes": 1391055778
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 1,
+   "fix_lines": 16,
+   "task": "PEtab-dev__libpetab-python-152",
+   "repo": "PEtab-dev/libpetab-python",
+   "image_bytes": 1649981929
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 2,
+   "fix_lines": 19,
+   "task": "Pylons__webob-332",
+   "repo": "Pylons/webob",
+   "image_bytes": 1352281694
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 3,
+   "fix_lines": 19,
+   "task": "RemDelaporteMathurin__h-transport-materials-118",
+   "repo": "RemDelaporteMathurin/h-transport-materials",
+   "image_bytes": 1634998559
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 2,
+   "fix_lines": 13,
+   "task": "ShawHahnLab__igseq-37",
+   "repo": "ShawHahnLab/igseq",
+   "image_bytes": 1426977310
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 2,
+   "fix_lines": 50,
+   "task": "Shopify__shopify_python_api-354",
+   "repo": "Shopify/shopify_python_api",
+   "image_bytes": 1347620193
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 2,
+   "fix_lines": 37,
+   "task": "Stranger6667__pyanyapi-42",
+   "repo": "Stranger6667/pyanyapi",
+   "image_bytes": 1358902262
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 2,
+   "fix_lines": 5,
+   "task": "Stratoscale__skipper-164",
+   "repo": "Stratoscale/skipper",
+   "image_bytes": 1351597973
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 2,
+   "fix_lines": 49,
+   "task": "Tadaboody__doctree-14",
+   "repo": "Tadaboody/doctree",
+   "image_bytes": 1346026412
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 3,
+   "fix_lines": 26,
+   "task": "TheFriendlyCoder__friendlypins-77",
+   "repo": "TheFriendlyCoder/friendlypins",
+   "image_bytes": 1438405728
+  },
+  {
+   "names_fix_file": true,
+   "fix_files": 3,
+   "fix_lines": 41,
+   "task": "Tinche__cattrs-117",
+   "repo": "Tinche/cattrs",
+   "image_bytes": 1422988409
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 2,
+   "fix_lines": 20,
+   "task": "adamchainz__apig-wsgi-187",
+   "repo": "adamchainz/apig-wsgi",
+   "image_bytes": 1345542762
+  },
+  {
+   "names_fix_file": true,
+   "fix_files": 3,
+   "fix_lines": 15,
+   "task": "adamchainz__ec2-metadata-350",
+   "repo": "adamchainz/ec2-metadata",
+   "image_bytes": 1345626956
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 2,
+   "fix_lines": 11,
+   "task": "adamchainz__time-machine-101",
+   "repo": "adamchainz/time-machine",
+   "image_bytes": 1345302268
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 2,
+   "fix_lines": 5,
+   "task": "adamchainz__time-machine-433",
+   "repo": "adamchainz/time-machine",
+   "image_bytes": 1348787041
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 1,
+   "fix_lines": 6,
+   "task": "alexander-akhmetov__python-telegram-168",
+   "repo": "alexander-akhmetov/python-telegram",
+   "image_bytes": 1599981332
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 1,
+   "fix_lines": 5,
+   "task": "allo-media__text2num-96",
+   "repo": "allo-media/text2num",
+   "image_bytes": 1346324617
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 1,
+   "fix_lines": 28,
+   "task": "asottile__add-trailing-comma-23",
+   "repo": "asottile/add-trailing-comma",
+   "image_bytes": 1342774671
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 3,
+   "fix_lines": 9,
+   "task": "asottile__all-repos-91",
+   "repo": "asottile/all-repos",
+   "image_bytes": 1347396859
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 1,
+   "fix_lines": 22,
+   "task": "asottile__yesqa-41",
+   "repo": "asottile/yesqa",
+   "image_bytes": 1346946374
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 2,
+   "fix_lines": 19,
+   "task": "astropenguin__xarray-dataclasses-203",
+   "repo": "astropenguin/xarray-dataclasses",
+   "image_bytes": 1476560765
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 1,
+   "fix_lines": 3,
+   "task": "astropy__astroquery-2160",
+   "repo": "astropy/astroquery",
+   "image_bytes": 1699633243
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 3,
+   "fix_lines": 8,
+   "task": "astropy__sphinx-automodapi-142",
+   "repo": "astropy/sphinx-automodapi",
+   "image_bytes": 1396016796
+  },
+  {
+   "names_fix_file": true,
+   "fix_files": 2,
+   "fix_lines": 44,
+   "task": "benmaier__binpacking-12",
+   "repo": "benmaier/binpacking",
+   "image_bytes": 1410333525
+  },
+  {
+   "names_fix_file": true,
+   "fix_files": 1,
+   "fix_lines": 6,
+   "task": "betamaxpy__betamax-170",
+   "repo": "betamaxpy/betamax",
+   "image_bytes": 1346918274
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 1,
+   "fix_lines": 19,
+   "task": "bids-standard__pybids-492",
+   "repo": "bids-standard/pybids",
+   "image_bytes": 1657577173
+  },
+  {
+   "names_fix_file": true,
+   "fix_files": 1,
+   "fix_lines": 13,
+   "task": "briggySmalls__pyflipdot-5",
+   "repo": "briggySmalls/pyflipdot",
+   "image_bytes": 1424783296
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 1,
+   "fix_lines": 2,
+   "task": "byllyfish__precis_i18n-32",
+   "repo": "byllyfish/precis_i18n",
+   "image_bytes": 1343601573
+  },
+  {
+   "names_fix_file": true,
+   "fix_files": 2,
+   "fix_lines": 4,
+   "task": "caleb531__automata-123",
+   "repo": "caleb531/automata",
+   "image_bytes": 1361163730
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 1,
+   "fix_lines": 9,
+   "task": "canonical__operator-1024",
+   "repo": "canonical/operator",
+   "image_bytes": 1353337957
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 1,
+   "fix_lines": 4,
+   "task": "childsish__dynamic-yaml-31",
+   "repo": "childsish/dynamic-yaml",
+   "image_bytes": 1343646688
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 2,
+   "fix_lines": 14,
+   "task": "chrahunt__hlp-15",
+   "repo": "chrahunt/hlp",
+   "image_bytes": 1343552087
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 2,
+   "fix_lines": 4,
+   "task": "codingedward__flask-sieve-31",
+   "repo": "codingedward/flask-sieve",
+   "image_bytes": 1365361544
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 3,
+   "fix_lines": 35,
+   "task": "codingedward__flask-sieve-37",
+   "repo": "codingedward/flask-sieve",
+   "image_bytes": 1361763207
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 2,
+   "fix_lines": 21,
+   "task": "commitizen-tools__commitizen-497",
+   "repo": "commitizen-tools/commitizen",
+   "image_bytes": 1386928491
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 2,
+   "fix_lines": 8,
+   "task": "couler-proj__couler-89",
+   "repo": "couler-proj/couler",
+   "image_bytes": 1363320097
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 2,
+   "fix_lines": 11,
+   "task": "coverahealth__dataspec-4",
+   "repo": "coverahealth/dataspec",
+   "image_bytes": 1347541797
+  },
+  {
+   "names_fix_file": true,
+   "fix_files": 3,
+   "fix_lines": 47,
+   "task": "cunla__fakeredis-py-109",
+   "repo": "cunla/fakeredis-py",
+   "image_bytes": 1356608479
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 1,
+   "fix_lines": 4,
+   "task": "cuthbertLab__music21-314",
+   "repo": "cuthbertLab/music21",
+   "image_bytes": 2493369839
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 2,
+   "fix_lines": 9,
+   "task": "dask__zict-64",
+   "repo": "dask/zict",
+   "image_bytes": 1342601169
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 2,
+   "fix_lines": 21,
+   "task": "datosgobar__pydatajson-212",
+   "repo": "datosgobar/pydatajson",
+   "image_bytes": 1408976830
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 3,
+   "fix_lines": 9,
+   "task": "devopsspiral__KubeLibrary-124",
+   "repo": "devopsspiral/KubeLibrary",
+   "image_bytes": 1364081413
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 2,
+   "fix_lines": 34,
+   "task": "drvinceknight__nbchkr-19",
+   "repo": "drvinceknight/nbchkr",
+   "image_bytes": 1493436749
+  },
+  {
+   "names_fix_file": true,
+   "fix_files": 2,
+   "fix_lines": 11,
+   "task": "duo-labs__parliament-185",
+   "repo": "duo-labs/parliament",
+   "image_bytes": 1399641025
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 2,
+   "fix_lines": 7,
+   "task": "e2nIEE__pandapipes-501",
+   "repo": "e2nIEE/pandapipes",
+   "image_bytes": 1789237838
+  },
+  {
+   "names_fix_file": true,
+   "fix_files": 1,
+   "fix_lines": 9,
+   "task": "elastic__elasticsearch-py-628",
+   "repo": "elastic/elasticsearch-py",
+   "image_bytes": 1362089623
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 2,
+   "fix_lines": 32,
+   "task": "elcaminoreal__elcaminoreal-10",
+   "repo": "elcaminoreal/elcaminoreal",
+   "image_bytes": 1346530424
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 1,
+   "fix_lines": 4,
+   "task": "eliben__pycparser-255",
+   "repo": "eliben/pycparser",
+   "image_bytes": 1347820948
+  },
+  {
+   "names_fix_file": true,
+   "fix_files": 1,
+   "fix_lines": 3,
+   "task": "eliben__pycparser-346",
+   "repo": "eliben/pycparser",
+   "image_bytes": 1347942852
+  },
+  {
+   "names_fix_file": true,
+   "fix_files": 2,
+   "fix_lines": 5,
+   "task": "eliben__pycparser-364",
+   "repo": "eliben/pycparser",
+   "image_bytes": 1348098672
+  },
+  {
+   "names_fix_file": true,
+   "fix_files": 1,
+   "fix_lines": 2,
+   "task": "encode__starlette-801",
+   "repo": "encode/starlette",
+   "image_bytes": 1357435966
+  },
+  {
+   "names_fix_file": true,
+   "fix_files": 3,
+   "fix_lines": 19,
+   "task": "facebookincubator__submitit-38",
+   "repo": "facebookincubator/submitit",
+   "image_bytes": 1414595258
+  },
+  {
+   "names_fix_file": true,
+   "fix_files": 2,
+   "fix_lines": 4,
+   "task": "fairlearn__fairlearn-906",
+   "repo": "fairlearn/fairlearn",
+   "image_bytes": 1811033013
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 3,
+   "fix_lines": 38,
+   "task": "florimondmanca__fountain-lang-7",
+   "repo": "florimondmanca/fountain-lang",
+   "image_bytes": 1345821387
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 3,
+   "fix_lines": 32,
+   "task": "fniessink__next-action-146",
+   "repo": "fniessink/next-action",
+   "image_bytes": 1374931576
+  },
+  {
+   "names_fix_file": true,
+   "fix_files": 1,
+   "fix_lines": 4,
+   "task": "geospace-code__pymap3d-66",
+   "repo": "geospace-code/pymap3d",
+   "image_bytes": 1347117729
+  },
+  {
+   "names_fix_file": true,
+   "fix_files": 1,
+   "fix_lines": 7,
+   "task": "gitpython-developers__GitPython-1224",
+   "repo": "gitpython-developers/GitPython",
+   "image_bytes": 1370397872
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 3,
+   "fix_lines": 25,
+   "task": "glotzerlab__signac-169",
+   "repo": "glotzerlab/signac",
+   "image_bytes": 1359718514
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 1,
+   "fix_lines": 3,
+   "task": "google__importlab-23",
+   "repo": "google/importlab",
+   "image_bytes": 1353933713
+  },
+  {
+   "names_fix_file": true,
+   "fix_files": 1,
+   "fix_lines": 2,
+   "task": "googlefonts__picosvg-240",
+   "repo": "googlefonts/picosvg",
+   "image_bytes": 1387842867
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 1,
+   "fix_lines": 3,
+   "task": "grappa-py__grappa-39",
+   "repo": "grappa-py/grappa",
+   "image_bytes": 1342681442
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 2,
+   "fix_lines": 6,
+   "task": "hgrecco__pint-pandas-204",
+   "repo": "hgrecco/pint-pandas",
+   "image_bytes": 1707837272
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 1,
+   "fix_lines": 38,
+   "task": "hhursev__recipe-scrapers-500",
+   "repo": "hhursev/recipe-scrapers",
+   "image_bytes": 1494613604
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 1,
+   "fix_lines": 2,
+   "task": "horejsek__python-fastjsonschema-116",
+   "repo": "horejsek/python-fastjsonschema",
+   "image_bytes": 1347703107
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 3,
+   "fix_lines": 7,
+   "task": "hylang__hy-2522",
+   "repo": "hylang/hy",
+   "image_bytes": 1359327970
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 1,
+   "fix_lines": 11,
+   "task": "hynek__structlog-463",
+   "repo": "hynek/structlog",
+   "image_bytes": 1477913089
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 2,
+   "fix_lines": 9,
+   "task": "iamjackg__md2cf-97",
+   "repo": "iamjackg/md2cf",
+   "image_bytes": 1353179918
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 2,
+   "fix_lines": 23,
+   "task": "ifosch__accloudtant-88",
+   "repo": "ifosch/accloudtant",
+   "image_bytes": 1388543622
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 3,
+   "fix_lines": 16,
+   "task": "ikalnytskyi__picobox-79",
+   "repo": "ikalnytskyi/picobox",
+   "image_bytes": 1344387610
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 2,
+   "fix_lines": 13,
+   "task": "ilevkivskyi__typing_inspect-71",
+   "repo": "ilevkivskyi/typing_inspect",
+   "image_bytes": 1345570703
+  },
+  {
+   "names_fix_file": true,
+   "fix_files": 1,
+   "fix_lines": 3,
+   "task": "ilevkivskyi__typing_inspect-74",
+   "repo": "ilevkivskyi/typing_inspect",
+   "image_bytes": 1342345246
+  },
+  {
+   "names_fix_file": true,
+   "fix_files": 1,
+   "fix_lines": 4,
+   "task": "inducer__pudb-260",
+   "repo": "inducer/pudb",
+   "image_bytes": 1357976130
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 3,
+   "fix_lines": 19,
+   "task": "ipython__ipython-11425",
+   "repo": "ipython/ipython",
+   "image_bytes": 1620734418
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 3,
+   "fix_lines": 26,
+   "task": "itamarst__crochet-109",
+   "repo": "itamarst/crochet",
+   "image_bytes": 1366686135
+  },
+  {
+   "names_fix_file": true,
+   "fix_files": 2,
+   "fix_lines": 37,
+   "task": "joke2k__django-environ-329",
+   "repo": "joke2k/django-environ",
+   "image_bytes": 1347299702
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 3,
+   "fix_lines": 10,
+   "task": "joke2k__django-environ-419",
+   "repo": "joke2k/django-environ",
+   "image_bytes": 1347349762
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 1,
+   "fix_lines": 11,
+   "task": "jsfehler__flake8-multiline-containers-128",
+   "repo": "jsfehler/flake8-multiline-containers",
+   "image_bytes": 1343193902
+  },
+  {
+   "names_fix_file": true,
+   "fix_files": 1,
+   "fix_lines": 4,
+   "task": "juju__python-libjuju-582",
+   "repo": "juju/python-libjuju",
+   "image_bytes": 1420715019
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 1,
+   "fix_lines": 8,
+   "task": "just-work__fffw-100",
+   "repo": "just-work/fffw",
+   "image_bytes": 1347495046
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 1,
+   "fix_lines": 4,
+   "task": "kytos__python-openflow-225",
+   "repo": "kytos/python-openflow",
+   "image_bytes": 1352763646
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 1,
+   "fix_lines": 17,
+   "task": "lepture__mistune-277",
+   "repo": "lepture/mistune",
+   "image_bytes": 1348233038
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 2,
+   "fix_lines": 9,
+   "task": "linkml__linkml-1623",
+   "repo": "linkml/linkml",
+   "image_bytes": 1696503434
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 2,
+   "fix_lines": 13,
+   "task": "linkml__linkml-992",
+   "repo": "linkml/linkml",
+   "image_bytes": 1755443269
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 3,
+   "fix_lines": 16,
+   "task": "litl__backoff-172",
+   "repo": "litl/backoff",
+   "image_bytes": 1346509249
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 1,
+   "fix_lines": 14,
+   "task": "lovasoa__marshmallow_dataclass-76",
+   "repo": "lovasoa/marshmallow_dataclass",
+   "image_bytes": 1461290407
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 3,
+   "fix_lines": 29,
+   "task": "m3dev__gokart-147",
+   "repo": "m3dev/gokart",
+   "image_bytes": 1700674183
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 2,
+   "fix_lines": 4,
+   "task": "macbre__sql-metadata-316",
+   "repo": "macbre/sql-metadata",
+   "image_bytes": 1348012065
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 1,
+   "fix_lines": 6,
+   "task": "macbre__sql-metadata-388",
+   "repo": "macbre/sql-metadata",
+   "image_bytes": 1348187457
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 3,
+   "fix_lines": 40,
+   "task": "mapbox__untiler-28",
+   "repo": "mapbox/untiler",
+   "image_bytes": 1485215420
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 3,
+   "fix_lines": 32,
+   "task": "marshmallow-code__webargs-463",
+   "repo": "marshmallow-code/webargs",
+   "image_bytes": 1456441559
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 2,
+   "fix_lines": 11,
+   "task": "marshmallow-code__webargs-541",
+   "repo": "marshmallow-code/webargs",
+   "image_bytes": 1459309148
+  },
+  {
+   "names_fix_file": true,
+   "fix_files": 1,
+   "fix_lines": 2,
+   "task": "martinrusev__imbox-95",
+   "repo": "martinrusev/imbox",
+   "image_bytes": 1350097727
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 2,
+   "fix_lines": 7,
+   "task": "matchms__matchms-539",
+   "repo": "matchms/matchms",
+   "image_bytes": 2027727586
+  },
+  {
+   "names_fix_file": true,
+   "fix_files": 1,
+   "fix_lines": 5,
+   "task": "mdolab__baseclasses-54",
+   "repo": "mdolab/baseclasses",
+   "image_bytes": 1412471460
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 2,
+   "fix_lines": 9,
+   "task": "melexis__warnings-plugin-28",
+   "repo": "melexis/warnings-plugin",
+   "image_bytes": 1348825429
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 1,
+   "fix_lines": 23,
+   "task": "melexis__warnings-plugin-57",
+   "repo": "melexis/warnings-plugin",
+   "image_bytes": 1353075919
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 2,
+   "fix_lines": 17,
+   "task": "microsoft__electionguard-python-189",
+   "repo": "microsoft/electionguard-python",
+   "image_bytes": 1473690326
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 1,
+   "fix_lines": 6,
+   "task": "microsoft__electionguard-python-654",
+   "repo": "microsoft/electionguard-python",
+   "image_bytes": 1427003021
+  },
+  {
+   "names_fix_file": true,
+   "fix_files": 1,
+   "fix_lines": 4,
+   "task": "miurahr__aqtinstall-633",
+   "repo": "miurahr/aqtinstall",
+   "image_bytes": 1382563544
+  },
+  {
+   "names_fix_file": true,
+   "fix_files": 2,
+   "fix_lines": 10,
+   "task": "mixkorshun__django-antispam-6",
+   "repo": "mixkorshun/django-antispam",
+   "image_bytes": 1368226669
+  },
+  {
+   "names_fix_file": true,
+   "fix_files": 1,
+   "fix_lines": 8,
+   "task": "mjs__imapclient-244",
+   "repo": "mjs/imapclient",
+   "image_bytes": 1397061424
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 2,
+   "fix_lines": 7,
+   "task": "mmerickel__wired-2",
+   "repo": "mmerickel/wired",
+   "image_bytes": 1351478237
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 1,
+   "fix_lines": 8,
+   "task": "mtgjson__mtgjson-1148",
+   "repo": "mtgjson/mtgjson",
+   "image_bytes": 1535350118
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 2,
+   "fix_lines": 3,
+   "task": "netromdk__vermin-196",
+   "repo": "netromdk/vermin",
+   "image_bytes": 1349727484
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 1,
+   "fix_lines": 59,
+   "task": "nose-devs__nose2-439",
+   "repo": "nose-devs/nose2",
+   "image_bytes": 1350644776
+  },
+  {
+   "names_fix_file": true,
+   "fix_files": 1,
+   "fix_lines": 2,
+   "task": "nutechsoftware__alarmdecoder-60",
+   "repo": "nutechsoftware/alarmdecoder",
+   "image_bytes": 1351371888
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 2,
+   "fix_lines": 97,
+   "task": "nylas__nylas-python-81",
+   "repo": "nylas/nylas-python",
+   "image_bytes": 1354255638
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 1,
+   "fix_lines": 2,
+   "task": "oasis-open__cti-stix-validator-109",
+   "repo": "oasis-open/cti-stix-validator",
+   "image_bytes": 1354613317
+  },
+  {
+   "names_fix_file": true,
+   "fix_files": 1,
+   "fix_lines": 7,
+   "task": "oasis-open__cti-taxii-client-55",
+   "repo": "oasis-open/cti-taxii-client",
+   "image_bytes": 1361144517
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 3,
+   "fix_lines": 34,
+   "task": "ofek__bit-32",
+   "repo": "ofek/bit",
+   "image_bytes": 1349048455
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 1,
+   "fix_lines": 4,
+   "task": "pact-foundation__pact-python-35",
+   "repo": "pact-foundation/pact-python",
+   "image_bytes": 1411351430
+  },
+  {
+   "names_fix_file": true,
+   "fix_files": 1,
+   "fix_lines": 20,
+   "task": "peterbe__premailer-218",
+   "repo": "peterbe/premailer",
+   "image_bytes": 1401348214
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 3,
+   "fix_lines": 8,
+   "task": "peterbe__premailer-258",
+   "repo": "peterbe/premailer",
+   "image_bytes": 1401223971
+  },
+  {
+   "names_fix_file": true,
+   "fix_files": 2,
+   "fix_lines": 8,
+   "task": "pika__pika-1041",
+   "repo": "pika/pika",
+   "image_bytes": 1363228914
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 1,
+   "fix_lines": 66,
+   "task": "pika__pika-1132",
+   "repo": "pika/pika",
+   "image_bytes": 1363157147
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 1,
+   "fix_lines": 14,
+   "task": "pybel__pybel-384",
+   "repo": "pybel/pybel",
+   "image_bytes": 1400140979
+  },
+  {
+   "names_fix_file": true,
+   "fix_files": 1,
+   "fix_lines": 2,
+   "task": "pypa__auditwheel-424",
+   "repo": "pypa/auditwheel",
+   "image_bytes": 1353925525
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 3,
+   "fix_lines": 8,
+   "task": "pypa__hatch-422",
+   "repo": "pypa/hatch",
+   "image_bytes": 1440459332
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 1,
+   "fix_lines": 3,
+   "task": "python-lsp__python-lsp-server-459",
+   "repo": "python-lsp/python-lsp-server",
+   "image_bytes": 1759480061
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 2,
+   "fix_lines": 6,
+   "task": "r1chardj0n3s__parse-81",
+   "repo": "r1chardj0n3s/parse",
+   "image_bytes": 1346289140
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 1,
+   "fix_lines": 20,
+   "task": "radiasoft__pykern-349",
+   "repo": "radiasoft/pykern",
+   "image_bytes": 1560716676
+  },
+  {
+   "names_fix_file": true,
+   "fix_files": 1,
+   "fix_lines": 10,
+   "task": "recurly__recurly-client-python-372",
+   "repo": "recurly/recurly-client-python",
+   "image_bytes": 1352154819
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 2,
+   "fix_lines": 16,
+   "task": "repobee__repobee-457",
+   "repo": "repobee/repobee",
+   "image_bytes": 1359240658
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 3,
+   "fix_lines": 18,
+   "task": "repobee__repobee-csvgrades-23",
+   "repo": "repobee/repobee-csvgrades",
+   "image_bytes": 1369476939
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 2,
+   "fix_lines": 20,
+   "task": "robmarkcole__HASS-data-detective-71",
+   "repo": "robmarkcole/HASS-data-detective",
+   "image_bytes": 1576587224
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 1,
+   "fix_lines": 4,
+   "task": "samkohn__larpix-control-74",
+   "repo": "samkohn/larpix-control",
+   "image_bytes": 1349439430
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 1,
+   "fix_lines": 58,
+   "task": "scieloorg__xylose-158",
+   "repo": "scieloorg/xylose",
+   "image_bytes": 1347368978
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 1,
+   "fix_lines": 5,
+   "task": "scrapinghub__price-parser-31",
+   "repo": "scrapinghub/price-parser",
+   "image_bytes": 1342246418
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 3,
+   "fix_lines": 30,
+   "task": "scrapy__itemadapter-18",
+   "repo": "scrapy/itemadapter",
+   "image_bytes": 1343833396
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 1,
+   "fix_lines": 13,
+   "task": "sealor__junkie-4",
+   "repo": "sealor/junkie",
+   "image_bytes": 1345689142
+  },
+  {
+   "names_fix_file": true,
+   "fix_files": 1,
+   "fix_lines": 6,
+   "task": "sendgrid__sendgrid-python-233",
+   "repo": "sendgrid/sendgrid-python",
+   "image_bytes": 1350679258
+  },
+  {
+   "names_fix_file": true,
+   "fix_files": 3,
+   "fix_lines": 34,
+   "task": "serge-sans-paille__gast-50",
+   "repo": "serge-sans-paille/gast",
+   "image_bytes": 1342218660
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 1,
+   "fix_lines": 3,
+   "task": "spiral-project__ihatemoney-1193",
+   "repo": "spiral-project/ihatemoney",
+   "image_bytes": 1489554212
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 1,
+   "fix_lines": 5,
+   "task": "springload__draftjs_exporter-57",
+   "repo": "springload/draftjs_exporter",
+   "image_bytes": 1364610093
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 3,
+   "fix_lines": 14,
+   "task": "stan-dev__pystan-257",
+   "repo": "stan-dev/pystan",
+   "image_bytes": 1539564913
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 2,
+   "fix_lines": 15,
+   "task": "steemit__hivemind-255",
+   "repo": "steemit/hivemind",
+   "image_bytes": 1412135724
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 1,
+   "fix_lines": 3,
+   "task": "stfc__fparser-109",
+   "repo": "stfc/fparser",
+   "image_bytes": 1351555304
+  },
+  {
+   "names_fix_file": true,
+   "fix_files": 3,
+   "fix_lines": 6,
+   "task": "stummjr__flake8-scrapy-19",
+   "repo": "stummjr/flake8-scrapy",
+   "image_bytes": 1346351624
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 1,
+   "fix_lines": 2,
+   "task": "terryyin__lizard-144",
+   "repo": "terryyin/lizard",
+   "image_bytes": 1354307553
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 1,
+   "fix_lines": 16,
+   "task": "thesimj__envyaml-10",
+   "repo": "thesimj/envyaml",
+   "image_bytes": 1345885109
+  },
+  {
+   "names_fix_file": true,
+   "fix_files": 1,
+   "fix_lines": 10,
+   "task": "unt-libraries__edtf-validate-30",
+   "repo": "unt-libraries/edtf-validate",
+   "image_bytes": 1352845074
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 1,
+   "fix_lines": 16,
+   "task": "vaidik__commentjson-46",
+   "repo": "vaidik/commentjson",
+   "image_bytes": 1346193682
+  },
+  {
+   "names_fix_file": true,
+   "fix_files": 1,
+   "fix_lines": 8,
+   "task": "weaveworks__kubediff-82",
+   "repo": "weaveworks/kubediff",
+   "image_bytes": 1355081470
+  },
+  {
+   "names_fix_file": true,
+   "fix_files": 3,
+   "fix_lines": 12,
+   "task": "wireservice__csvkit-645",
+   "repo": "wireservice/csvkit",
+   "image_bytes": 1449178132
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 1,
+   "fix_lines": 22,
+   "task": "xCDAT__xcdat-257",
+   "repo": "xCDAT/xcdat",
+   "image_bytes": 1557094643
+  },
+  {
+   "names_fix_file": false,
+   "fix_files": 1,
+   "fix_lines": 16,
+   "task": "xlab-si__xopera-opera-52",
+   "repo": "xlab-si/xopera-opera",
+   "image_bytes": 1516455966
+  }
+ ]
+}

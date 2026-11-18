@@ -1,0 +1,1360 @@
+{
+ "lock": {
+  "image": "replay-lock:e4754e5fcc54",
+  "base": "05b34926dcfbf2dd7ef615107f92ace6e6e794af",
+  "isolation": {
+   "same_files_as_pre": true,
+   "only_redacted_files_differ": true,
+   "inputs_only_in_second_commit": true,
+   "neutral_history": true,
+   "all_objects_reachable": true,
+   "one_ref": true,
+   "no_withheld_test_file": true,
+   "boundary_passes_probe_commands": true,
+   "no_caches_host_paths_or_internet": true,
+   "commits_in_image": true,
+   "no_mounts": true
+  },
+  "privacy": {
+   "probe_blocked": {},
+   "tree_blocked_lines": 0,
+   "tree_blocked_sample": []
+  },
+  "redacted": [
+   ".github/workflows/ci.yml",
+   "README.md",
+   "SPEC.md",
+   "acceptance/tests/m3/chaos.test.ts",
+   "compose.yaml",
+   "results/chaos-design-seed16/report.json",
+   "results/chaos-design-seed17/report.json",
+   "results/chaos-design-seed18/report.json",
+   "results/chaos-design-seed19/report.json",
+   "results/chaos-design-seed20/report.json",
+   "results/chaos-naive-seed16/report.json",
+   "results/chaos-naive-seed17/report.json",
+   "results/chaos-naive-seed18/report.json",
+   "results/chaos-naive-seed19/report.json",
+   "results/chaos-naive-seed20/report.json",
+   "results/chaos-pgboss-seed16/report.json",
+   "results/chaos-pgboss-seed17/report.json",
+   "results/chaos-pgboss-seed18/report.json",
+   "results/chaos-pgboss-seed19/report.json",
+   "results/chaos-pgboss-seed20/report.json",
+   "src/chaos/docker.test.ts",
+   "src/chaos/docker.ts"
+  ],
+  "flagged": [
+   "SPEC.md: application",
+   "acceptance/README.md: @sink.test",
+   "acceptance/helpers.ts: application",
+   "acceptance/setup/global.ts: @sink.test",
+   "acceptance/tests/m1/api.test.ts: @other.test, @sink.test",
+   "acceptance/tests/m1/caps.test.ts: @sink.test",
+   "acceptance/tests/m1/delivery.test.ts: @sink.test, application",
+   "acceptance/tests/m1/oracle.test.ts: @sink.test",
+   "acceptance/tests/m1/tenancy.test.ts: @sink.test",
+   "acceptance/tests/m2/compliance.test.ts: @else.test, @elsewhere.test, @example.test, @sink.test",
+   "acceptance/tests/m2/feedback.test.ts: @nowhere.test, @sink.test, @x.test",
+   "acceptance/tests/m2/unsubscribe.test.ts: @sink.test, application",
+   "src/api/routes/unsubscribe.ts: application",
+   "src/chaos/enqueue.ts: application",
+   "src/chaos/injector.ts: application",
+   "src/chaos/seed.ts: @sink.test, application",
+   "src/compliance.test.ts: @sink.test, @x.test, @y.test",
+   "src/db.ts: application",
+   "src/domainCheck.ts: application",
+   "src/exportCaps.ts: application",
+   "src/feedback/apply.test.ts: @mx.test, @sink.test, @x.test",
+   "src/feedback/parse.test.ts: @fbl.test, @mx.test, @sink.test, @x.test",
+   "src/feedback/parse.ts: @example.com",
+   "src/measure/bounce.test.ts: @y.test",
+   "src/migrate.ts: application",
+   "src/mime.test.ts: @x.test",
+   "src/sink/faults.test.ts: @x.test",
+   "src/tenants.ts: application",
+   "src/worker/message.test.ts: @sink.test, @x.test",
+   "src/worker/naive.test.ts: @sink.test, @x.test",
+   "src/worker/pgboss.test.ts: @sink.test, @x.test",
+   "src/worker/pgboss.ts: application"
+  ],
+  "expected": [
+   "src/worker/lockOrder.test.ts > a bounce and a complaint for the same requeued send suppress without a deadlock",
+   "src/worker/lockOrder.test.ts > a hard bounce suppresses before it refunds, so a claim holding the contact's send can still reserve",
+   "src/worker/lockOrder.test.ts > the reaper does not wait for an expired commit while it holds a counter that the requeue needs"
+  ],
+  "regression": [
+   "src/caps.test.ts > dayOf floors the time to a day boundary",
+   "src/caps.test.ts > effectiveCap K-2 a growth rate printed in e-notation is read exactly",
+   "src/caps.test.ts > effectiveCap K-2 a tiny growth rate over a huge day count never rounds the cap up",
+   "src/caps.test.ts > effectiveCap does not lose a unit to float error",
+   "src/caps.test.ts > effectiveCap is 0 before the start day and grows to the daily cap",
+   "src/caps.test.ts > effectiveCap is exact when the ramp lands on an integer",
+   "src/caps.test.ts > effectiveCap is flat without warm-up",
+   "src/caps.test.ts > effectiveCap never rounds a ramp up, even a hair below an integer",
+   "src/caps.test.ts > effectiveCap saturates at the cap for the largest safe day",
+   "src/caps.test.ts > effectiveCap stops at the daily cap for a long ramp",
+   "src/caps.test.ts > effectiveCap zero growth with a huge day is flat and fast",
+   "src/chaos/docker.test.ts > docker guard kills and restarts a container of the allowed compose project",
+   "src/chaos/docker.test.ts > docker guard refuses a container of another compose project and kills nothing",
+   "src/chaos/docker.test.ts > docker guard refuses a container without a compose label",
+   "src/chaos/docker.test.ts > docker guard refuses a name that could be read as a flag",
+   "src/chaos/injector.test.ts > a connection kill counts only when pg_terminate_backend returned true, and is tried again otherwise",
+   "src/chaos/options.test.ts > a range is two non-decreasing integers",
+   "src/chaos/options.test.ts > defaults follow workload W1 with a one second throttle pause",
+   "src/chaos/options.test.ts > missing or invalid flags are usage errors",
+   "src/chaos/report.test.ts > a baseline fails only on oracle, reconcile or unknown findings",
+   "src/chaos/report.test.ts > a clean design run passes and a leftover queued send fails it",
+   "src/chaos/report.test.ts > a requested kill that never happened, a late first kill or an injection error fails the run",
+   "src/chaos/report.test.ts > failed sends fail a design run only under the default faults",
+   "src/chaos/report.test.ts > percentiles use the nearest rank and an empty sample gives zero",
+   "src/chaos/report.test.ts > reconcile applies the receipt rule of each state",
+   "src/chaos/report.test.ts > the unknown bound adds the drops and the concurrency for every kill",
+   "src/chaos/workload.test.ts > the same seed gives the same hash and another seed another",
+   "src/chaos/workload.test.ts > the workload has the W1 shape and domain caps at 70% of their mailbox caps",
+   "src/chaos/workload.test.ts > uncapped lifts every cap to the maximum and drops the warm-up",
+   "src/compliance.test.ts > checkDomainDns PTR is only a warning",
+   "src/compliance.test.ts > checkDomainDns a DKIM record split by whitespace still matches",
+   "src/compliance.test.ts > checkMessage allows plain http only for localhost and 127.0.0.1",
+   "src/compliance.test.ts > checkMessage names each missing piece",
+   "src/compliance.test.ts > checkMessage passes a complete message",
+   "src/compliance.test.ts > strict record and URL parsing DMARC needs the exact version token and a whole policy value",
+   "src/compliance.test.ts > strict record and URL parsing SPF needs the exact version token",
+   "src/compliance.test.ts > strict record and URL parsing one remote http URL fails even next to a good https URL",
+   "src/domainCheck.test.ts > domain-check stores the report and a system audit event together",
+   "src/feedback/apply.test.ts > concurrent reports for one domain all apply and none deadlocks",
+   "src/feedback/parse.test.ts > a complaint whose returned message contains a DSN stays a complaint with the returned Message-ID",
+   "src/feedback/parse.test.ts > parseFeedback edge cases accepts an abuse report only inside a feedback-report wrapper",
+   "src/feedback/parse.test.ts > parseFeedback edge cases reads a boundary written with a quoted-pair",
+   "src/feedback/parse.test.ts > parseFeedback on the corpus dsn_01.eml",
+   "src/feedback/parse.test.ts > parseFeedback on the corpus dsn_03.eml",
+   "src/feedback/parse.test.ts > parseFeedback on the corpus dsn_05.eml",
+   "src/feedback/parse.test.ts > parseFeedback on the corpus dsn_10.eml",
+   "src/feedback/parse.test.ts > parseFeedback on the corpus dsn_11.eml",
+   "src/feedback/parse.test.ts > parseFeedback on the corpus dsn_17.eml",
+   "src/feedback/parse.test.ts > parseFeedback on the corpus qmail_01.eml",
+   "src/feedback/parse.test.ts > parseFeedback on the corpus yahoo_13.eml",
+   "src/feedback/parse.test.ts > parseFeedback real-bounce shapes finds a DSN inside a message/rfc822 attachment and takes the Message-ID of its own returned message",
+   "src/feedback/parse.test.ts > parseFeedback real-bounce shapes ignores a comment after the Action value",
+   "src/measure/bounce.test.ts > a corpus with missing files or a changed file is refused",
+   "src/measure/bounce.test.ts > conformance counts matches and keeps the upstream labels apart",
+   "src/measure/options.test.ts > the defaults are the pre-registered plan",
+   "src/measure/options.test.ts > the frozen data folder is required and counts are positive integers",
+   "src/measure/provenance.test.ts > provenance matches only when code and configuration both match",
+   "src/measure/provenance.test.ts > the configuration fingerprint ignores the output folder and follows every setting",
+   "src/measure/summary.test.ts > a changed concurrency or throttle pause is a modified run",
+   "src/measure/summary.test.ts > a design run where every send failed is not a success",
+   "src/measure/summary.test.ts > a missing injection, a modified run and mixed workloads are named and block success",
+   "src/measure/summary.test.ts > a mode summary adds up duplicates and runs over the unknown bound",
+   "src/measure/summary.test.ts > every row of the chaos table has as many cells as the heading",
+   "src/measure/summary.test.ts > no runs gives no success claim",
+   "src/measure/summary.test.ts > the complete registered measurement can state success, and says pg-boss matched when it did",
+   "src/mime.test.ts > headers a decoy boundary does not hijack the parts",
+   "src/mime.test.ts > headers a folded value has no leading space",
+   "src/mime.test.ts > headers the body starts at the first empty line, a line with spaces only folds",
+   "src/mime.test.ts > parameter a comment after the media type does not change the type",
+   "src/mime.test.ts > parameter drops comments with escaped parentheses and quotes, keeps the quoted value whole",
+   "src/mime.test.ts > parameter ignores a parameter hidden inside a quoted string",
+   "src/mime.test.ts > parameter ignores a parameter inside a comment and reads quoted-pairs",
+   "src/oracle.test.ts > oracle counts a duplicate line against the cap",
+   "src/oracle.test.ts > oracle flags a receipt past the lease slack of its day",
+   "src/oracle.test.ts > oracle lists unlabeled receipts and does not count them",
+   "src/oracle.test.ts > oracle passes a clean log and ignores outcome lines",
+   "src/oracle.test.ts > oracle treats a missing day or a prototype name as unlabeled",
+   "src/schema.test.ts > a temporary table named api_keys cannot hijack create_api_key",
+   "src/secrets.test.ts > open fails for another key or a changed value",
+   "src/secrets.test.ts > seal hides the text and open restores it",
+   "src/sink/faults.test.ts > FaultPlan applies a rule at most `times` times",
+   "src/sink/faults.test.ts > FaultPlan reads a delay from the action name",
+   "src/sink/faults.test.ts > FaultPlan repeats the same faults for the same seed",
+   "src/unsubscribe.test.ts > unsubscribe token rejects a changed tag, a wrong key and garbage",
+   "src/unsubscribe.test.ts > unsubscribe token round-trips and carries no address",
+   "src/worker/message.test.ts > a built message is signed, compliant and keeps the unsubscribe URL on one line",
+   "src/worker/message.test.ts > a domain without a key never produces a message",
+   "src/worker/naive.test.ts > a throttle reply on the last attempt still requeues the send and pauses its mailbox",
+   "src/worker/naive.test.ts > with a cap of 2 the naive claim takes all 5 sends and the design claim takes 2",
+   "src/worker/pgboss.test.ts > a suppression of one tenant does not hold the same recipient of another tenant",
+   "src/worker/transitions.test.ts > backoff doubles from 60 seconds and stops at one hour"
+  ],
+  "graded": {
+   "pre": [
+    {
+     "pass": false,
+     "avoided": false,
+     "task_failed": [
+      "src/worker/lockOrder.test.ts > a hard bounce suppresses before it refunds, so a claim holding the contact's send can still reserve",
+      "src/worker/lockOrder.test.ts > the reaper does not wait for an expired commit while it holds a counter that the requeue needs"
+     ],
+     "memory_failed": [],
+     "regression_failed": 0,
+     "applied": true
+    },
+    {
+     "pass": false,
+     "avoided": false,
+     "task_failed": [
+      "src/worker/lockOrder.test.ts > a hard bounce suppresses before it refunds, so a claim holding the contact's send can still reserve",
+      "src/worker/lockOrder.test.ts > the reaper does not wait for an expired commit while it holds a counter that the requeue needs"
+     ],
+     "memory_failed": [],
+     "regression_failed": 0,
+     "applied": true
+    },
+    {
+     "pass": false,
+     "avoided": false,
+     "task_failed": [
+      "src/worker/lockOrder.test.ts > a hard bounce suppresses before it refunds, so a claim holding the contact's send can still reserve",
+      "src/worker/lockOrder.test.ts > the reaper does not wait for an expired commit while it holds a counter that the requeue needs"
+     ],
+     "memory_failed": [],
+     "regression_failed": 0,
+     "applied": true
+    }
+   ],
+   "first_attempt": [
+    {
+     "pass": true,
+     "avoided": false,
+     "task_failed": [],
+     "memory_failed": [
+      "src/worker/lockOrder.test.ts > a bounce and a complaint for the same requeued send suppress without a deadlock"
+     ],
+     "regression_failed": 0,
+     "applied": true
+    },
+    {
+     "pass": true,
+     "avoided": false,
+     "task_failed": [],
+     "memory_failed": [
+      "src/worker/lockOrder.test.ts > a bounce and a complaint for the same requeued send suppress without a deadlock"
+     ],
+     "regression_failed": 0,
+     "applied": true
+    },
+    {
+     "pass": true,
+     "avoided": false,
+     "task_failed": [],
+     "memory_failed": [
+      "src/worker/lockOrder.test.ts > a bounce and a complaint for the same requeued send suppress without a deadlock"
+     ],
+     "regression_failed": 0,
+     "applied": true
+    }
+   ],
+   "reference": [
+    {
+     "pass": true,
+     "avoided": true,
+     "task_failed": [],
+     "memory_failed": [],
+     "regression_failed": 0,
+     "applied": true
+    },
+    {
+     "pass": true,
+     "avoided": true,
+     "task_failed": [],
+     "memory_failed": [],
+     "regression_failed": 0,
+     "applied": true
+    },
+    {
+     "pass": true,
+     "avoided": true,
+     "task_failed": [],
+     "memory_failed": [],
+     "regression_failed": 0,
+     "applied": true
+    }
+   ]
+  },
+  "seconds": {
+   "pre": [
+    4,
+    4,
+    4
+   ],
+   "first_attempt": [
+    3,
+    3,
+    3
+   ],
+   "reference": [
+    2,
+    2,
+    2
+   ]
+  }
+ },
+ "verifier": {
+  "image": "replay-verifier:43f138676e83",
+  "base": "0a65c4596202edf0ed8a5781e087a43cf7a01e1f",
+  "isolation": {
+   "same_files_as_pre": true,
+   "only_redacted_files_differ": true,
+   "inputs_only_in_second_commit": true,
+   "neutral_history": true,
+   "all_objects_reachable": true,
+   "one_ref": true,
+   "no_withheld_test_file": true,
+   "boundary_passes_probe_commands": true,
+   "no_caches_host_paths_or_internet": true,
+   "commits_in_image": true,
+   "no_mounts": true
+  },
+  "privacy": {
+   "probe_blocked": {},
+   "tree_blocked_lines": 0,
+   "tree_blocked_sample": []
+  },
+  "redacted": [
+   "SPEC.md",
+   "compose.yaml"
+  ],
+  "flagged": [
+   "acceptance/helpers.ts: application",
+   "acceptance/stub-source.ts: application",
+   "acceptance/tests/m2/api.test.ts: application",
+   "acceptance/tests/m2/jobs.test.ts: application",
+   "acceptance/tests/m2/security.test.ts: application",
+   "acceptance/tests/m2/ui.test.ts: application",
+   "src/server/limits.test.ts: application"
+  ],
+  "expected": [
+   "src/jobs/runs.db.test.ts > verify-run job against Postgres J-4 a cancelled attempt stops waiting at once",
+   "src/jobs/runs.db.test.ts > verify-run job against Postgres J-4 a duplicate verify job exits while another holds the run",
+   "src/jobs/runs.db.test.ts > verify-run job against Postgres J-4 a failing lock query still releases the client",
+   "src/jobs/runs.db.test.ts > verify-run job against Postgres J-4 a fetch still running after the wait goes back to the queue instead of holding the client",
+   "src/jobs/runs.db.test.ts > verify-run job against Postgres J-4 a job that ended without a result is an error, not a fetch_failed",
+   "src/jobs/runs.db.test.ts > verify-run job against Postgres J-4 a result counts only for the job the run depends on, and a live job is waited for",
+   "src/jobs/runs.db.test.ts > verify-run job against Postgres J-4 a run waiting on a slow fetch is checked again later without using a retry",
+   "src/jobs/runs.db.test.ts > verify-run job against Postgres J-4 a run whose fetches never finish fails after the recheck cap",
+   "src/jobs/runs.db.test.ts > verify-run job against Postgres S-3a the run resolves with the source id that is persisted, not a conflicting proposal",
+   "src/jobs/runs.db.test.ts > verify-run job against Postgres a failing run is thrown for retry, and marked failed only after the last attempt"
+  ],
+  "regression": [
+   "src/jobs/official-fetch.db.test.ts > official fetches against Postgres 429 and 500 are retryable and carry Retry-After, 404 and other 4xx are not",
+   "src/jobs/official-fetch.db.test.ts > official fetches against Postgres J-5 dispatches to one host are serialized, and the delay counts from the end of the previous request",
+   "src/jobs/official-fetch.db.test.ts > official fetches against Postgres X-5 a path that resolves to another host is refused before any request",
+   "src/jobs/official-fetch.db.test.ts > official fetches against Postgres a redirect to another origin is refused, and so is a redirect loop",
+   "src/jobs/official-fetch.db.test.ts > official fetches against Postgres a successful fetch returns the body",
+   "src/jobs/official-fetch.db.test.ts > retryAfterMs reads seconds and dates",
+   "src/lib/extract.test.ts > extractCitations a bare F. reporter needs no year and has a short form",
+   "src/lib/extract.test.ts > extractCitations a quote in a very long parenthetical is still attached",
+   "src/lib/extract.test.ts > extractCitations a quote is attached to one citation only",
+   "src/lib/extract.test.ts > extractCitations a series without a page is not read as a bare F. cite",
+   "src/lib/extract.test.ts > extractCitations a short form never borrows a key from another volume",
+   "src/lib/extract.test.ts > extractCitations an empty text has no citations",
+   "src/lib/extract.test.ts > extractCitations ignores citations inside URLs",
+   "src/lib/markers.test.ts > hasPath each designator must sit one level below its parent",
+   "src/lib/markers.test.ts > hasPath finds designators that open a line or follow a heading",
+   "src/lib/markers.test.ts > hasPath reads (i) as a letter after (h) and as a numeral under a paragraph",
+   "src/lib/markers.test.ts > hasPath searches each designator only inside its parent",
+   "src/lib/markers.test.ts > hasPath tries every occurrence of the first designator",
+   "src/lib/markers.test.ts > headingMarkers derives levels from heading labels",
+   "src/lib/pinpoint.test.ts > foldPinpoint folds look-alikes only at digit levels",
+   "src/lib/pinpoint.test.ts > foldPinpoint folds the digit level after the range dash too",
+   "src/lib/pinpoint.test.ts > foldPinpoint removes spaces and keeps a range",
+   "src/lib/quote.test.ts > findQuote a missing quote is null",
+   "src/lib/quote.test.ts > findQuote an ellipsis needs its parts in order",
+   "src/lib/quote.test.ts > findQuote returns offsets into the original text",
+   "src/lib/quote.test.ts > normalizeQuoteText joins a hyphenated line break",
+   "src/lib/quote.test.ts > normalizeQuoteText lowercases, unifies quotes and dashes, collapses whitespace",
+   "src/lib/verify.test.ts > verifyCitation outcome rules a caption failure outranks a pinpoint failure",
+   "src/lib/verify.test.ts > verifyCitation outcome rules a matched quote is verified and becomes the evidence passage",
+   "src/lib/verify.test.ts > verifyCitation outcome rules a missing authority is not_found and has no evidence",
+   "src/lib/verify.test.ts > verifyCitation outcome rules a precedent caption passes on a close OCR misread",
+   "src/lib/verify.test.ts > verifyCitation outcome rules a quote without stored text is unverifiable",
+   "src/lib/verify.test.ts > verifyCitation outcome rules an unresolved short form skips every check",
+   "src/lib/verify.test.ts > verifyCitation outcome rules evidence offsets reproduce a truncated excerpt",
+   "src/lib/verify.test.ts > verifyCitation outcome rules evidence without a quote is the start of the stored text, cut at 600 characters",
+   "src/lib/verify.test.ts > verifyCitation outcome rules outside coverage the cite is unverifiable, never not_found",
+   "src/server/boss.db.test.ts > queue settings against Postgres an existing queue and its waiting jobs are brought to the current retry settings",
+   "src/server/limits.test.ts > readLimited cancels the stream as soon as the limit is passed",
+   "src/server/limits.test.ts > readLimited returns what fits",
+   "src/server/limits.test.ts > request bodies A-1 a body that is not JSON is a 422",
+   "src/server/limits.test.ts > request bodies X-3 an oversized body is a 413 before it is read",
+   "src/server/limits.test.ts > request bodies a malformed multipart body is a 422",
+   "src/server/reviews.db.test.ts > reviews and audit against Postgres R-4 a concurrent rejection is not overwritten by the bulk acceptance",
+   "src/server/reviews.db.test.ts > reviews and audit against Postgres R-4 a finding added after the locking query is not accepted by that bulk call",
+   "src/server/reviews.db.test.ts > reviews and audit against Postgres R-7 a failed document insert leaves no audit event",
+   "src/server/reviews.db.test.ts > reviews and audit against Postgres R-7 a review and its audit event commit together",
+   "src/server/reviews.db.test.ts > reviews and audit against Postgres R-7 an upload and its audit event commit together",
+   "src/server/reviews.db.test.ts > reviews and audit against Postgres R-7 twelve concurrent uploads on a ten-connection pool finish, with one audit event each",
+   "src/server/server.test.ts > review rules R-1 to R-3 body rules",
+   "src/server/server.test.ts > review rules R-2 official hosts are https and exact",
+   "src/server/server.test.ts > reviewers and tokens a token maps to its reviewer only when it matches exactly",
+   "src/server/server.test.ts > reviewers and tokens an Origin must equal http:// plus the Host header",
+   "src/server/server.test.ts > reviewers and tokens parses name:token pairs and ignores malformed entries",
+   "src/server/server.test.ts > reviewers and tokens reads one cookie out of a header",
+   "src/server/server.test.ts > web helpers X-4 escapes markup characters",
+   "src/server/server.test.ts > web helpers an id that is not a UUID is a 404",
+   "src/store.db.test.ts > store against Postgres a malformed CourtListener CSV is an input error",
+   "src/store.db.test.ts > store against Postgres a resume needs an existing run and the same document",
+   "src/store.db.test.ts > store against Postgres a resumed run reuses the stored manifest even after a newer ingest",
+   "src/store.db.test.ts > store against Postgres the manifest is committed before any citation is checked",
+   "src/store/html.test.ts > htmlToText one line per block, entities decoded, scripts dropped",
+   "src/store/ingest/parse.test.ts > parseAmendDate reads eCFR and Policy Manual dates",
+   "src/store/ingest/parse.test.ts > parseEcfr a part and a section, versioned by the amendment date",
+   "src/store/ingest/parse.test.ts > parseEcfr section text has one line per block and no source credit",
+   "src/store/ingest/parse.test.ts > parseUscode sections, identifier paths and the INA mapping",
+   "src/store/resolve.test.ts > Resolver policy manual chapters a chapter listed on the part page exists",
+   "src/store/resolve.test.ts > Resolver policy manual chapters a chapter missing from the pinned part page does not exist, even with stored text",
+   "src/store/sources.test.ts > snapshotId changes when any source version changes",
+   "src/store/sources.test.ts > snapshotId is 16 hex characters and ignores row order",
+   "src/web/forms.test.ts > form errors R-1 a reviewer field in a form is refused, not dropped",
+   "src/web/forms.test.ts > form errors U-2 a validation failure is an escaped HTML page with status 422",
+   "src/web/forms.test.ts > form errors a refused credential keeps its JSON error",
+   "src/zip-size.test.ts > assertSafeZip accepts a small document",
+   "src/zip-size.test.ts > assertSafeZip refuses a decoy prefix that shifts the directory",
+   "src/zip-size.test.ts > assertSafeZip refuses a forged ZIP64 end record",
+   "src/zip-size.test.ts > assertSafeZip refuses a forged entry count",
+   "src/zip-size.test.ts > assertSafeZip refuses an archive that really inflates past the limit",
+   "src/zip-size.test.ts > assertSafeZip refuses bytes that are not a zip file",
+   "src/zip-size.test.ts > hasZip64Locator a locator that points at a ZIP64 end record counts",
+   "src/zip-size.test.ts > hasZip64Locator four bytes that only look like the signature do not count"
+  ],
+  "graded": {
+   "pre": [
+    {
+     "pass": false,
+     "avoided": false,
+     "task_failed": [
+      "src/jobs/runs.db.test.ts > verify-run job against Postgres J-4 a run whose fetches never finish fails after the recheck cap",
+      "src/jobs/runs.db.test.ts > verify-run job against Postgres a failing run is thrown for retry, and marked failed only after the last attempt"
+     ],
+     "memory_failed": [],
+     "regression_failed": 0,
+     "applied": true
+    },
+    {
+     "pass": false,
+     "avoided": false,
+     "task_failed": [
+      "src/jobs/runs.db.test.ts > verify-run job against Postgres J-4 a run whose fetches never finish fails after the recheck cap",
+      "src/jobs/runs.db.test.ts > verify-run job against Postgres a failing run is thrown for retry, and marked failed only after the last attempt"
+     ],
+     "memory_failed": [],
+     "regression_failed": 0,
+     "applied": true
+    },
+    {
+     "pass": false,
+     "avoided": false,
+     "task_failed": [
+      "src/jobs/runs.db.test.ts > verify-run job against Postgres J-4 a run whose fetches never finish fails after the recheck cap",
+      "src/jobs/runs.db.test.ts > verify-run job against Postgres a failing run is thrown for retry, and marked failed only after the last attempt"
+     ],
+     "memory_failed": [],
+     "regression_failed": 0,
+     "applied": true
+    }
+   ],
+   "first_attempt": [
+    {
+     "pass": true,
+     "avoided": false,
+     "task_failed": [],
+     "memory_failed": [
+      "src/jobs/runs.db.test.ts > verify-run job against Postgres J-4 a failing lock query still releases the client"
+     ],
+     "regression_failed": 0,
+     "applied": true
+    },
+    {
+     "pass": true,
+     "avoided": false,
+     "task_failed": [],
+     "memory_failed": [
+      "src/jobs/runs.db.test.ts > verify-run job against Postgres J-4 a failing lock query still releases the client"
+     ],
+     "regression_failed": 0,
+     "applied": true
+    },
+    {
+     "pass": true,
+     "avoided": false,
+     "task_failed": [],
+     "memory_failed": [
+      "src/jobs/runs.db.test.ts > verify-run job against Postgres J-4 a failing lock query still releases the client"
+     ],
+     "regression_failed": 0,
+     "applied": true
+    }
+   ],
+   "reference": [
+    {
+     "pass": true,
+     "avoided": true,
+     "task_failed": [],
+     "memory_failed": [],
+     "regression_failed": 0,
+     "applied": true
+    },
+    {
+     "pass": true,
+     "avoided": true,
+     "task_failed": [],
+     "memory_failed": [],
+     "regression_failed": 0,
+     "applied": true
+    },
+    {
+     "pass": true,
+     "avoided": true,
+     "task_failed": [],
+     "memory_failed": [],
+     "regression_failed": 0,
+     "applied": true
+    }
+   ]
+  },
+  "seconds": {
+   "pre": [
+    4,
+    3,
+    3
+   ],
+   "first_attempt": [
+    3,
+    3,
+    3
+   ],
+   "reference": [
+    3,
+    3,
+    3
+   ]
+  }
+ },
+ "simlink": {
+  "image": "replay-simlink:edafc610c042",
+  "base": "c867b10a9c41a4b8d9000f5c9dfc2a892052a0e4",
+  "isolation": {
+   "same_files_as_pre": true,
+   "only_redacted_files_differ": true,
+   "inputs_only_in_second_commit": true,
+   "neutral_history": true,
+   "all_objects_reachable": true,
+   "one_ref": true,
+   "no_withheld_test_file": true,
+   "boundary_passes_probe_commands": true,
+   "no_caches_host_paths_or_internet": true,
+   "commits_in_image": true,
+   "no_mounts": true
+  },
+  "privacy": {
+   "probe_blocked": {},
+   "tree_blocked_lines": 0,
+   "tree_blocked_sample": []
+  },
+  "redacted": [
+   "SPEC.md"
+  ],
+  "flagged": [],
+  "expected": [
+   "test/patch-apply.test.ts > patch apply never writes through a symlinked directory in the corpus",
+   "test/patch-apply.test.ts > patch apply never writes through a symlinked file in the corpus",
+   "test/patch-apply.test.ts > patch apply patches a plain copy"
+  ],
+  "regression": [
+   "test/lua.test.ts > undeclaredCalls accepts KEYS, locals from KEYS and loops over KEYS",
+   "test/lua.test.ts > undeclaredCalls checks every key of a multi-key command",
+   "test/lua.test.ts > undeclaredCalls ignores commands without keys and keys named in comments or strings",
+   "test/lua.test.ts > undeclaredCalls reports a key built from ARGV with the index that feeds it",
+   "test/patch.test.ts > applyHunks applies with exact context",
+   "test/patch.test.ts > applyHunks fails when the context moved",
+   "test/patch.test.ts > parsePatch reads hunks by their line counts, so a removed \"-- \" line is not a header",
+   "test/patch.test.ts > parsePatch refuses paths that leave the tree",
+   "test/render.test.ts > Rng gives the same stream for the same seed",
+   "test/render.test.ts > Rng samples without repeats",
+   "test/render.test.ts > classify All keys in the pipeline should belong to the same slots allocation group",
+   "test/render.test.ts > classify CROSSSLOT Keys in request don't hash to the same slot",
+   "test/render.test.ts > classify ERR Script attempted to access a non local key in a cluster node script",
+   "test/render.test.ts > classify ERR Script attempted to access keys that do not hash to the same slot",
+   "test/render.test.ts > classify MOVED 5812 127.0.0.1:7002",
+   "test/render.test.ts > classify WRONGTYPE",
+   "test/render.test.ts > render fills placeholders, including ones with nested braces",
+   "test/render.test.ts > render refuses a placeholder the driver gave no value for",
+   "test/tags.test.ts > colocated needs the same literal tag, or the same key",
+   "test/tags.test.ts > colocated never trusts a tag that depends on the list element",
+   "test/tags.test.ts > primaryOf follows the even three-way split of the slot range",
+   "test/tags.test.ts > tagOf reads the first non-empty tag and treats placeholders as opaque"
+  ],
+  "graded": {
+   "pre": [
+    {
+     "pass": false,
+     "avoided": false,
+     "task_failed": [
+      "test/patch-apply.test.ts > patch apply never writes through a symlinked directory in the corpus",
+      "test/patch-apply.test.ts > patch apply never writes through a symlinked file in the corpus"
+     ],
+     "memory_failed": [
+      "test/patch-apply.test.ts > patch apply never writes through a symlinked directory in the corpus",
+      "test/patch-apply.test.ts > patch apply never writes through a symlinked file in the corpus"
+     ],
+     "regression_failed": 0,
+     "applied": true
+    },
+    {
+     "pass": false,
+     "avoided": false,
+     "task_failed": [
+      "test/patch-apply.test.ts > patch apply never writes through a symlinked directory in the corpus",
+      "test/patch-apply.test.ts > patch apply never writes through a symlinked file in the corpus"
+     ],
+     "memory_failed": [
+      "test/patch-apply.test.ts > patch apply never writes through a symlinked directory in the corpus",
+      "test/patch-apply.test.ts > patch apply never writes through a symlinked file in the corpus"
+     ],
+     "regression_failed": 0,
+     "applied": true
+    },
+    {
+     "pass": false,
+     "avoided": false,
+     "task_failed": [
+      "test/patch-apply.test.ts > patch apply never writes through a symlinked directory in the corpus",
+      "test/patch-apply.test.ts > patch apply never writes through a symlinked file in the corpus"
+     ],
+     "memory_failed": [
+      "test/patch-apply.test.ts > patch apply never writes through a symlinked directory in the corpus",
+      "test/patch-apply.test.ts > patch apply never writes through a symlinked file in the corpus"
+     ],
+     "regression_failed": 0,
+     "applied": true
+    }
+   ],
+   "memory_only": [
+    {
+     "pass": false,
+     "avoided": false,
+     "task_failed": [
+      "test/patch-apply.test.ts > patch apply patches a plain copy"
+     ],
+     "memory_failed": [],
+     "regression_failed": 0,
+     "applied": true
+    },
+    {
+     "pass": false,
+     "avoided": false,
+     "task_failed": [
+      "test/patch-apply.test.ts > patch apply patches a plain copy"
+     ],
+     "memory_failed": [],
+     "regression_failed": 0,
+     "applied": true
+    },
+    {
+     "pass": false,
+     "avoided": false,
+     "task_failed": [
+      "test/patch-apply.test.ts > patch apply patches a plain copy"
+     ],
+     "memory_failed": [],
+     "regression_failed": 0,
+     "applied": true
+    }
+   ],
+   "reference": [
+    {
+     "pass": true,
+     "avoided": true,
+     "task_failed": [],
+     "memory_failed": [],
+     "regression_failed": 0,
+     "applied": true
+    },
+    {
+     "pass": true,
+     "avoided": true,
+     "task_failed": [],
+     "memory_failed": [],
+     "regression_failed": 0,
+     "applied": true
+    },
+    {
+     "pass": true,
+     "avoided": true,
+     "task_failed": [],
+     "memory_failed": [],
+     "regression_failed": 0,
+     "applied": true
+    }
+   ]
+  },
+  "seconds": {
+   "pre": [
+    1,
+    1,
+    1
+   ],
+   "memory_only": [
+    1,
+    1,
+    1
+   ],
+   "reference": [
+    1,
+    1,
+    1
+   ]
+  }
+ },
+ "onnx": {
+  "image": "replay-onnx:a100068ada05",
+  "base": "967a87548e4784236d143260c441c40f47d64a82",
+  "isolation": {
+   "same_files_as_pre": true,
+   "only_redacted_files_differ": true,
+   "inputs_only_in_second_commit": true,
+   "neutral_history": true,
+   "all_objects_reachable": true,
+   "one_ref": true,
+   "no_withheld_test_file": true,
+   "boundary_passes_probe_commands": true,
+   "no_caches_host_paths_or_internet": true,
+   "commits_in_image": true,
+   "no_mounts": true
+  },
+  "privacy": {
+   "probe_blocked": {},
+   "tree_blocked_lines": 0,
+   "tree_blocked_sample": []
+  },
+  "redacted": [
+   "README.md",
+   "SPEC.md",
+   "acceptance/README.md"
+  ],
+  "flagged": [
+   "SPEC.md: company",
+   "acceptance/py/test_data_manifest.py: @unittest.skipunless",
+   "acceptance/ts/helpers.ts: application",
+   "acceptance/ts/http.test.ts: company",
+   "acceptance/ts/mcp.test.ts: company",
+   "ml/aliasrank_ml/bigru.py: @torch.no",
+   "ml/tests/test_bigru.py: @unittest.skipif",
+   "src/request.test.ts: company",
+   "src/tools/latency.ts: application"
+  ],
+  "expected": [
+   "src/match/neural.test.ts > encode left-pads, and keeps the first characters of a long name",
+   "src/match/neural.test.ts > loadNeuralScorer loads the ONNX model and reproduces the golden scores of the Python network",
+   "src/match/neural.test.ts > loadNeuralScorer rejects an ONNX file that does not match its recorded hash",
+   "src/match/neural.test.ts > loadNeuralScorer scores a batch the same as one pair at a time",
+   "src/match/neural.test.ts > metadata checks rejects a golden score off by more than 1e-6 and accepts one within it",
+   "src/match/neural.test.ts > metadata checks rejects a missing file",
+   "src/match/neural.test.ts > metadata checks rejects bad hash with model_invalid",
+   "src/match/neural.test.ts > metadata checks rejects golden not an array with model_invalid",
+   "src/match/neural.test.ts > metadata checks rejects metadata of [] without an uncoded error",
+   "src/match/neural.test.ts > metadata checks rejects metadata of not json without an uncoded error",
+   "src/match/neural.test.ts > metadata checks rejects metadata of null without an uncoded error",
+   "src/match/neural.test.ts > metadata checks rejects missing version with model_invalid",
+   "src/match/neural.test.ts > metadata checks rejects null golden score with model_invalid",
+   "src/match/neural.test.ts > metadata checks rejects null threshold with model_invalid",
+   "src/match/neural.test.ts > metadata checks rejects wrong alphabet with model_invalid",
+   "src/match/neural.test.ts > metadata checks rejects wrong max_len with model_invalid"
+  ],
+  "regression": [
+   "src/canonical.test.ts > canonicalJson is the same for any key order",
+   "src/canonical.test.ts > canonicalJson sorts keys at every level and keeps array order",
+   "src/lists/fetch.test.ts > download follows a redirect and returns the body",
+   "src/lists/fetch.test.ts > download reduces a connection failure to its kind",
+   "src/lists/fetch.test.ts > download refuses a hop to a lookalike host before requesting it",
+   "src/lists/fetch.test.ts > download reports a missing file without the query string",
+   "src/lists/fetch.test.ts > download spends one time budget across all redirect hops",
+   "src/lists/fetch.test.ts > download stops after five redirects",
+   "src/lists/fetch.test.ts > fetchBase allows https and loopback http, and defaults to the OFAC export",
+   "src/lists/fetch.test.ts > fetchBase refuses file:///etc",
+   "src/lists/fetch.test.ts > fetchBase refuses ftp://127.0.0.1/x",
+   "src/lists/fetch.test.ts > fetchBase refuses http://example.invalid/x",
+   "src/lists/fetch.test.ts > fetchBase refuses not a url",
+   "src/lists/fetch.test.ts > safeUrl ftp://host/a'b?X-Amz-Signature=SECRET",
+   "src/lists/fetch.test.ts > safeUrl ftp://host/file?X-Amz-Signature=SECRET",
+   "src/lists/fetch.test.ts > safeUrl https://s3.example/a/b?X-Amz-Signature=abc&x=1#frag",
+   "src/lists/fetch.test.ts > safeUrl https://user:pw@host/p",
+   "src/lists/fetch.test.ts > safeUrl mailto:user?X-Amz-Signature=SECRET",
+   "src/lists/fetch.test.ts > safeUrl never echoes text that is not a URL",
+   "src/lists/fetch.test.ts > sanitize bad tag <https://host/p?token=SECRET> here",
+   "src/lists/fetch.test.ts > sanitize error:\"https://user:SECRET@host/p\"",
+   "src/lists/fetch.test.ts > sanitize http://[bad?token=SECRET",
+   "src/lists/fetch.test.ts > sanitize https://host/p#abc<SECRET",
+   "src/lists/fetch.test.ts > sanitize https://host/p?token=abc<SECRET",
+   "src/lists/fetch.test.ts > sanitize https://host/p?x=a\nSECRET",
+   "src/lists/fetch.test.ts > sanitize https://user:pa\tSECRET@host/p",
+   "src/lists/fetch.test.ts > sanitize mailto:user?X-Amz-Signature=SECRET",
+   "src/lists/fetch.test.ts > sanitize near ?key=SECRET and more",
+   "src/lists/fetch.test.ts > sanitize near ?key=abc\"SECRET and more",
+   "src/lists/fetch.test.ts > sanitize plain text, no urls: just words.",
+   "src/lists/fetch.test.ts > sanitize see ftp://u:pw@host/a'b?X=SECRET",
+   "src/lists/fetch.test.ts > sanitize xml <https://host/a'b#SECRET>",
+   "src/lists/fetch.test.ts > sanitize xml <https://host/p?token=abc'SECRET>",
+   "src/lists/fetch.test.ts > sanitize xml <https://user:pa'SECRET@host/p>",
+   "src/lists/parse.test.ts > parse error messages never repeat document text",
+   "src/lists/parse.test.ts > parse error messages never repeat text from a parser exception",
+   "src/lists/parse.test.ts > parseList gives equal content equal hashes and changed content another",
+   "src/lists/parse.test.ts > parseList reads entities, names and the publish date",
+   "src/lists/parse.test.ts > parseList rejects sdn_malformed.xml",
+   "src/lists/parse.test.ts > parseList rejects sdn_truncated.xml",
+   "src/lists/parse.test.ts > parseList required fields accepts a well-formed entry",
+   "src/lists/parse.test.ts > parseList required fields rejects a missing Record_Count",
+   "src/lists/parse.test.ts > parseList required fields rejects a missing, empty or oversized uid",
+   "src/match/dob.test.ts > dobCheck 1965 against [\"12 Mar 1965\"] is match",
+   "src/match/dob.test.ts > dobCheck 1965-03-12 against [\"12 Mar 1965\"] is match",
+   "src/match/dob.test.ts > dobCheck 1965-03-13 against [\"12 Mar 1965\"] is mismatch",
+   "src/match/dob.test.ts > dobCheck 1978 against [\"1977 to 1979\"] is match",
+   "src/match/dob.test.ts > dobCheck 1981 against [\"circa 1980\"] is match",
+   "src/match/dob.test.ts > dobCheck 1983 against [\"circa 1980\"] is mismatch",
+   "src/match/dob.test.ts > dobCheck 1990 against [\"not a date\"] is unknown",
+   "src/match/dob.test.ts > dobCheck 1990 against [] is unknown",
+   "src/match/dob.test.ts > dobCheck 1990-01-01 against [\"Jan 1990\"] is match",
+   "src/match/dob.test.ts > dobCheck 1991 against [\"Jan 1990 to Mar 1990\"] is mismatch",
+   "src/match/dob.test.ts > dobCheck matches when any of several dates fits",
+   "src/match/dob.test.ts > dobCheck null against [\"1990\"] is unknown",
+   "src/match/model.test.ts > loadModel accepts a valid model",
+   "src/match/model.test.ts > loadModel rejects a model root of 42",
+   "src/match/model.test.ts > loadModel rejects a model root of []",
+   "src/match/model.test.ts > loadModel rejects a model root of null",
+   "src/match/model.test.ts > loadModel rejects a model whose scores overflow",
+   "src/match/model.test.ts > loadModel rejects missing features with model_invalid",
+   "src/match/model.test.ts > loadModel rejects missing golden with model_invalid",
+   "src/match/model.test.ts > loadModel rejects missing thresholds with model_invalid",
+   "src/match/model.test.ts > loadModel rejects null weights entry with model_invalid",
+   "src/match/model.test.ts > loadModel rejects string hash weight with model_invalid",
+   "src/match/model.test.ts > loadModel rejects zero std with model_invalid",
+   "src/match/similarity.test.ts > jaroWinkler DIXON vs DICKSONX",
+   "src/match/similarity.test.ts > jaroWinkler DWAYNE vs DUANE",
+   "src/match/similarity.test.ts > jaroWinkler MARTHA vs MARHTA",
+   "src/match/similarity.test.ts > jaroWinkler handles equal and disjoint strings",
+   "src/match/similarity.test.ts > normalize transliterates Cyrillic, strips accents and apostrophes",
+   "src/match/similarity.test.ts > soundex 2201 -> 2201",
+   "src/match/similarity.test.ts > soundex ASHCRAFT -> A261",
+   "src/match/similarity.test.ts > soundex HONEYMAN -> H555",
+   "src/match/similarity.test.ts > soundex LEE -> L000",
+   "src/match/similarity.test.ts > soundex PFISTER -> P236",
+   "src/match/similarity.test.ts > soundex ROBERT -> R163",
+   "src/match/similarity.test.ts > soundex TYMCZAK -> T522",
+   "src/match/similarity.test.ts > trigramSimilarity and fnv1a32 hashes UTF-8 bytes",
+   "src/match/similarity.test.ts > trigramSimilarity and fnv1a32 matches pg_trgm on padded words",
+   "src/replay.test.ts > findModel returns null when no file has the hash",
+   "src/replay.test.ts > findModel skips unreadable and non-file entries and still finds a later model",
+   "src/replay.test.ts > findModel treats a missing directory as no match",
+   "src/replay.test.ts > parseModel reports the hash of the bytes it validated",
+   "src/request.test.ts > parseRequest \"Ivan\" fails with invalid_name",
+   "src/request.test.ts > parseRequest accepts a leap day",
+   "src/request.test.ts > parseRequest fills defaults and normalizes the name",
+   "src/request.test.ts > parseRequest {\"name\":\"!!!\"} fails with invalid_name",
+   "src/request.test.ts > parseRequest {\"name\":\"\"} fails with invalid_name",
+   "src/request.test.ts > parseRequest {\"name\":\"Ivan\",\"budget\":\"0.5\"} fails with invalid_budget",
+   "src/request.test.ts > parseRequest {\"name\":\"Ivan\",\"budget\":0.02} fails with invalid_budget",
+   "src/request.test.ts > parseRequest {\"name\":\"Ivan\",\"dob\":\"1965-02-30\"} fails with invalid_dob",
+   "src/request.test.ts > parseRequest {\"name\":\"Ivan\",\"dob\":\"65\"} fails with invalid_dob",
+   "src/request.test.ts > parseRequest {\"name\":\"Ivan\",\"include_weak_aliases\":\"yes\"} fails with invalid_request",
+   "src/request.test.ts > parseRequest {\"name\":\"Ivan\",\"list_version\":1.5} fails with unknown_list_version",
+   "src/request.test.ts > parseRequest {\"name\":\"Ivan\",\"type\":\"company\"} fails with invalid_type",
+   "src/request.test.ts > parseRequest {\"name\":\"a\\u0000b\"} fails with invalid_name",
+   "src/request.test.ts > parseRequest {\"name\":\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\"} fails with invalid_name",
+   "src/request.test.ts > parseRequest {} fails with invalid_name",
+   "src/tools/latency.test.ts > latency helpers samples evenly and never more than asked",
+   "src/tools/latency.test.ts > latency helpers takes nearest-rank percentiles"
+  ],
+  "graded": {
+   "pre": [
+    {
+     "pass": false,
+     "avoided": false,
+     "task_failed": [
+      "src/match/neural.test.ts > encode left-pads, and keeps the first characters of a long name",
+      "src/match/neural.test.ts > loadNeuralScorer loads the ONNX model and reproduces the golden scores of the Python network",
+      "src/match/neural.test.ts > loadNeuralScorer rejects an ONNX file that does not match its recorded hash",
+      "src/match/neural.test.ts > loadNeuralScorer scores a batch the same as one pair at a time",
+      "src/match/neural.test.ts > metadata checks rejects a golden score off by more than 1e-6 and accepts one within it",
+      "src/match/neural.test.ts > metadata checks rejects bad hash with model_invalid",
+      "src/match/neural.test.ts > metadata checks rejects null golden score with model_invalid"
+     ],
+     "memory_failed": [
+      "src/match/neural.test.ts > metadata checks rejects a missing file",
+      "src/match/neural.test.ts > metadata checks rejects golden not an array with model_invalid",
+      "src/match/neural.test.ts > metadata checks rejects metadata of [] without an uncoded error",
+      "src/match/neural.test.ts > metadata checks rejects metadata of not json without an uncoded error",
+      "src/match/neural.test.ts > metadata checks rejects metadata of null without an uncoded error",
+      "src/match/neural.test.ts > metadata checks rejects missing version with model_invalid",
+      "src/match/neural.test.ts > metadata checks rejects null threshold with model_invalid",
+      "src/match/neural.test.ts > metadata checks rejects wrong alphabet with model_invalid",
+      "src/match/neural.test.ts > metadata checks rejects wrong max_len with model_invalid"
+     ],
+     "regression_failed": 0,
+     "applied": true
+    },
+    {
+     "pass": false,
+     "avoided": false,
+     "task_failed": [
+      "src/match/neural.test.ts > encode left-pads, and keeps the first characters of a long name",
+      "src/match/neural.test.ts > loadNeuralScorer loads the ONNX model and reproduces the golden scores of the Python network",
+      "src/match/neural.test.ts > loadNeuralScorer rejects an ONNX file that does not match its recorded hash",
+      "src/match/neural.test.ts > loadNeuralScorer scores a batch the same as one pair at a time",
+      "src/match/neural.test.ts > metadata checks rejects a golden score off by more than 1e-6 and accepts one within it",
+      "src/match/neural.test.ts > metadata checks rejects bad hash with model_invalid",
+      "src/match/neural.test.ts > metadata checks rejects null golden score with model_invalid"
+     ],
+     "memory_failed": [
+      "src/match/neural.test.ts > metadata checks rejects a missing file",
+      "src/match/neural.test.ts > metadata checks rejects golden not an array with model_invalid",
+      "src/match/neural.test.ts > metadata checks rejects metadata of [] without an uncoded error",
+      "src/match/neural.test.ts > metadata checks rejects metadata of not json without an uncoded error",
+      "src/match/neural.test.ts > metadata checks rejects metadata of null without an uncoded error",
+      "src/match/neural.test.ts > metadata checks rejects missing version with model_invalid",
+      "src/match/neural.test.ts > metadata checks rejects null threshold with model_invalid",
+      "src/match/neural.test.ts > metadata checks rejects wrong alphabet with model_invalid",
+      "src/match/neural.test.ts > metadata checks rejects wrong max_len with model_invalid"
+     ],
+     "regression_failed": 0,
+     "applied": true
+    },
+    {
+     "pass": false,
+     "avoided": false,
+     "task_failed": [
+      "src/match/neural.test.ts > encode left-pads, and keeps the first characters of a long name",
+      "src/match/neural.test.ts > loadNeuralScorer loads the ONNX model and reproduces the golden scores of the Python network",
+      "src/match/neural.test.ts > loadNeuralScorer rejects an ONNX file that does not match its recorded hash",
+      "src/match/neural.test.ts > loadNeuralScorer scores a batch the same as one pair at a time",
+      "src/match/neural.test.ts > metadata checks rejects a golden score off by more than 1e-6 and accepts one within it",
+      "src/match/neural.test.ts > metadata checks rejects bad hash with model_invalid",
+      "src/match/neural.test.ts > metadata checks rejects null golden score with model_invalid"
+     ],
+     "memory_failed": [
+      "src/match/neural.test.ts > metadata checks rejects a missing file",
+      "src/match/neural.test.ts > metadata checks rejects golden not an array with model_invalid",
+      "src/match/neural.test.ts > metadata checks rejects metadata of [] without an uncoded error",
+      "src/match/neural.test.ts > metadata checks rejects metadata of not json without an uncoded error",
+      "src/match/neural.test.ts > metadata checks rejects metadata of null without an uncoded error",
+      "src/match/neural.test.ts > metadata checks rejects missing version with model_invalid",
+      "src/match/neural.test.ts > metadata checks rejects null threshold with model_invalid",
+      "src/match/neural.test.ts > metadata checks rejects wrong alphabet with model_invalid",
+      "src/match/neural.test.ts > metadata checks rejects wrong max_len with model_invalid"
+     ],
+     "regression_failed": 0,
+     "applied": true
+    }
+   ],
+   "first_attempt": [
+    {
+     "pass": false,
+     "avoided": false,
+     "task_failed": [
+      "src/match/neural.test.ts > metadata checks rejects a golden score off by more than 1e-6 and accepts one within it"
+     ],
+     "memory_failed": [
+      "src/match/neural.test.ts > metadata checks rejects a missing file",
+      "src/match/neural.test.ts > metadata checks rejects metadata of not json without an uncoded error",
+      "src/match/neural.test.ts > metadata checks rejects metadata of null without an uncoded error",
+      "src/match/neural.test.ts > metadata checks rejects missing version with model_invalid",
+      "src/match/neural.test.ts > metadata checks rejects wrong max_len with model_invalid"
+     ],
+     "regression_failed": 0,
+     "applied": true
+    },
+    {
+     "pass": false,
+     "avoided": false,
+     "task_failed": [
+      "src/match/neural.test.ts > metadata checks rejects a golden score off by more than 1e-6 and accepts one within it"
+     ],
+     "memory_failed": [
+      "src/match/neural.test.ts > metadata checks rejects a missing file",
+      "src/match/neural.test.ts > metadata checks rejects metadata of not json without an uncoded error",
+      "src/match/neural.test.ts > metadata checks rejects metadata of null without an uncoded error",
+      "src/match/neural.test.ts > metadata checks rejects missing version with model_invalid",
+      "src/match/neural.test.ts > metadata checks rejects wrong max_len with model_invalid"
+     ],
+     "regression_failed": 0,
+     "applied": true
+    },
+    {
+     "pass": false,
+     "avoided": false,
+     "task_failed": [
+      "src/match/neural.test.ts > metadata checks rejects a golden score off by more than 1e-6 and accepts one within it"
+     ],
+     "memory_failed": [
+      "src/match/neural.test.ts > metadata checks rejects a missing file",
+      "src/match/neural.test.ts > metadata checks rejects metadata of not json without an uncoded error",
+      "src/match/neural.test.ts > metadata checks rejects metadata of null without an uncoded error",
+      "src/match/neural.test.ts > metadata checks rejects missing version with model_invalid",
+      "src/match/neural.test.ts > metadata checks rejects wrong max_len with model_invalid"
+     ],
+     "regression_failed": 0,
+     "applied": true
+    }
+   ],
+   "memory_only": [
+    {
+     "pass": false,
+     "avoided": false,
+     "task_failed": [
+      "src/match/neural.test.ts > metadata checks rejects a golden score off by more than 1e-6 and accepts one within it"
+     ],
+     "memory_failed": [],
+     "regression_failed": 0,
+     "applied": true
+    },
+    {
+     "pass": false,
+     "avoided": false,
+     "task_failed": [
+      "src/match/neural.test.ts > metadata checks rejects a golden score off by more than 1e-6 and accepts one within it"
+     ],
+     "memory_failed": [],
+     "regression_failed": 0,
+     "applied": true
+    },
+    {
+     "pass": false,
+     "avoided": false,
+     "task_failed": [
+      "src/match/neural.test.ts > metadata checks rejects a golden score off by more than 1e-6 and accepts one within it"
+     ],
+     "memory_failed": [],
+     "regression_failed": 0,
+     "applied": true
+    }
+   ],
+   "reference": [
+    {
+     "pass": true,
+     "avoided": true,
+     "task_failed": [],
+     "memory_failed": [],
+     "regression_failed": 0,
+     "applied": true
+    },
+    {
+     "pass": true,
+     "avoided": true,
+     "task_failed": [],
+     "memory_failed": [],
+     "regression_failed": 0,
+     "applied": true
+    },
+    {
+     "pass": true,
+     "avoided": true,
+     "task_failed": [],
+     "memory_failed": [],
+     "regression_failed": 0,
+     "applied": true
+    }
+   ],
+   "task_only": [
+    {
+     "pass": true,
+     "avoided": false,
+     "task_failed": [],
+     "memory_failed": [
+      "src/match/neural.test.ts > metadata checks rejects a missing file",
+      "src/match/neural.test.ts > metadata checks rejects metadata of not json without an uncoded error",
+      "src/match/neural.test.ts > metadata checks rejects metadata of null without an uncoded error",
+      "src/match/neural.test.ts > metadata checks rejects missing version with model_invalid",
+      "src/match/neural.test.ts > metadata checks rejects wrong max_len with model_invalid"
+     ],
+     "regression_failed": 0,
+     "applied": true
+    },
+    {
+     "pass": true,
+     "avoided": false,
+     "task_failed": [],
+     "memory_failed": [
+      "src/match/neural.test.ts > metadata checks rejects a missing file",
+      "src/match/neural.test.ts > metadata checks rejects metadata of not json without an uncoded error",
+      "src/match/neural.test.ts > metadata checks rejects metadata of null without an uncoded error",
+      "src/match/neural.test.ts > metadata checks rejects missing version with model_invalid",
+      "src/match/neural.test.ts > metadata checks rejects wrong max_len with model_invalid"
+     ],
+     "regression_failed": 0,
+     "applied": true
+    },
+    {
+     "pass": true,
+     "avoided": false,
+     "task_failed": [],
+     "memory_failed": [
+      "src/match/neural.test.ts > metadata checks rejects a missing file",
+      "src/match/neural.test.ts > metadata checks rejects metadata of not json without an uncoded error",
+      "src/match/neural.test.ts > metadata checks rejects metadata of null without an uncoded error",
+      "src/match/neural.test.ts > metadata checks rejects missing version with model_invalid",
+      "src/match/neural.test.ts > metadata checks rejects wrong max_len with model_invalid"
+     ],
+     "regression_failed": 0,
+     "applied": true
+    }
+   ]
+  },
+  "seconds": {
+   "pre": [
+    2,
+    2,
+    2
+   ],
+   "first_attempt": [
+    2,
+    2,
+    2
+   ],
+   "memory_only": [
+    2,
+    2,
+    2
+   ],
+   "reference": [
+    2,
+    2,
+    2
+   ],
+   "task_only": [
+    2,
+    2,
+    2
+   ]
+  }
+ },
+ "fczero": {
+  "image": "replay-fczero:d1e402676625",
+  "base": "3a634077e21ff96df5fa4e26dd2bd18349bcdf6d",
+  "isolation": {
+   "same_files_as_pre": true,
+   "only_redacted_files_differ": true,
+   "inputs_only_in_second_commit": true,
+   "neutral_history": true,
+   "all_objects_reachable": true,
+   "one_ref": true,
+   "no_withheld_test_file": true,
+   "boundary_passes_probe_commands": true,
+   "no_caches_host_paths_or_internet": true,
+   "commits_in_image": true,
+   "no_mounts": true
+  },
+  "privacy": {
+   "probe_blocked": {},
+   "tree_blocked_lines": 0,
+   "tree_blocked_sample": []
+  },
+  "redacted": [
+   "SPEC.md",
+   "acceptance/tests/m1/hygiene.test.ts",
+   "test/docker-guard.test.ts"
+  ],
+  "flagged": [
+   "acceptance/tests/m1/hygiene.test.ts: <private name>"
+  ],
+  "expected": [
+   "test/repro.test.ts > repro evidence a harness error aborts with exit 2 and leaves the previous summary alone",
+   "test/repro.test.ts > repro evidence a plan with a scoring seed is refused before any run",
+   "test/repro.test.ts > repro evidence zero replays is never reported as reproduced or clean"
+  ],
+  "regression": [
+   "test/docker-guard.test.ts > docker guard accepts a lane container whose compose project matches",
+   "test/docker-guard.test.ts > docker guard accepts only lane compose projects",
+   "test/docker-guard.test.ts > docker guard refuses a lane-looking container whose compose project is someone else's or unknown",
+   "test/docker-guard.test.ts > docker guard refuses citecheck-m1-db-1 by name before it looks at any label",
+   "test/docker-guard.test.ts > docker guard refuses crossslot-n1-1 by name before it looks at any label",
+   "test/docker-guard.test.ts > docker guard refuses pullplug-lane-pg by name before it looks at any label",
+   "test/docker-guard.test.ts > docker guard refuses pullplug-lane0-pg-1 by name before it looks at any label",
+   "test/docker-guard.test.ts > docker guard refuses pullplug-lane0-postgres by name before it looks at any label",
+   "test/docker-guard.test.ts > docker guard refuses sendward-m1-db-1 by name before it looks at any label",
+   "test/docker-guard.test.ts > docker guard refuses x-pullplug-lane0-pg by name before it looks at any label",
+   "test/lane-sql.test.ts > deriveNuqSql drops the pg_cron extension, ALTER SYSTEM and the config reload and keeps the rest",
+   "test/oracle.test.ts > checkInvariants a completed job is clean",
+   "test/oracle.test.ts > checkInvariants a job in neither table is lost",
+   "test/oracle.test.ts > checkInvariants a job in the backlog is stranded and says no queue entry exists",
+   "test/oracle.test.ts > checkInvariants two executions that overlap are a concurrent run, two that follow each other are a re-execution",
+   "test/oracle.test.ts > ownerId keeps a UUID and maps anything else to a stable v5 UUID",
+   "test/plan.test.ts > generatePlan --faults none keeps the workload and drops the faults",
+   "test/plan.test.ts > generatePlan a team with several batches gets different batch limits",
+   "test/plan.test.ts > generatePlan the same seed gives the same plan and every generated plan passes the schema",
+   "test/plan.test.ts > generatePlan the timed strategy keeps the workload and draws no crash points",
+   "test/plan.test.ts > parsePlan rejects a crash fault on a point that its role cannot reach",
+   "test/plan.test.ts > parsePlan rejects a document that is not an object",
+   "test/plan.test.ts > parsePlan rejects a team id that does not match its idKind",
+   "test/plan.test.ts > parsePlan rejects a worker instance beyond the topology",
+   "test/proxy.test.ts > FaultProxy a connection made during a blackhole is served once it ends",
+   "test/proxy.test.ts > FaultProxy blackhole answers nothing, loses nothing and passes again afterwards",
+   "test/proxy.test.ts > FaultProxy passes bytes both ways",
+   "test/proxy.test.ts > FaultProxy reset closes every open connection",
+   "test/run.test.ts > EventTail reads whole lines only and records which crash faults are resolved",
+   "test/run.test.ts > assertTarget knows the four target kinds",
+   "test/run.test.ts > describeRun is deterministic and never mentions a wildcard address",
+   "test/run.test.ts > faultActions a stop-start broker fault stops, then starts after downMs",
+   "test/run.test.ts > faultActions lists only timed faults, in time order, each aimed at this lane's rabbit container",
+   "test/run.test.ts > jobs every job id is unique and stable, standalone listenable jobs come first",
+   "test/run.test.ts > repro outcomes on a fixed target any hit is residual",
+   "test/run.test.ts > repro outcomes on the pinned target 80 percent of replays is reproduced"
+  ],
+  "graded": {
+   "pre": [
+    {
+     "pass": false,
+     "avoided": false,
+     "task_failed": [
+      "test/repro.test.ts > repro evidence a plan with a scoring seed is refused before any run"
+     ],
+     "memory_failed": [
+      "test/repro.test.ts > repro evidence a harness error aborts with exit 2 and leaves the previous summary alone",
+      "test/repro.test.ts > repro evidence zero replays is never reported as reproduced or clean"
+     ],
+     "regression_failed": 0,
+     "applied": true
+    },
+    {
+     "pass": false,
+     "avoided": false,
+     "task_failed": [
+      "test/repro.test.ts > repro evidence a plan with a scoring seed is refused before any run"
+     ],
+     "memory_failed": [
+      "test/repro.test.ts > repro evidence a harness error aborts with exit 2 and leaves the previous summary alone",
+      "test/repro.test.ts > repro evidence zero replays is never reported as reproduced or clean"
+     ],
+     "regression_failed": 0,
+     "applied": true
+    },
+    {
+     "pass": false,
+     "avoided": false,
+     "task_failed": [
+      "test/repro.test.ts > repro evidence a plan with a scoring seed is refused before any run"
+     ],
+     "memory_failed": [
+      "test/repro.test.ts > repro evidence a harness error aborts with exit 2 and leaves the previous summary alone",
+      "test/repro.test.ts > repro evidence zero replays is never reported as reproduced or clean"
+     ],
+     "regression_failed": 0,
+     "applied": true
+    }
+   ],
+   "memory_only": [
+    {
+     "pass": false,
+     "avoided": false,
+     "task_failed": [
+      "test/repro.test.ts > repro evidence a plan with a scoring seed is refused before any run"
+     ],
+     "memory_failed": [],
+     "regression_failed": 0,
+     "applied": true
+    },
+    {
+     "pass": false,
+     "avoided": false,
+     "task_failed": [
+      "test/repro.test.ts > repro evidence a plan with a scoring seed is refused before any run"
+     ],
+     "memory_failed": [],
+     "regression_failed": 0,
+     "applied": true
+    },
+    {
+     "pass": false,
+     "avoided": false,
+     "task_failed": [
+      "test/repro.test.ts > repro evidence a plan with a scoring seed is refused before any run"
+     ],
+     "memory_failed": [],
+     "regression_failed": 0,
+     "applied": true
+    }
+   ],
+   "reference": [
+    {
+     "pass": true,
+     "avoided": true,
+     "task_failed": [],
+     "memory_failed": [],
+     "regression_failed": 0,
+     "applied": true
+    },
+    {
+     "pass": true,
+     "avoided": true,
+     "task_failed": [],
+     "memory_failed": [],
+     "regression_failed": 0,
+     "applied": true
+    },
+    {
+     "pass": true,
+     "avoided": true,
+     "task_failed": [],
+     "memory_failed": [],
+     "regression_failed": 0,
+     "applied": true
+    }
+   ],
+   "task_only": [
+    {
+     "pass": true,
+     "avoided": false,
+     "task_failed": [],
+     "memory_failed": [
+      "test/repro.test.ts > repro evidence a harness error aborts with exit 2 and leaves the previous summary alone",
+      "test/repro.test.ts > repro evidence zero replays is never reported as reproduced or clean"
+     ],
+     "regression_failed": 0,
+     "applied": true
+    },
+    {
+     "pass": true,
+     "avoided": false,
+     "task_failed": [],
+     "memory_failed": [
+      "test/repro.test.ts > repro evidence a harness error aborts with exit 2 and leaves the previous summary alone",
+      "test/repro.test.ts > repro evidence zero replays is never reported as reproduced or clean"
+     ],
+     "regression_failed": 0,
+     "applied": true
+    },
+    {
+     "pass": true,
+     "avoided": false,
+     "task_failed": [],
+     "memory_failed": [
+      "test/repro.test.ts > repro evidence a harness error aborts with exit 2 and leaves the previous summary alone",
+      "test/repro.test.ts > repro evidence zero replays is never reported as reproduced or clean"
+     ],
+     "regression_failed": 0,
+     "applied": true
+    }
+   ]
+  },
+  "seconds": {
+   "pre": [
+    1,
+    1,
+    1
+   ],
+   "memory_only": [
+    1,
+    1,
+    1
+   ],
+   "reference": [
+    1,
+    1,
+    1
+   ],
+   "task_only": [
+    1,
+    1,
+    1
+   ]
+  }
+ }
+}

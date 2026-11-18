@@ -1,0 +1,27 @@
+{
+ "name": "lock",
+ "project": "sendward",
+ "source": "sendward/repo",
+ "pre": "e4754e5fcc540efb60513e8904e904b29618bb9f",
+ "reference": "5b1bd1a241bae1c3f44c4893ed15e58b7f177d59",
+ "first_attempt": "e773a4f7d5f5752b7e7b522d29dc064ffd038aa0",
+ "cutoff": "2026-11-17T00:23:51-05:00",
+ "text": "Two deadlocks were reported on the throughput branch. First, the reaper holds a usage counter row while it waits for an expired `committing` send, so it can deadlock with a requeue of that send. Second, a hard bounce refunds the usage counters before suppression locks the contact's queued sends, so it can deadlock with a claim that holds one of those sends while it reserves a counter. Fix both and add concurrency tests.\n\nHidden tests call `reapForTenant`, `fail`, `suppress`, `refundUsage` and `bumpUsage`, so keep their exported signatures.",
+ "tests": [
+  "src/worker/lockOrder.test.ts"
+ ],
+ "memory_tests": [
+  "a bounce and a complaint for the same requeued send suppress without a deadlock"
+ ],
+ "database": "SENDWARD_TEST_ADMIN_URL",
+ "gold_memory": [
+  "sendward/records/phase1/code-review/REVIEW-reviewer-m2-1.md",
+  "sendward/records/phase1/code-review/REVIEW-reviewer-m2-2.md"
+ ],
+ "inputs": [],
+ "exclude_memory": {},
+ "patches": [
+  "first_attempt",
+  "reference"
+ ]
+}

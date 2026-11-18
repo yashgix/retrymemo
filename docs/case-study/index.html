@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>retrymemo case study</title>
+<meta name="description" content="Six experiments on whether memory stops coding agents from repeating mistakes: a clear retrieval gain, and no measurable change in agent behaviour.">
+<style>
+/* Same layout family as the author's other case-study pages: 760px reading column, 980px for figures, one light
+   theme. Burnt orange marks the method under test. Grey marks baselines and intervals that include zero. */
+:root {
+  color-scheme: light;
+  --paper: #ffffff;
+  --band: #f7f5f2;
+  --ink: #1d1a17;
+  --muted: #5f5852;
+  --line: #e9e4de;
+  --grid: #efebe6;
+  --accent: #c2410c;
+  --accent-soft: #fbeee6;
+  --base: #a39b93;
+  --base-dark: #6f6760;
+  --code: #f2efeb;
+  --h0: #faf7f4; --h1: #f7dccd; --h2: #f0bd9f; --h3: #e59a71; --h4: #d26c3c; --h5: #c2410c;
+  --sans: "Instrument Sans", -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  --mono: "Fragment Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --s0: 0.8125rem; --s1: 1.0625rem; --s2: 1.25rem; --s3: 1.65rem; --s4: clamp(2rem, 5.5vw, 3.1rem);
+  --radius: 12px;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: var(--s1); line-height: 1.65; }
+.wrap { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.col { max-width: 760px; margin-inline: auto; }
+.wide { max-width: 980px; margin-inline: auto; }
+a { color: var(--accent); text-underline-offset: 3px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+h1, h2, h3 { text-wrap: balance; line-height: 1.2; margin: 0; }
+h2 { font-size: var(--s3); font-weight: 600; letter-spacing: -0.015em; }
+h3 { font-size: var(--s1); font-weight: 600; }
+p, ul, ol { margin: 0; }
+ul, ol { padding-left: 1.25rem; display: flex; flex-direction: column; gap: 0.4rem; }
+code { font-family: var(--mono); font-size: 0.86em; background: var(--code); padding: 0.08em 0.35em; border-radius: 4px; overflow-wrap: anywhere; }
+.muted { color: var(--muted); }
+.small { font-size: var(--s0); }
+.num { font-variant-numeric: tabular-nums; }
+.eyebrow { font-family: var(--mono); font-size: var(--s0); color: var(--accent); letter-spacing: 0.04em; text-transform: uppercase; }
+.stack { display: flex; flex-direction: column; gap: 1.1rem; }
+section { padding-block: 2.75rem; }
+section + section { border-top: 1px solid var(--line); }
+
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: rgba(255,255,255,0.94); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+.bar-in { display: flex; align-items: center; gap: 1rem; padding-block: 0.6rem; }
+.brand { font-family: var(--mono); font-size: var(--s0); }
+.tabs { display: flex; gap: 0.25rem; margin-left: auto; }
+.tabs button { font: inherit; font-size: var(--s0); font-weight: 500; border: 0; background: transparent; color: var(--muted); padding: 0.4rem 0.8rem; border-radius: 999px; cursor: pointer; }
+.tabs button[aria-selected="true"] { background: var(--accent-soft); color: var(--accent); }
+.gh { font-size: var(--s0); font-weight: 600; text-decoration: none; white-space: nowrap; color: var(--accent); border: 1px solid var(--accent); border-radius: 999px; padding: 0.3rem 0.8rem; }
+.gh:hover { background: var(--accent-soft); }
+
+header { padding-block: 3.25rem 2.25rem; background: linear-gradient(180deg, var(--band), var(--paper)); }
+h1 { font-size: var(--s4); font-weight: 700; letter-spacing: -0.03em; }
+.lede { font-size: var(--s2); color: var(--muted); max-width: 62ch; line-height: 1.55; }
+.meta { display: flex; flex-wrap: wrap; gap: 0.4rem 1.25rem; font-size: var(--s0); color: var(--muted); }
+.meta b { color: var(--ink); font-weight: 600; }
+
+.tiles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.75rem; }
+.tile { border: 1px solid var(--line); border-radius: var(--radius); padding: 1rem; display: flex; flex-direction: column; gap: 0.3rem; min-width: 0; }
+.tile .big { font-size: 1.9rem; font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.tile .big.acc { color: var(--accent); }
+.tile .lbl { font-weight: 600; line-height: 1.35; }
+.tile .detail { font-size: var(--s0); color: var(--muted); }
+
+.figure { border: 1px solid var(--line); border-radius: var(--radius); padding: 1.25rem; display: flex; flex-direction: column; gap: 0.9rem; }
+.figure .cap { font-size: var(--s0); color: var(--muted); }
+.legend { display: flex; flex-wrap: wrap; gap: 0.3rem 1rem; font-size: var(--s0); color: var(--muted); }
+.key { display: inline-block; width: 0.8rem; height: 0.8rem; border-radius: 3px; vertical-align: -0.1rem; margin-right: 0.35rem; }
+
+/* Journey */
+.journey { list-style: none; padding: 0; gap: 0; counter-reset: step; }
+.journey li { display: grid; grid-template-columns: 5.5rem minmax(0, 1fr); gap: 0.25rem 1rem; padding: 0.9rem 0; border-top: 1px solid var(--line); }
+.journey li:first-child { border-top: 0; }
+.journey .step { font-family: var(--mono); font-size: var(--s0); color: var(--accent); padding-top: 0.15rem; }
+.journey .q { font-weight: 600; }
+.journey .r { color: var(--muted); }
+.journey .d { font-size: var(--s0); }
+.chip { display: inline-block; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; padding: 0.1rem 0.5rem; border-radius: 999px; margin-left: 0.4rem; vertical-align: 0.1rem; }
+.chip.pos { background: var(--accent-soft); color: var(--accent); }
+.chip.neg { background: var(--code); color: var(--muted); }
+
+/* Horizontal bars, HTML so labels stay readable at phone width */
+.bars { display: flex; flex-direction: column; gap: 0.7rem; }
+.brow { display: grid; grid-template-columns: minmax(8rem, 13rem) minmax(0, 1fr) 3.6rem; align-items: center; gap: 0.75rem; }
+.brow .name { font-size: var(--s0); line-height: 1.3; }
+.track { position: relative; height: 1.4rem; background: linear-gradient(90deg, var(--grid) 1px, transparent 1px) 0 0 / 12.5% 100%; border-left: 1px solid var(--base); }
+.fill { position: absolute; left: 0; top: 0.2rem; bottom: 0.2rem; border-radius: 0 4px 4px 0; background: var(--base); }
+.fill.acc { background: var(--accent); }
+.ci { position: absolute; top: 50%; height: 2px; background: var(--ink); transform: translateY(-50%); }
+.ci::before, .ci::after { content: ""; position: absolute; top: -5px; width: 2px; height: 12px; background: var(--ink); }
+.ci::before { left: 0; } .ci::after { right: 0; }
+.brow .val { font-size: var(--s0); font-weight: 600; text-align: right; font-variant-numeric: tabular-nums; }
+.axis { display: grid; grid-template-columns: minmax(8rem, 13rem) minmax(0, 1fr) 3.6rem; gap: 0.75rem; font-size: 0.72rem; color: var(--muted); }
+.axis .ticks { display: flex; justify-content: space-between; }
+
+/* Heat table */
+.heat { border-collapse: separate; border-spacing: 3px; width: 100%; font-variant-numeric: tabular-nums; }
+.heat th { font-size: var(--s0); font-weight: 600; color: var(--muted); text-align: center; padding: 0.3rem 0.2rem; }
+.heat th.rowh { text-align: left; color: var(--ink); white-space: nowrap; }
+.heat td { text-align: center; font-weight: 700; border-radius: 6px; padding: 0.55rem 0.2rem; }
+.c0 { background: var(--h0); color: var(--muted); } .c1 { background: var(--h1); } .c2 { background: var(--h2); }
+.c3 { background: var(--h3); } .c4 { background: var(--h4); color: var(--ink); } .c5 { background: var(--h5); color: #fff; }
+.heat tr.sep th, .heat tr.sep td { border-top: 2px dashed var(--line); }
+.ramp { display: inline-flex; gap: 2px; vertical-align: middle; }
+.ramp span { width: 1.1rem; height: 0.8rem; border-radius: 2px; }
+
+/* Interval plot */
+.forest { display: flex; flex-direction: column; gap: 0.8rem; }
+.frow { display: grid; grid-template-columns: minmax(8rem, 13rem) minmax(0, 1fr) 7.5rem; align-items: center; gap: 0.75rem; }
+.frow .name { font-size: var(--s0); }
+.fplot { position: relative; height: 1.6rem; }
+.fplot .zero { position: absolute; left: 50%; top: -0.4rem; bottom: -0.4rem; width: 1px; background: var(--ink); }
+.fplot .grid { position: absolute; inset: 0; background: linear-gradient(90deg, var(--grid) 1px, transparent 1px) 0 0 / 10% 100%; }
+.fplot .int { position: absolute; top: 50%; height: 3px; background: var(--base-dark); transform: translateY(-50%); border-radius: 2px; }
+.fplot .pt { position: absolute; top: 50%; width: 12px; height: 12px; border-radius: 50%; background: var(--base-dark); border: 2px solid #fff; transform: translate(-50%, -50%); }
+.frow .val { font-size: var(--s0); text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.faxis { display: grid; grid-template-columns: minmax(8rem, 13rem) minmax(0, 1fr) 7.5rem; gap: 0.75rem; font-size: 0.72rem; color: var(--muted); }
+.faxis .ticks { display: flex; justify-content: space-between; }
+.faxis.raxis { grid-template-columns: 5rem minmax(0, 1fr) 6.5rem; }
+
+/* Rank strip */
+.ranks { display: flex; flex-direction: column; gap: 0.65rem; }
+.rrow { display: grid; grid-template-columns: 5rem minmax(0, 1fr) 6.5rem; align-items: center; gap: 0.75rem; }
+.rtrack { position: relative; height: 1.5rem; border-bottom: 1px solid var(--base); background: linear-gradient(90deg, var(--grid) 1px, transparent 1px) 0 0 / 20% 100%; }
+.rdot { position: absolute; top: 50%; width: 12px; height: 12px; border-radius: 50%; background: var(--base-dark); border: 2px solid #fff; transform: translate(-50%, -50%); }
+.rdot.hit { background: var(--accent); }
+.rrow .val { font-size: var(--s0); color: var(--muted); }
+
+/* Flow diagram */
+.flow { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.6rem; }
+.node { border: 1px solid var(--line); border-radius: 10px; padding: 0.7rem 0.8rem; background: var(--paper); position: relative; min-width: 0; }
+.node b { display: block; font-size: var(--s0); }
+.node span { display: block; font-size: 0.75rem; color: var(--muted); line-height: 1.4; }
+.node.gate { border-color: var(--accent); background: var(--accent-soft); }
+.node.ext { border-style: dashed; }
+.flowcap { font-size: 0.72rem; color: var(--muted); font-family: var(--mono); }
+
+table.t { border-collapse: collapse; width: 100%; font-size: var(--s0); font-variant-numeric: tabular-nums; }
+table.t th, table.t td { text-align: left; padding: 0.5rem 0.6rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+table.t th { font-weight: 600; color: var(--muted); }
+table.t td.r, table.t th.r { text-align: right; }
+.tw { overflow-x: auto; }
+.note { border-left: 3px solid var(--accent); padding: 0.2rem 0 0.2rem 0.9rem; }
+details { border: 1px solid var(--line); border-radius: var(--radius); padding: 0.8rem 1rem; }
+details summary { cursor: pointer; font-weight: 600; }
+details > div { margin-top: 0.8rem; }
+footer { padding-block: 2rem 3rem; border-top: 1px solid var(--line); }
+
+@media (max-width: 720px) {
+  .tiles { grid-template-columns: 1fr; }
+  .flow { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .brow, .axis { grid-template-columns: minmax(0, 1fr) 3.2rem; }
+  .brow .name, .axis > span:first-child { grid-column: 1 / -1; }
+  .axis > span:first-child { display: none; }
+  .frow, .faxis { grid-template-columns: minmax(0, 1fr) 8.8rem; }
+  .frow .name { grid-column: 1 / -1; }
+  .faxis > span:first-child { display: none; }
+  .journey li { grid-template-columns: 1fr; }
+  .rrow { grid-template-columns: 4.2rem minmax(0, 1fr); }
+  .rrow .val { grid-column: 2; }
+  .faxis.raxis { grid-template-columns: 4.2rem minmax(0, 1fr); }
+  .faxis.raxis > span:first-child { display: block; }
+  .faxis.raxis > span:last-child { display: none; }
+  .bar-in { flex-wrap: wrap; }
+  .heat { border-spacing: 2px; }
+  .heat th { font-size: 0.64rem; padding: 0.3rem 0; }
+  .heat td { padding: 0.45rem 0; }
+}
+@media (max-width: 420px) {
+  .brand { display: none; }
+  .bar-in { gap: 0.5rem; }
+  .tabs button { padding: 0.4rem 0.6rem; }
+}
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+</style>
+</head>
+<body>
+
+<div class="bar wrap"><div class="wide bar-in">
+  <span class="brand">retrymemo</span>
+  <div class="tabs" role="tablist" aria-label="View">
+    <button role="tab" id="tab-overview" aria-controls="overview" aria-selected="true" data-view="overview">Overview</button>
+    <button role="tab" id="tab-details" aria-controls="details" aria-selected="false" data-view="details">Technical details</button>
+  </div>
+  <a class="gh" href="https://github.com/yashgix/retrymemo">GitHub</a>
+</div></div>
+
+<main id="overview" role="tabpanel" aria-labelledby="tab-overview">
+  <header class="wrap"><div class="col stack">
+    <p class="eyebrow">Case study · coding-agent memory</p>
+    <h1>Does memory stop coding agents from repeating mistakes?</h1>
+    <p class="lede">Six experiments, from an offline retrieval benchmark to a controlled 125-run replay
+      with a real agent. Memory measurably improved which file an offline ranking put first. No clear effect on what a
+      real agent did was detected.</p>
+    <p class="meta"><span><b>6</b> experiments</span><span><b>442</b> held-out retries</span><span><b>576</b> agent runs in v5</span><span><b>125</b> in the final replay</span></p>
+  </div></header>
+
+  <section class="wrap" aria-labelledby="q-h"><div class="col stack">
+    <h2 id="q-h">The question</h2>
+    <p>Teams that run coding agents build up history: past sessions, failed attempts, review comments, decisions. A
+      shared memory layer promises to hand the right piece of that history to the next agent, so it does not repeat
+      old mistakes. This project asked a narrow, testable version of that promise: <b>when a coding agent is given the
+      relevant lesson from earlier work, does it avoid the mistake, and does memory beat simply reading the
+      repository?</b></p>
+    <p>The starting hypothesis had two steps. A good retriever would find past work that points to the right code, and
+      an agent given that pointer or lesson would work faster and avoid known mistakes. The plan was to measure step
+      one cheaply and offline, then test step two with a real agent.</p>
+  </div></section>
+
+  <section class="wrap" aria-labelledby="ans-h"><div class="wide stack">
+    <h2 id="ans-h">The answer, in three numbers</h2>
+    <div class="tiles">
+      <div class="tile"><span class="big acc">+9.0 pts</span><span class="lbl">Offline retrieval improved</span>
+        <span class="detail">Ranking a failed attempt's files put a needed file first 69.0% of the time, against 60.0% for what the next attempt really opened first. 442 held-out retries, interval [+4.8, +14.3].</span></div>
+      <div class="tile"><span class="big">−2.7%</span><span class="lbl">No clear effect on a real agent</span>
+        <span class="detail">The same hint in front of a real agent: steps 19.73 to 19.19, interval includes zero. Solved 86.1% without it, 87.5% with it.</span></div>
+      <div class="tile"><span class="big">0 of 3</span><span class="lbl">No clear effect from remembered lessons</span>
+        <span class="detail">In a 125-run replay of reviewer-flagged mistakes, all three pre-registered memory comparisons read "no clear effect". Every run passed its task.</span></div>
+    </div>
+    <p class="small muted">These results hold for the settings tested: one agent, one model family, public Python data for
+      the retrieval work and five TypeScript tasks for the replay. They are not a verdict on agent memory in general.</p>
+  </div></section>
+
+  <section class="wrap" aria-labelledby="j-h"><div class="col stack">
+    <h2 id="j-h">The journey</h2>
+    <p>v1 was built first and then reviewed. From v2 on, each step was pre-registered and frozen with a git tag before
+      its held-out data was scored, and every step was checked by an independent reviewer that could read the code and
+      data but not change them. Each result decided the next step.</p>
+    <ol class="journey">
+      <li><span class="step">v1</span><div><p class="q">Do past agent sessions point to the files the real fix changed?</p>
+        <p class="r">64.2% session hit@5, but a ranking that ignores the query scored 63.0%. The metric rewarded naming many files.</p>
+        <p class="d muted">Next: fix the metric.</p></div></li>
+      <li><span class="step">v2</span><div><p class="q">With a fair metric and a held-out half, do sessions beat fix history? <span class="chip neg">no clear gain</span></p>
+        <p class="r">52.7% file hit@5 against 49.7% for a control that uses no sessions at all, +3.0 [−2.7, +8.0].</p>
+        <p class="d muted">Next: ask why.</p></div></li>
+      <li><span class="step">v3</span><div><p class="q">Does any session signal beat a strong fix index on unseen tasks? <span class="chip neg">negative</span></p>
+        <p class="r">70.2% against 74.9% on 171 unseen queries, −4.7 [−8.8, −1.2]. Across tasks, merged fixes are the better memory.</p>
+        <p class="d muted">Next: memory where fix history cannot help.</p></div></li>
+      <li><span class="step">v4</span><div><p class="q">Can a failed attempt guide the next attempt on the same issue? <span class="chip pos">positive</span></p>
+        <p class="r">hit@1 69.0% against 60.0% for the real retry, +9.0 [+4.8, +14.3]. An offline ranking: file identification only.</p>
+        <p class="d muted">Next: does a head start help a real agent?</p></div></li>
+      <li><span class="step">v5</span><div><p class="q">Does that file hint make a real agent better? <span class="chip neg">no clear effect</span></p>
+        <p class="r">576 runs. The agent found a needed file by step 2 on its own (median). Steps −2.7%, solved 86.1% vs 87.5%.</p>
+        <p class="d muted">Next: test lessons the agent cannot rediscover, not pointers.</p></div></li>
+      <li><span class="step">replay</span><div><p class="q">Do remembered review lessons stop a reviewer-flagged mistake recurring? <span class="chip neg">no clear effect</span></p>
+        <p class="r">125 runs, five memory conditions. Every run passed its task. No comparison showed a clear effect.</p>
+        <p class="d muted">Decision: stop, and write it up.</p></div></li>
+    </ol>
+  </div></section>
+
+  <section class="wrap" aria-labelledby="v4-h"><div class="wide stack">
+    <div class="col stack" style="margin:0">
+      <h2 id="v4-h">The promising finding: memory of a failed attempt</h2>
+      <p>An unsolved issue has no merged fix, so fix history cannot help with it. But a failed attempt has already
+        explored the code. The handoff ranks the files that attempt edited and opened, with a fix-history fallback, and
+        hands them to the next attempt.</p>
+    </div>
+    <div class="figure" role="figure" aria-labelledby="v4-cap">
+      <p class="cap" id="v4-cap">First file is a file the real fix changed (hit@1), 442 held-out retries in 361 repositories. Whiskers are 95% bootstrap intervals over tasks.</p>
+      <div class="bars">
+        <div class="brow" title="Real retry: 265 of 442, 95% interval 55.2% to 64.5%"><span class="name">What the next attempt really opened first</span>
+          <div class="track"><div class="fill" style="width:75%"></div><div class="ci" style="left:69%;width:11.6%"></div></div><span class="val">60.0%</span></div>
+        <div class="brow" title="Fairer baseline: 280 of 442. Post hoc, found by the independent reviewer"><span class="name">Fairer baseline: the same, with the same fallback</span>
+          <div class="track"><div class="fill" style="width:79.1%"></div></div><span class="val">63.3%</span></div>
+        <div class="brow" title="Handoff: 305 of 442, 95% interval 64.9% to 73.3%"><span class="name"><b>Handoff from the failed attempt</b></span>
+          <div class="track"><div class="fill acc" style="width:86.3%"></div><div class="ci" style="left:81.1%;width:10.5%"></div></div><span class="val">69.0%</span></div>
+      </div>
+      <div class="axis"><span></span><span class="ticks"><span>0%</span><span>20%</span><span>40%</span><span>60%</span><span>80%</span></span><span></span></div>
+    </div>
+    <div class="col stack" style="margin:0">
+      <p>The pre-registered comparison is +9.0 points. An independent reviewer found a fairer baseline: give the real
+        retry the same fallback. Against it the lead is +5.7 [+1.4, +10.6], and that comparison was made after the
+        fact. Most of the gain comes from retries that stall before opening anything. A failed attempt holds about what
+        the next attempt would find by itself, so its value is a head start and a fallback.</p>
+      <p class="note">This measures <b>file identification</b>, not task completion. That is what v5 tested next.</p>
+    </div>
+  </div></section>
+
+  <section class="wrap" aria-labelledby="why-h"><div class="col stack">
+    <h2 id="why-h">Why better retrieval was not enough</h2>
+    <p>The handoff went in front of a real agent (mini-swe-agent with DeepSeek Flash): 144 tasks, two arms, two
+      repeats, 576 runs. Mean steps went from 19.73 to 19.19, a 2.7% drop whose interval includes zero. Cost rose
+      4.4%. The agent solved 86.1% without the hint and 87.5% with it. The median step at which it first opened a needed
+      file went from 2 without the hint to 1 with it.</p>
+    <p>The pilot for that run caught a leak worth knowing about. The public evaluation images still held the future
+      fix in their git history, and the agent found it: 25 of 30 runs printed the real fix (per the run notes). That run was thrown away,
+      and every image is now cleaned and checked before use.</p>
+    <p>So if memory matters, it has to carry knowledge the agent cannot rediscover by reading the repository: a
+      decision a reviewer made, or a mistake that only shows up later. That is what the final experiment tested.</p>
+  </div></section>
+
+  <section class="wrap" aria-labelledby="rep-h"><div class="wide stack">
+    <div class="col stack" style="margin:0">
+      <h2 id="rep-h">The controlled 125-run experiment</h2>
+      <p>Five tasks built around mistakes a reviewer had flagged earlier, taken from the author's own agent-built
+        TypeScript projects. For three of them the agent's real earlier attempt that made the mistake is kept as a control. Five memory conditions, five seeds each, the analysis frozen
+        before the first paid request. A run <b>passes</b> if the task and regression tests pass, and <b>avoids</b>
+        the mistake if, in addition, withheld memory tests for that exact earlier mistake pass.</p>
+      <ul>
+        <li><b>none</b>, and <b>instructions</b> (one general build brief shared across projects)</li>
+        <li><b>retrieved</b>: BM25 over the earlier review records, cut to 18,000 characters</li>
+        <li><b>oracle</b>: the two hand-picked lessons, padded with random records to the same size</li>
+        <li><b>random</b>: same size, no hand-picked record</li>
+      </ul>
+    </div>
+    <div class="figure" role="figure" aria-labelledby="heat-cap">
+      <p class="cap" id="heat-cap">Runs that avoided the repeated mistake, out of 5 seeds. All 125 runs passed their task.</p>
+      <div class="tw"><table class="heat">
+        <thead><tr><th></th><th>None</th><th>Instructions</th><th>Retrieved</th><th>Oracle</th><th>Random</th></tr></thead>
+        <tbody>
+          <tr><th class="rowh" scope="row">lock</th><td class="c5">5</td><td class="c5">5</td><td class="c4">4</td><td class="c5">5</td><td class="c5">5</td></tr>
+          <tr><th class="rowh" scope="row">verifier</th><td class="c5">5</td><td class="c5">5</td><td class="c5">5</td><td class="c5">5</td><td class="c5">5</td></tr>
+          <tr><th class="rowh" scope="row">onnx</th><td class="c2">2</td><td class="c1">1</td><td class="c5">5</td><td class="c2">2</td><td class="c2">2</td></tr>
+          <tr><th class="rowh" scope="row">fczero</th><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td><td class="c0">0</td></tr>
+          <tr class="sep"><th class="rowh" scope="row">simlink*</th><td class="c5">5</td><td class="c5">5</td><td class="c5">5</td><td class="c5">5</td><td class="c5">5</td></tr>
+        </tbody>
+      </table></div>
+      <p class="legend"><span><span class="ramp" aria-hidden="true"><span style="background:var(--h0)"></span><span style="background:var(--h1)"></span><span style="background:var(--h2)"></span><span style="background:var(--h3)"></span><span style="background:var(--h4)"></span><span style="background:var(--h5)"></span></span> 0 to 5 of 5</span>
+        <span>* reported apart: its lesson is the task itself</span></p>
+    </div>
+    <div class="figure" role="figure" aria-labelledby="forest-cap">
+      <p class="cap" id="forest-cap">The three pre-registered comparisons on lock, verifier, onnx and fczero: mean difference in the avoided rate, with 95% bootstrap intervals. Grey means the interval includes zero.</p>
+      <div class="forest">
+        <div class="frow" title="oracle vs none: 0.00, interval -0.15 to 0.15"><span class="name">Hand-picked lesson vs none</span>
+          <div class="fplot"><div class="grid"></div><div class="zero"></div><div class="int" style="left:42.5%;width:15%"></div><div class="pt" style="left:50%"></div></div><span class="val">0.00 [−0.15, 0.15]</span></div>
+        <div class="frow" title="retrieved vs none: +0.10, interval -0.20 to 0.45"><span class="name">Retrieved vs none</span>
+          <div class="fplot"><div class="grid"></div><div class="zero"></div><div class="int" style="left:40%;width:32.5%"></div><div class="pt" style="left:55%"></div></div><span class="val">+0.10 [−0.20, 0.45]</span></div>
+        <div class="frow" title="oracle vs random: 0.00, interval -0.15 to 0.15"><span class="name">Hand-picked lesson vs random</span>
+          <div class="fplot"><div class="grid"></div><div class="zero"></div><div class="int" style="left:42.5%;width:15%"></div><div class="pt" style="left:50%"></div></div><span class="val">0.00 [−0.15, 0.15]</span></div>
+      </div>
+      <div class="faxis"><span></span><span class="ticks"><span>−1.0</span><span>−0.5</span><span>0</span><span>+0.5</span><span>+1.0</span></span><span></span></div>
+    </div>
+    <div class="col stack" style="margin:0">
+      <p>With four tasks the smallest possible p-value is 0.125, so no comparison could be significant. That was known
+        and written down before the first paid request. The reading rule, also fixed in advance, needed a positive
+        difference in at least 3 of 4 tasks and an interval above zero for a "consistent benefit".</p>
+    </div>
+  </div></section>
+
+  <section class="wrap" aria-labelledby="fail-h"><div class="wide stack">
+    <div class="col stack" style="margin:0">
+      <h2 id="fail-h">What failed, and why</h2>
+      <ul>
+        <li><b>Ceiling.</b> On lock, verifier and simlink the agent avoided the mistake without memory. The repository
+          already showed the right pattern, or the task asked for it. Memory had nothing left to add.</li>
+        <li><b>Floor.</b> On fczero every run passed the task, but none fixed the earlier mistake, not even with the hand-picked lesson in context. The
+          lesson was one line inside long review records about another project, and the agent gave priority to the
+          explicit request in the task.</li>
+        <li><b>Retrieval.</b> Keyword search over raw review records put the useful lesson into the memory text for one
+          task of five.</li>
+        <li><b>The one interesting cell.</b> On onnx, retrieved memory avoided the mistake 5 of 5 times and every other
+          condition 1 or 2. It is one task with 5 seeds, and the lesson was already in the repository, so it is a hint
+          for a follow-up, not evidence.</li>
+      </ul>
+    </div>
+    <div class="figure" role="figure" aria-labelledby="rank-cap">
+      <p class="cap" id="rank-cap">Where BM25 ranked the two hand-picked lessons among each task's earlier review records (rank 1 is best). Orange, and "in text" beside the ranks: the lesson made it into the memory text.</p>
+      <div class="ranks">
+        <div class="rrow"><span>lock</span><div class="rtrack"><span class="rdot" style="left:36.7%" title="rank 22"></span><span class="rdot" style="left:40%" title="rank 24"></span></div><span class="val">22, 24</span></div>
+        <div class="rrow"><span>verifier</span><div class="rtrack"><span class="rdot" style="left:48.3%" title="rank 29"></span><span class="rdot" style="left:75%" title="rank 45"></span></div><span class="val">29, 45</span></div>
+        <div class="rrow"><span>simlink</span><div class="rtrack"><span class="rdot" style="left:8.3%" title="rank 5, not in the memory text"></span><span class="rdot" style="left:70%" title="rank 42"></span></div><span class="val">5, 42</span></div>
+        <div class="rrow"><span>onnx</span><div class="rtrack"><span class="rdot hit" style="left:3.3%" title="rank 2, in the memory text"></span><span class="rdot" style="left:8.3%" title="rank 5, cut off after its heading"></span></div><span class="val">2 (in text), 5</span></div>
+        <div class="rrow"><span>fczero</span><div class="rtrack"><span class="rdot" style="left:23.3%" title="rank 14"></span><span class="rdot" style="left:85%" title="rank 51"></span></div><span class="val">14, 51</span></div>
+      </div>
+      <div class="faxis raxis"><span></span><span class="ticks"><span>0</span><span>12</span><span>24</span><span>36</span><span>48</span><span>60</span></span><span></span></div>
+    </div>
+    <p class="col small muted" style="margin:0">The instructions, oracle and random texts also cost 15 to 18% more per run than no memory ($0.037 to $0.038 against $0.032 mean), retrieved about 1% more, with no clear effect detected.</p>
+  </div></section>
+
+  <section class="wrap" aria-labelledby="eng-h"><div class="col stack">
+    <h2 id="eng-h">The engineering that made the result trustworthy</h2>
+    <ul>
+      <li><b>Evaluation integrity.</b> Fourteen freezes before the paid grid, each with a written reason and all before any
+        counted run. None changed the tasks, memory texts, conditions, seeds, tests or comparisons. Some refined how crashed
+        or cut-off runs are handled. The analysis refuses to run if any
+        frozen input, image or installed package changed.</li>
+      <li><b>Isolation.</b> Redacted single-commit snapshots, containers with no network, a host sandbox that denies
+        writes to the source repositories, and a before/after snapshot of every file there, caches included.</li>
+      <li><b>Privacy.</b> The first full paid run was stopped by its own audit: an internal branch name had reached the
+        model through <code>git log</code> output. The fix was a fail-closed scan of every outgoing request, conversation
+        history and tool output included. Later, when the disk filled, that boundary refused a request carrying an
+        error message with a local path, and the run stopped itself.</li>
+      <li><b>Budget control.</b> A hash-chained, append-only ledger reserves each request's worst case under a lock
+        before it is sent, and settles it after. Ten review rounds before the grid found ways money could leak (a crash
+        before logging, two processes spending at once, a reachable total of $10.02) and each was closed.</li>
+      <li><b>Independent verification.</b> A read-only reviewer (an independent second model) recomputed the replay's per-task rates,
+        comparisons and intervals from the raw rows. They matched. It found no gaming of the grading, and two small reporting gaps that are disclosed below.</li>
+    </ul>
+  </div></section>
+
+  <section class="wrap" aria-labelledby="les-h"><div class="col stack">
+    <h2 id="les-h">Lessons for practical agent-memory systems</h2>
+    <p class="muted small">Drawn from these results at this scale. They are working conclusions, not general proofs.</p>
+    <ol>
+      <li><b>Measure behaviour, not retrieval.</b> A clear offline retrieval gain (v4) showed no clear effect on a real agent (v5).</li>
+      <li><b>Memory competes with the repository.</b> When the lesson is visible in the code, a strong agent finds it,
+        and memory added tokens with no clear effect detected.</li>
+      <li><b>Raw history is a poor memory format.</b> A one-line lesson inside long records showed no clear effect on behaviour,
+        even when it was hand-picked.</li>
+      <li><b>Keyword retrieval over review prose misses.</b> The useful lesson reached the memory text for one task of five.</li>
+      <li><b>Leaks are everywhere.</b> Git history in evaluation images, caches in <code>node_modules</code> and branch
+        names in tool output all leaked or nearly leaked here. Check the whole request, not only the prompt.</li>
+      <li><b>Design the money path like a database.</b> Reserve before sending, settle after, latch every failure, never reset.</li>
+    </ol>
+  </div></section>
+
+  <section class="wrap" aria-labelledby="next-h"><div class="col stack">
+    <h2 id="next-h">What we would test next</h2>
+    <p>None of this was built or run.</p>
+    <ul>
+      <li>6 to 8 tasks where the lesson is absent from the repository, so memory has room to help.</li>
+      <li>A distilled-lesson condition, a short specific rule, next to raw records.</li>
+      <li>Retrieval that indexes individual lessons rather than whole review documents.</li>
+      <li>The two reporting gaps fixed before a new freeze.</li>
+    </ul>
+  </div></section>
+
+  <section class="wrap" aria-labelledby="con-h"><div class="col stack">
+    <h2 id="con-h">Conclusion and limits</h2>
+    <p>The evidence moved the question from "can memory find the right file?" (yes, measurably) to "does it change what
+      the agent does?" (no clear effect detected in these settings). The results did not clearly support the starting hypothesis, and each step of that,
+      including the negative ones, is on the record.</p>
+    <p class="small muted">Limits: one agent and one model family for the agent experiments. Four primary replay tasks,
+      two of them at the ceiling. Memory as raw records, not distilled lessons. File overlap as a proxy in v1 to v4.
+      Two known reporting gaps in the frozen replay analysis: the secondary comparisons have no bootstrap intervals,
+      and token counts leave out 32 paid responses that followed format errors (costs are complete). None of this shows
+      that agent memory does not work in general.</p>
+  </div></section>
+</main>
+
+<main id="details" role="tabpanel" aria-labelledby="tab-details" hidden>
+  <header class="wrap"><div class="col stack">
+    <p class="eyebrow">Technical details</p>
+    <h1>Methods, numbers and controls</h1>
+    <p class="lede">Every experiment's data, method and result, the replay design and its safeguards. Headline numbers
+      are written by code into <code>results/</code>.</p>
+  </div></header>
+
+  <section class="wrap" aria-labelledby="ret-h"><div class="col stack">
+    <h2 id="ret-h">v1 to v3: retrieval on public agent sessions</h2>
+    <p>Data: 677 SWE-bench-extra tasks and 812 SWE-agent sessions in 8 Python repositories (Nebius, CC-BY-4.0), redacted
+      and pinned by sha256. The memory pool for a task is the sessions of the same repository's tasks created strictly earlier (by pull-request
+      date, not by when a session ran or a fix merged). The label is
+      objective: a memory is relevant if it names a file the real merged fix changed. No model calls.</p>
+    <div class="tw"><table class="t">
+      <thead><tr><th>Step</th><th>Method</th><th>Result</th></tr></thead>
+      <tbody>
+        <tr><td>v1</td><td>7 rankers (recency, BM25 variants, fusion <code>hybrid</code>, resolved-only, staleness), session hit@5, 597 queries</td><td><code>hybrid</code> 64.2% [60.5, 68.0]. A query-blind ranking that prefers sessions naming many files: 63.0%</td></tr>
+        <tr><td>v2</td><td>File hit@5 at a fixed 5 files, date split per repository (297 dev, 300 test), settings frozen before test, query and repository bootstraps</td><td><code>vote_prior</code> 52.7%, no-session control <code>issue_fix_vote</code> 49.7% (+3.0 [−2.7, +8.0]), <code>hybrid</code> 43.0%, <code>past_fix_files</code> 40.0%, <code>most_files</code> 21.0%</td></tr>
+        <tr><td>v3</td><td>Diagnose on old data, freeze one candidate and its control, score 171 unseen queries in 27 repositories once</td><td>candidate 70.2%, fix index <code>fix_hybrid</code> 74.9%, −4.7 [−8.8, −1.2]. v2's +3.0 did not replicate (−8.2)</td></tr>
+      </tbody>
+    </table></div>
+    <p class="small muted">A difference counts as clear only when both the query and the repository intervals exclude
+      zero. The no-session control in v2 was added after the test half was scored, on the reviewer's request, with the
+      frozen settings. The <code>vote_prior</code> idea came from a look at all queries before the split.</p>
+  </div></section>
+
+  <section class="wrap" aria-labelledby="v4d-h"><div class="col stack">
+    <h2 id="v4d-h">v4: the retry handoff</h2>
+    <p>All 80,036 pinned attempts, split by a hash of the task id (60/20/20, with the earlier benchmark's repositories
+      always in train). Attempts are independent samples, so "retry" follows dataset row order, not real time. The unit is the first retry after a failed
+      first attempt. Two other ideas were checked on train first and dropped: a known-failure warning (retries succeed
+      1% of the time) and a recurring-error warning (76% against 71% precision, no clean label). The development split
+      chose one weight. The test split was scored once.</p>
+    <div class="tw"><table class="t">
+      <thead><tr><th>Ranking (442 test retries, 361 repos)</th><th class="r">hit@1</th><th class="r">hit@5</th></tr></thead>
+      <tbody>
+        <tr><td>Handoff from the failed attempt</td><td class="r">69.0%</td><td class="r">84.6%</td></tr>
+        <tr><td>Real retry, what it opened first</td><td class="r">60.0%</td><td class="r">74.7%</td></tr>
+        <tr><td>Real retry with the same fallback (post hoc)</td><td class="r">63.3%</td><td class="r"></td></tr>
+        <tr><td>Fix index alone</td><td class="r">25.1%</td><td class="r">41.4%</td></tr>
+      </tbody>
+    </table></div>
+    <p class="small muted">Handoff minus real retry, pre-registered: +9.0 [+4.8, +14.3] over tasks, [+4.4, +13.9] over
+      repositories. Without the 56 stalled retries: +1.8 [−3.1, +6.5]. The dataset's own retries resolved 16 of 442.</p>
+  </div></section>
+
+  <section class="wrap" aria-labelledby="v5d-h"><div class="col stack">
+    <h2 id="v5d-h">v5: the handoff in front of a real agent</h2>
+    <p>mini-swe-agent 2.4.6 with DeepSeek Flash, 100 steps, $0.40 and 45 minutes per run, containers with no network,
+      git history after the base commit removed and checked. Scoring by each task's FAIL_TO_PASS and kept PASS_TO_PASS
+      tests in a fresh container. Primary outcomes: steps and cost. 188 tasks tried, 42 failed image validation (mostly
+      environments where no test passes), 2 left out after the runs (API connection errors in every run, and one incomplete task).</p>
+    <div class="tw"><table class="t">
+      <thead><tr><th>144 tasks, 576 runs</th><th class="r">No memory</th><th class="r">v4 file list</th><th>Difference</th></tr></thead>
+      <tbody>
+        <tr><td>Mean steps</td><td class="r">19.73</td><td class="r">19.19</td><td>−2.7%, [−1.43, +0.38] steps</td></tr>
+        <tr><td>Cost</td><td class="r"></td><td class="r"></td><td>+4.4% [−1.4%, +9.8%]</td></tr>
+        <tr><td>Solved</td><td class="r">86.1%</td><td class="r">87.5%</td><td>McNemar p 0.56</td></tr>
+        <tr><td>First needed file, median step</td><td class="r">2</td><td class="r">1</td><td></td></tr>
+      </tbody>
+    </table></div>
+  </div></section>
+
+  <section class="wrap" aria-labelledby="des-h"><div class="col stack">
+    <h2 id="des-h">Replay design</h2>
+    <div class="tw"><table class="t">
+      <tbody>
+        <tr><th>Tasks</th><td>lock (row-lock strength), verifier (release a database client on every path), simlink (path check that symlinks escape), onnx (validate model metadata's full shape), fczero (no result from zero replays, keep results after a harness error)</td></tr>
+        <tr><th>Lesson in repo?</th><td>yes for lock, verifier, onnx. No for fczero. simlink's lesson is the task</td></tr>
+        <tr><th>Task checks</th><td>all five: untouched code fails, real fix passes and avoids. Real earlier attempt kept for lock, verifier, onnx. Task-only fix for onnx, fczero. Memory-only fix for simlink, onnx, fczero. 3 of 3 times each</td></tr>
+        <tr><th>Memory</th><td>review records written before the task's start (birth and change time), 17.4k to 18.0k characters for the record-based conditions. Seeds change only the random records</td></tr>
+        <tr><th>Runs</th><td>5 tasks × 5 conditions × 5 seeds = 125. DeepSeek Flash, mini-swe-agent 2.4.6, 60 steps, $0.08 and 30 minutes per run (observed maximum 40 steps, $0.0735, 546 s)</td></tr>
+        <tr><th>Statistics</th><td>Wilson intervals per task, exact sign-flip test over 4 tasks (16 patterns) with Holm adjustment, 95% bootstrap with 10,000 resamples (tasks, then seeds)</td></tr>
+        <tr><th>Missing data</th><td>a crash is missing, never a fail, and is retried once. Two seed-5 runs crashed when the disk filled and were retried. They stay on record as diagnostics</td></tr>
+      </tbody>
+    </table></div>
+  </div></section>
+
+  <section class="wrap" aria-labelledby="flow-h"><div class="wide stack">
+    <h2 id="flow-h" class="col" style="margin:0 auto;width:100%">Data flow and safeguards</h2>
+    <div class="figure" role="figure" aria-labelledby="flow-cap">
+      <p class="cap" id="flow-cap">One run, left to right and top to bottom. Orange boxes can stop the run, and nothing is sent when they do.</p>
+      <p class="flowcap">On the host, under a sandbox that denies writes to the source repositories</p>
+      <div class="flow">
+        <div class="node"><b>Source repo</b><span>redacted into one neutral commit, no history or remotes</span></div>
+        <div class="node"><b>Task image</b><span>fresh <code>npm ci</code>, image ID frozen</span></div>
+        <div class="node"><b>Frozen memory</b><span>records cut by date, hashed</span></div>
+        <div class="node gate"><b>Freeze check</b><span>refuses any changed input, image or package</span></div>
+      </div>
+      <p class="flowcap">Each model request</p>
+      <div class="flow">
+        <div class="node"><b>Agent container</b><span>no network, no host mounts, no API key</span></div>
+        <div class="node gate"><b>Privacy boundary</b><span>scans the whole request, history and tool output, fail-closed</span></div>
+        <div class="node gate"><b>Spend ledger</b><span>reserve worst case under a lock, then settle, hash-chained</span></div>
+        <div class="node ext"><b>DeepSeek API</b><span>the only outside call</span></div>
+      </div>
+      <p class="flowcap">After the run</p>
+      <div class="flow">
+        <div class="node"><b>Scoring container</b><span>withheld tests written over the agent's, regression tests restored</span></div>
+        <div class="node gate"><b>Transcript audit</b><span>second privacy check on what was sent</span></div>
+        <div class="node gate"><b>Unchanged check</b><span>before/after snapshot of every source file</span></div>
+        <div class="node"><b>Frozen analysis</b><span>per-task rates, comparisons, reading rules</span></div>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="wrap" aria-labelledby="proc-h"><div class="col stack">
+    <h2 id="proc-h">Process and cost per condition</h2>
+    <div class="tw"><table class="t">
+      <thead><tr><th>Condition</th><th class="r">Input tokens</th><th class="r">Output</th><th class="r">Steps</th><th class="r">Seconds</th><th class="r">Cost</th></tr></thead>
+      <tbody>
+        <tr><td>none</td><td class="r">540,223</td><td class="r">16,530</td><td class="r">22.4</td><td class="r">240</td><td class="r">$0.0323</td></tr>
+        <tr><td>instructions</td><td class="r">707,755</td><td class="r">18,378</td><td class="r">23.9</td><td class="r">274</td><td class="r">$0.0380</td></tr>
+        <tr><td>retrieved</td><td class="r">599,660</td><td class="r">16,453</td><td class="r">22.4</td><td class="r">223</td><td class="r">$0.0327</td></tr>
+        <tr><td>oracle</td><td class="r">759,523</td><td class="r">18,653</td><td class="r">25.1</td><td class="r">266</td><td class="r">$0.0373</td></tr>
+        <tr><td>random</td><td class="r">748,012</td><td class="r">18,387</td><td class="r">24.5</td><td class="r">248</td><td class="r">$0.0372</td></tr>
+      </tbody>
+    </table></div>
+    <p class="small muted">Means over 25 runs each. About 95% of input tokens were cache hits. Token counts leave out 32
+      paid responses that followed format errors. Costs come from the ledger and are complete.</p>
+    <div class="tw"><table class="t">
+      <thead><tr><th>Spend</th><th class="r">USD</th></tr></thead>
+      <tbody>
+        <tr><td>125 counted runs</td><td class="r">4.438</td></tr>
+        <tr><td>2 crashed runs, kept as diagnostics</td><td class="r">0.040</td></tr>
+        <tr><td>Reconciliation and rounding</td><td class="r">0.001</td></tr>
+        <tr><td>One smoke request before the grid</td><td class="r">0.001</td></tr>
+        <tr><td>First paid run, excluded after the privacy audit</td><td class="r">0.047</td></tr>
+        <tr><td><b>Cumulative, of a $10 cap</b></td><td class="r"><b>4.528</b></td></tr>
+      </tbody>
+    </table></div>
+  </div></section>
+
+  <section class="wrap" aria-labelledby="rev-h"><div class="col stack">
+    <h2 id="rev-h">Reviews and what they changed</h2>
+    <details><summary>Before results: 14 freezes</summary><div class="stack">
+      <p>Freezes 1 to 3 came from pre-registration reviews (crashes counted as missing, a minimum of 3 complete seeds,
+        a written rule for "lesson in repo"). Freeze 4 was the privacy repair. Freezes 5 to 13 followed nine NO-GO
+        rounds from a read-only second-model review, almost all about money and failure handling. Freeze 14 only changed how
+        the base image is looked up. All of this happened before any counted run, and no freeze changed the tasks, memory
+        texts, conditions, seeds, tests or the three comparisons.</p>
+      <p>One finding mattered for the result itself: runs that hit the model's context limit were being scored as
+        unchanged code, which would have penalized the long-memory conditions. It was fixed before any grid run.</p>
+    </div></details>
+    <details><summary>After results: independent recomputation</summary><div class="stack">
+      <p>The reviewer recomputed the per-task rates, the three comparisons and the Wilson intervals from the raw rows
+        and they matched. It read diffs and transcripts for the surprising cells, found no gaming of the grading, and
+        verified the ledger's hash chain and the cost reconciliation. Two reporting gaps were found and are disclosed:
+        the secondary comparisons have no bootstrap intervals, and token counts miss 32 format-error responses.</p>
+    </div></details>
+    <details><summary>Inconsistencies found in the records</summary><div class="stack">
+      <ul>
+        <li>The discarded v5 pilot run is described both as "29 of 30 runs searched git history" and "25 of 30 printed the real fix". Different measures, both true.</li>
+        <li>The replay cost estimate cites 603 earlier runs, while the counted v5 runs add up to 606.</li>
+        <li>The grid first ran with a $10 cap and the resume with $9.99. Both sit inside the approved $10, and the ledger counted everything cumulatively.</li>
+        <li>onnx and verifier were first judged "lesson not in the repo" in the pilot, then classified "in repo" by the rule frozen into the analysis. The frozen rule is used.</li>
+      </ul>
+    </div></details>
+  </div></section>
+
+  <section class="wrap" aria-labelledby="repro-h"><div class="col stack">
+    <h2 id="repro-h">Reproduce</h2>
+    <p>v1 to v4 run offline from public data: <code>make test</code>, <code>make data-check</code>,
+      <code>make experiment</code>, then <code>tools/unseen.py</code> and <code>tools/handoff.py</code> on the pinned
+      files. v5 and the replay need paid model calls and Docker images. The replay also needs task repositories, memory texts and
+      per-run rows that are not public, so the replay and its frozen analysis cannot be rerun from this repository.</p>
+    <p class="small muted">Data: Nebius SWE-bench-extra and SWE-agent-trajectories (CC-BY-4.0, attribution to Nebius;
+      the trajectories card adds the Llama 3.1 License for model outputs), Nebius SWE-rebench task rows (CC-BY-4.0).
+      Agent: mini-swe-agent (MIT). Independent research, not affiliated with or endorsed by any company.</p>
+  </div></section>
+</main>
+
+<footer class="wrap"><div class="wide small muted">retrymemo · Yash Gupta · <a href="https://github.com/yashgix/retrymemo">github.com/yashgix/retrymemo</a> · <a href="https://www.linkedin.com/in/yash-guptaix/">linkedin.com/in/yash-guptaix</a></div></footer>
+
+<script>
+const views = ["overview", "details"];
+function show(v) {
+  if (!views.includes(v)) v = "overview";
+  for (const x of views) {
+    document.getElementById(x).hidden = x !== v;
+    const tab = document.getElementById("tab-" + x);
+    tab.setAttribute("aria-selected", String(x === v));
+    tab.tabIndex = x === v ? 0 : -1;
+  }
+}
+document.querySelectorAll("[data-view]").forEach((b) => b.addEventListener("click", () => {
+  history.replaceState(null, "", "#" + b.dataset.view);
+  show(b.dataset.view);
+  window.scrollTo(0, 0);
+}));
+document.querySelector('[role="tablist"]').addEventListener("keydown", (e) => {
+  const i = views.indexOf(document.querySelector('[aria-selected="true"]').dataset.view);
+  const next = { ArrowRight: i + 1, ArrowLeft: i - 1, Home: 0, End: views.length - 1 }[e.key];
+  if (next === undefined) return;
+  e.preventDefault();
+  const v = views[(next + views.length) % views.length];
+  history.replaceState(null, "", "#" + v);
+  show(v);
+  document.getElementById("tab-" + v).focus();
+});
+addEventListener("hashchange", () => show(location.hash.slice(1)));
+show(location.hash.slice(1));
+</script>
+</body>
+</html>

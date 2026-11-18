@@ -1,0 +1,27 @@
+{
+ "name": "verifier",
+ "project": "citecheck",
+ "source": "citecheck/repo",
+ "pre": "43f138676e834c820069478e6e420eb664007ee7",
+ "reference": "9648a5428f262cabd1741364ddcc07bd8f32f95d",
+ "first_attempt": "ee9a207c712505f26bb6b117da752c99ae9c3180",
+ "cutoff": "2026-11-16T08:02:00-05:00",
+ "text": "At-least-once delivery can run two verify jobs for the same run, and a fetch that never finishes can keep a run waiting forever. Make sure only one verifier works on a run at a time, and cap the rechecks.\n\nThe hidden tests rely on this interface:\n- One verifier per run: `handleVerify` locks the run with a session advisory lock on `hashtext(runId)`, held on the client it connects from the pool. A job that finds the lock taken exits without changing the run.\n- Rechecks: add an integer column `runs.rechecks` (default 0) in a new migration in `db/migrations/`. `recheckLater(db, boss, runId)` counts each recheck. When a run has already been rechecked 24 times, the next recheck marks it `failed` with error `fetches did not finish` and sends no job.",
+ "tests": [
+  "src/jobs/runs.db.test.ts"
+ ],
+ "memory_tests": [
+  "a failing lock query still releases the client"
+ ],
+ "database": "CITECHECK_TEST_ADMIN_URL",
+ "gold_memory": [
+  "aliasrank/records/phase1/code-review/REVIEW-reviewer-m2-2.md",
+  "sendward/records/phase1/code-review/REVIEW-reviewer-m2-4.md"
+ ],
+ "inputs": [],
+ "exclude_memory": {},
+ "patches": [
+  "first_attempt",
+  "reference"
+ ]
+}

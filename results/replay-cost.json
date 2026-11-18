@@ -1,0 +1,26 @@
+{
+ "runs": 125,
+ "v5_runs": 603,
+ "v5_mean_cost": 0.0214,
+ "v5_mean_steps": 19.4,
+ "memory_cost_per_run": 0.00115,
+ "expected": {
+  "1.0": {
+   "per_run": 0.0225,
+   "total": 2.81,
+   "share_hitting_run_limit": 0.003
+  },
+  "1.5": {
+   "per_run": 0.0326,
+   "total": 4.07,
+   "share_hitting_run_limit": 0.032
+  },
+  "2.0": {
+   "per_run": 0.0417,
+   "total": 5.22,
+   "share_hitting_run_limit": 0.085
+  }
+ },
+ "run_cost_limit": 0.08,
+ "ceiling": 10.0
+}

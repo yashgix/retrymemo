@@ -1,0 +1,34 @@
+{
+ "name": "onnx",
+ "project": "aliasrank",
+ "source": "aliasrank/repo",
+ "pre": "a100068ada0544fb91f3d1fc803b8c0182cc4407",
+ "reference": "33dfee656ae0a97c1b1e2ee0a0e58dfc59d6fa7e",
+ "first_attempt": "b0f04f3a1a4baf6365fc51c272f6de3122b4b657",
+ "cutoff": "2026-11-16T13:29:53-05:00",
+ "text": "Add a TypeScript scorer in `src/match/neural.ts` for the exported BiGRU: an ONNX file plus its metadata JSON (format `aliasrank.bigru/v1`). It loads the model, checks the ONNX file against its recorded sha256 and the golden pairs, and fails cleanly on a bad model.\n\nThe hidden tests rely on this interface:\n- `loadNeuralScorer(metaPath)` resolves to `{ meta, sha256, score }`. The ONNX file sits beside the metadata file, with the same name and `.onnx`. `meta` is the parsed metadata, `sha256` a 64-character hex digest, and `score(query, candidates)` resolves to one probability per candidate, in order (an empty list for no candidates).\n- `encode(text, alphabet, maxLen)` returns `bigint[]`, the same encoding as `aliasrank_ml.bigru.encode`.\n- The ONNX inputs are `query` and `candidate` (int64, shape [batch, max_len]), the output is `logit`.\n- Errors follow SPEC: an `AppError` with code `model_invalid`, and the golden check of Appendix B.4.\n- A small test model is provided: `src/match/fixtures/bigru-tiny.onnx` with `bigru-tiny.json`.",
+ "tests": [
+  "src/match/neural.test.ts"
+ ],
+ "memory_tests": [
+  "^metadata checks rejects (wrong|missing|null threshold|golden not)",
+  "^metadata checks rejects metadata of",
+  "^metadata checks rejects a missing file"
+ ],
+ "inputs": [
+  "src/match/fixtures/bigru-tiny.json",
+  "src/match/fixtures/bigru-tiny.onnx"
+ ],
+ "database": null,
+ "gold_memory": [
+  "aliasrank/records/phase1/code-review/REVIEW-reviewer-1.md",
+  "aliasrank/records/phase1/code-review/REVIEW-reviewer-2.md"
+ ],
+ "exclude_memory": {},
+ "patches": [
+  "first_attempt",
+  "memory_only",
+  "reference",
+  "task_only"
+ ]
+}

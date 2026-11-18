@@ -1,0 +1,28 @@
+{
+ "name": "simlink",
+ "project": "crossslot",
+ "source": "crossslot/repo",
+ "pre": "edafc610c042cb2348b31fb048354495544d1c4f",
+ "reference": "b0a8324fe1155cfee7e46105d455121bf2793da6",
+ "first_attempt": null,
+ "cutoff": "2026-11-16T15:01:45-05:00",
+ "text": "`crossslot patch apply` will run on corpus checkouts we don't control. Make sure applying a patch can never change anything outside `--out`, including the input corpus. Patching an ordinary corpus must keep working, and `patchCommand(argv)` stays the entry point (hidden tests call it).",
+ "tests": [
+  "test/patch-apply.test.ts"
+ ],
+ "memory_tests": [
+  "symlinked"
+ ],
+ "database": null,
+ "gold_memory": [
+  "helmdoctor/records/phase1/code-review/REVIEW-reviewer-1.md",
+  "ci-recovery/records/phase2/auto-reviewer-review-report.md"
+ ],
+ "inputs": [],
+ "exclude_memory": {},
+ "patches": [
+  "memory_only",
+  "reference"
+ ],
+ "memory_is_task": true
+}

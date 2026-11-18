@@ -1,0 +1,115 @@
+{
+ "tasks_run": 10,
+ "tasks_failed_validation": [
+  "karlicoss__promnesia-277"
+ ],
+ "spend_total": 0.641,
+ "arms": {
+  "A": {
+   "runs": 10,
+   "resolved": 10,
+   "cost_total": 0.1975,
+   "cost_median": 0.0177,
+   "steps_median": 19.5,
+   "seconds_median": 70.5,
+   "input_tokens_median": 346548.0,
+   "output_tokens_median": 7947.5,
+   "first_needed_step_median": 2.0,
+   "never_touched_needed_file": 0,
+   "misled": 0,
+   "patch_not_applied": 0,
+   "submission_differs": 0,
+   "exit_status": {
+    "Submitted": 10
+   }
+  },
+  "B": {
+   "runs": 10,
+   "resolved": 9,
+   "cost_total": 0.2061,
+   "cost_median": 0.0201,
+   "steps_median": 16.0,
+   "seconds_median": 86.5,
+   "input_tokens_median": 345489.0,
+   "output_tokens_median": 9325.5,
+   "first_needed_step_median": 1.0,
+   "never_touched_needed_file": 0,
+   "misled": 0,
+   "patch_not_applied": 0,
+   "submission_differs": 0,
+   "exit_status": {
+    "Submitted": 10
+   }
+  },
+  "C": {
+   "runs": 10,
+   "resolved": 9,
+   "cost_total": 0.2374,
+   "cost_median": 0.0214,
+   "steps_median": 18.5,
+   "seconds_median": 84.0,
+   "input_tokens_median": 426451.5,
+   "output_tokens_median": 9813.5,
+   "first_needed_step_median": 1.5,
+   "never_touched_needed_file": 0,
+   "misled": 0,
+   "patch_not_applied": 0,
+   "submission_differs": 0,
+   "exit_status": {
+    "Submitted": 10
+   }
+  }
+ },
+ "per_task": {
+  "M0r13n__pyais-56": {
+   "B": true,
+   "A": true,
+   "C": true
+  },
+  "PaulSchweizer__flowpipe-127": {
+   "C": true,
+   "B": false,
+   "A": true
+  },
+  "chimpler__pyhocon-133": {
+   "B": true,
+   "A": true,
+   "C": true
+  },
+  "linkml__linkml-1772": {
+   "C": true,
+   "A": true,
+   "B": true
+  },
+  "lucianopaz__compress_pickle-28": {
+   "A": true,
+   "B": true,
+   "C": false
+  },
+  "mdowds__python-mock-firestore-34": {
+   "A": true,
+   "B": true,
+   "C": true
+  },
+  "reframe-hpc__reframe-3058": {
+   "A": true,
+   "B": true,
+   "C": true
+  },
+  "tobac-project__tobac-272": {
+   "B": true,
+   "A": true,
+   "C": true
+  },
+  "vivisect__vivisect-447": {
+   "B": true,
+   "C": true,
+   "A": true
+  },
+  "wireservice__agate-excel-25": {
+   "A": true,
+   "C": true,
+   "B": true
+  }
+ }
+}

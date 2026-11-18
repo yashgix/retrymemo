@@ -1,0 +1,38 @@
+{
+ "task": "lock",
+ "arm": "oracle",
+ "seed": 1,
+ "reserve": 0.02,
+ "prices_per_token": {
+  "miss": 3e-07,
+  "hit": 6e-09,
+  "output": 1.2e-06
+ },
+ "payload_chars": 19214,
+ "payload_sha256": "9d04455a3ea725879f397138990f43a5cde7fab9978110a541f3ce6f680ade2c",
+ "worst_case_cost": 0.015595,
+ "balance_before": 22.14,
+ "interrupted": null,
+ "usage": {
+  "prompt_tokens": 4791,
+  "completion_tokens": 62,
+  "prompt_cache_hit_tokens": 128,
+  "prompt_cache_miss_tokens": 4663
+ },
+ "cost_agent": 0.001474068,
+ "cost_global": 0.001474068,
+ "calls": 1,
+ "finish_reason": "tool_calls",
+ "actions": [
+  "cd /testbed && git status --short && ls"
+ ],
+ "observations": [
+  "<returncode>0</returncode>\n<output>\nREADME.md\nREPORT.md\nSPEC.md\nacceptance\ncompose.yaml\neslint.config.js\nnode_modules\npackage-lock.json\npackage.json\nresults\nsrc\ntsconfig.build.json\ntsconfig.json\nvitest.config.ts\n</output>"
+ ],
+ "reply_text": "",
+ "source_repos_unchanged": true,
+ "balance_after": 22.14,
+ "balance_drop": 0.0,
+ "cost_recomputed": 0.001474068,
+ "stopped": null
+}
