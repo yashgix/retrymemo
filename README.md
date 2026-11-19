@@ -1,5 +1,7 @@
 # retrymemo
 
+**Case study:** https://yashgix.github.io/retrymemo/
+
 Does memory stop coding agents from repeating mistakes? This repository holds six experiments (v1 to v5 and a final
 replay) that tried to answer that question, from an offline retrieval benchmark on public agent runs to a controlled 125-run replay with a real
 coding agent. v1 was built first and then reviewed. From v2 on, each experiment was pre-registered and frozen before its held-out
@@ -11,8 +13,8 @@ replay every run passed its task with or without memory, and none of the three p
 showed a clear effect.
 These are results for one model, one agent and a handful of tasks, not a verdict on agent memory in general.
 
-The full story with charts is in the case study ([`docs/case-study/index.html`](docs/case-study/index.html), Markdown
-copy [`docs/case-study/CASE-STUDY.md`](docs/case-study/CASE-STUDY.md)).
+The full story with charts is in the case study: **https://yashgix.github.io/retrymemo/** (Markdown copy
+[`docs/case-study/CASE-STUDY.md`](docs/case-study/CASE-STUDY.md)).
 
 ## Why agent memory is hard to evaluate
 
